@@ -1,0 +1,17 @@
+{
+    "name": "fresh_grocery",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "tw-build": "npx tailwindcss-cli@latest build ./public/new.css -o ./public/src/tailwind.css"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "autoprefixer": "^10.1.0",
+        "postcss": "^8.2.1",
+        "tailwindcss": "^2.0.2"
+    }
+}

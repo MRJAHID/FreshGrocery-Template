@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en" class="box-border">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fresh Grocery</title>
+    <!-- Favicon -->
+    <link rel="icon" href="src/img/favicon.ico" />
+    <!--LineIcons -->
+    <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet" />
+    <!-- Owl Carousel Slider -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="src/tailwind.css" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- ======================== ******* ======================== -->
+    <!-- ======================== Scripts ======================== -->
+    <!-- ======================== ******* ======================== -->
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- Main Custom JS-->
+    <script type="text/javascript" src="main.js"></script>
+</head>
+
+<body class="antialiased min-h-screen box-border overflow-auto bg-blue-100">
+    <!-- ======================== Small Cart:Begin ======================== -->
+    <div id="small_cart">
+        <div>
+            <div id="small_cart_container" class="container w-full h-full fixed hidden"
+                style="background-color: rgba(0, 0, 0, 0.5); z-index: 1000">
+                <div class="w-full md:w-2/3 lg:w-1/3 h-full fixed top-0 right-0" style="background: rgb(255, 255, 255)">
+                    <!-- Head:Begin -->
+                    <div id="small_cart_head" class="small_cart-heading_container" style="min-height: 5%; height: 5%">
+                        <div id="small_cart_head" class="flex justify-between items-center h-full">
+                            <div class="w-8/12">
+                                <h5 style="color: #fff; font-size: 12px"
+                                    class="small_cart_shopping_heading tracking-wider font-semibold px-3">
+                                    <i class="lni lni-anchor"></i>
+                                    SHOPPING CART
+                                </h5>
+                            </div>
+                            <div class="w-4/12 flex justify-end mr-2">
+                                <p style="font-size: 12px"
+                                    class="small_cart-close cursor-pointer uppercase font-medium hover:text-red-600">
+                                    Close &nbsp;
+                                    <i class="lni lni-close"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Head:END -->
+
+                    <!-- HealthBar:Begin -->
+                    <div class="small_cart-healthbar">
+                        <span class="small_cart-health_text font-bold text-white text-xs">You may checkout now.</span>
+                        <div class="small_cart-healthbar__value"
+                            style="background-color: rgb(39, 174, 96); width: 4800%"></div>
+                    </div>
+                    <!-- HealthBar:END -->
+
+                    <!-- Main Body:Begin -->
+                    <div class="small_cart-body-container" style="overflow-y: scroll; height: 81%">
+                        <!-- 1 -->
+                        <div class="small_cart-checkout-box flex flex-col items-between">
+                            <div class="small_cart-section flex relative">
+                                <div class="small_cart-product-remove">
+                                    <i
+                                        class="lni lni-close cursor-pointer absolute text-xs right-5 top-3 hover:text-red-700"></i>
+                                </div>
+                                <div class="w-4/12 flex items-center">
+                                    <a href="#"><img style="width: 80px" src="./src/img/vegetables1.png" /></a>
+                                </div>
+                                <div class="w-8/12 leading-normal" style="margin-left: 5px">
+                                    <div class="flex justify-between items-start pb-1">
+                                        <a href="#">
+                                            <p title="" class="product-title text-sm text-gray-800 font-medium">
+                                                Mixed Fruit Salad
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <!-- Product Size Select Box -->
+                                    <div class="small_cart-produc-size-container flex">
+                                        <div class="selectbox relative">
+                                            <select name="" id=""
+                                                class="border border-gray-100 text-xs flex bg-gray-100 text-gray-800 outline-0 cursor-pointer appearance-none">
+                                                <option value="">1000 Gm</option>
+                                                <option value="">1 Kg</option>
+                                                <option value="">5 Litter</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex">
+                                        <!-- Inrement Button
+                                             -->
+                                        <div class="product_increment_btn flex pt-2">
+                                            <span
+                                                class="input-number-decrement border-none select-none inline-block cursor-pointer font-bold bg-gray-300 hover:bg-gray-800 text-gray-800 hover:text-white flex justify-center items-center">–</span>
+                                            <input
+                                                class="input-number text-gray-700 align-top text-center select-none border-none"
+                                                type="text" value="1" min="0" max="10" />
+                                            <span
+                                                class="input-number-increment select-none border-none inline-block cursor-pointer font-bold bg-gray-300 hover:bg-gray-800 text-gray-800 hover:text-white flex justify-center items-center">+</span>
+                                        </div>
+                                        <!-- Price -->
+                                        <div class="small_cart-product-total w-7/12 flex items-center justify-end">
+                                            <p class="text-base font-semibold text-yellow-550">
+                                                ৳ 720
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 2 -->
+                        <div class="small_cart-checkout-box flex flex-col items-between">
+                            <div class="small_cart-section flex relative">
+                                <div class="small_cart-product-remove">
+                                    <i
+                                        class="lni lni-close cursor-pointer absolute text-xs right-5 top-3 hover:text-red-700"></i>
+                                </div>
+                                <div class="w-4/12 flex items-center">
+                                    <a href="#"><img style="width: 80px" src="./src/img/vegetables2.png" /></a>
+                                </div>
+                                <div class="w-8/12 leading-normal" style="margin-left: 5px">
+                                    <div class="flex justify-between items-start pb-1">
+                                        <a href="#">
+                                            <p title="" class="product-title text-sm text-gray-800 font-medium">
+                                                Mixed Fruit Salad
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <!-- Product Size Select Box -->
+                                    <div class="small_cart-produc-size-container flex">
+                                        <div class="selectbox relative">
+                                            <select name="" id=""
+                                                class="border border-gray-100 text-xs flex bg-gray-100 text-gray-800 outline-0 cursor-pointer appearance-none">
+                                                <option value="">1000 Gm</option>
+                                                <option value="">1 Kg</option>
+                                                <option value="">5 Litter</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex">
+                                        <!-- Inrement Button
+                                             -->
+                                        <div class="product_increment_btn flex pt-2">
+                                            <span
+                                                class="input-number-decrement border-none select-none inline-block cursor-pointer font-bold bg-gray-300 hover:bg-gray-800 text-gray-800 hover:text-white flex justify-center items-center">–</span>
+                                            <input
+                                                class="input-number text-gray-700 align-top text-center select-none border-none"
+                                                type="text" value="1" min="0" max="10" />
+                                            <span
+                                                class="input-number-increment select-none border-none inline-block cursor-pointer font-bold bg-gray-300 hover:bg-gray-800 text-gray-800 hover:text-white flex justify-center items-center">+</span>
+                                        </div>
+                                        <!-- Price -->
+                                        <div class="small_cart-product-total w-7/12 flex items-center justify-end">
+                                            <p class="text-base font-semibold text-yellow-550">
+                                                ৳ 720
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 3 -->
+                        <div class="small_cart-checkout-box flex flex-col items-between">
+                            <div class="small_cart-section flex relative">
+                                <div class="small_cart-product-remove">
+                                    <i
+                                        class="lni lni-close cursor-pointer absolute text-xs right-5 top-3 hover:text-red-700"></i>
+                                </div>
+                                <div class="w-4/12 flex items-center">
+                                    <a href="#"><img style="width: 80px" src="./src/img/vegetables3.png" /></a>
+                                </div>
+                                <div class="w-8/12 leading-normal" style="margin-left: 5px">
+                                    <div class="flex justify-between items-start pb-1">
+                                        <a href="#">
+                                            <p title="" class="product-title text-sm text-gray-800 font-medium">
+                                                Mixed Fruit Salad
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <!-- Product Size Select Box -->
+                                    <div class="small_cart-produc-size-container flex">
+                                        <div class="selectbox relative">
+                                            <select name="" id=""
+                                                class="border border-gray-100 text-xs flex bg-gray-100 text-gray-800 outline-0 cursor-pointer appearance-none">
+                                                <option value="">1000 Gm</option>
+                                                <option value="">1 Kg</option>
+                                                <option value="">5 Litter</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex">
+                                        <!-- Inrement Button
+                                             -->
+                                        <div class="product_increment_btn flex pt-2">
+                                            <span
+                                                class="input-number-decrement border-none select-none inline-block cursor-pointer font-bold bg-gray-300 hover:bg-gray-800 text-gray-800 hover:text-white flex justify-center items-center">–</span>
+                                            <input
+                                                class="input-number text-gray-700 align-top text-center select-none border-none"
+                                                type="text" value="1" min="0" max="10" />
+                                            <span
+                                                class="input-number-increment select-none border-none inline-block cursor-pointer font-bold bg-gray-300 hover:bg-gray-800 text-gray-800 hover:text-white flex justify-center items-center">+</span>
+                                        </div>
+                                        <!-- Price -->
+                                        <div class="small_cart-product-total w-7/12 flex items-center justify-end">
+                                            <p class="text-base font-semibold text-yellow-550">
+                                                ৳ 720
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 4 -->
+                        <div class="small_cart-checkout-box flex flex-col items-between">
+                            <div class="small_cart-section flex relative">
+                                <div class="small_cart-product-remove">
+                                    <i
+                                        class="lni lni-close cursor-pointer absolute text-xs right-5 top-3 hover:text-red-700"></i>
+                                </div>
+                                <div class="w-4/12 flex items-center">
+                                    <a href="#"><img style="width: 80px" src="./src/img/vegetables4.png" /></a>
+                                </div>
+                                <div class="w-8/12 leading-normal" style="margin-left: 5px">
+                                    <div class="flex justify-between items-start pb-1">
+                                        <a href="#">
+                                            <p title="" class="product-title text-sm text-gray-800 font-medium">
+                                                Mixed Fruit Salad
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <!-- Product Size Select Box -->
+                                    <div class="small_cart-produc-size-container flex">
+                                        <div class="selectbox relative">
+                                            <select name="" id=""
+                                                class="border border-gray-100 text-xs flex bg-gray-100 text-gray-800 outline-0 cursor-pointer appearance-none">
+                                                <option value="">1000 Gm</option>
+                                                <option value="">1 Kg</option>
+                                                <option value="">5 Litter</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex">
+                                        <!-- Inrement Button
+                                             -->
+                                        <div class="product_increment_btn flex pt-2">
+                                            <span
+                                                class="input-number-decrement border-none select-none inline-block cursor-pointer font-bold bg-gray-300 hover:bg-gray-800 text-gray-800 hover:text-white flex justify-center items-center">–</span>
+                                            <input
+                                                class="input-number text-gray-700 align-top text-center select-none border-none"
+                                                type="text" value="1" min="0" max="10" />
+                                            <span
+                                                class="input-number-increment select-none border-none inline-block cursor-pointer font-bold bg-gray-300 hover:bg-gray-800 text-gray-800 hover:text-white flex justify-center items-center">+</span>
+                                        </div>
+                                        <!-- Price -->
+                                        <div class="small_cart-product-total w-7/12 flex items-center justify-end">
+                                            <p class="text-base font-semibold text-yellow-550">
+                                                ৳ 720
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Main Body:END -->
+
+                    <!-- Bottom:Begin -->
+                    <div class="small_cart-checkout-container" style="min-height: 10%; height: 11%">
+                        <div class="flex h-full justify-between items-center">
+                            <div
+                                class="small_cart-total border border-gray-300 w-6/12 h-full flex flex-col justify-center items-center">
+                                <p class="text-base text-left capitalize text-gray-800 font-medium">
+                                    Cart Total
+                                    <br />
+                                </p>
+
+                                <div class="text-center">
+                                    <span class="text-base font-semibold text-green-550">৳
+                                    </span>
+                                    <span class="text-base font-semibold text-green-550">720</span>
+                                </div>
+                            </div>
+                            <div class="small_cart-checkout bg-green-550 hover:bg-gray-800 transition duration-300 ease-in-out text-white uppercase w-6/12 h-full flex justify-center items-center"
+                                style="border-top: 1px solid rgba(129, 129, 129, 0.2)">
+                                <a href="cart.html"><button style="outline: none"
+                                        class="small_cart-checkout-btn focus:outline-none font-medium ml-auto mr-auto w-6/12 h-full flex justify-center items-center">
+                                        PROCEED
+                                        <i
+                                            class="lni lni-chevron-right-circle pl-2 focus:outline-none"></i></button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Small Cart Small Bag  -->
+            <div id="small_cart_section_div"
+                class="container small_cart-shopping-bag-sidebar fixed top-5/10 opacity-70 right-0 hover:opacity-100">
+                <div
+                    class="small-cart-container bg-green-550 rounded cursor-pointer flex flex-col justify-between items-center">
+                    <span class="small_cart-small_bag flex justify-center cursor-pointer text-lg"><i
+                            class="lni lni-shopify text-white"></i></span>
+                    <p id="small_total_cart" class="text-xs tracking-wider font-semibold text-white">
+                        1 ITEMS
+                    </p>
+                    <p class="w-full text-white text-center font-semibold text-sm" style="background: rgb(45, 55, 72)">
+                        <span>৳&nbsp;</span> <span id="small_cart_amount"> 720 </span>
+                        <input id="small_cart_amount_2" type="hidden" />
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ======================== Small Cart:End ======================== -->
+
+    <!-- ======================== TopBar:Begin ======================== -->
+    <div class="topbar_container overflow-hidden">
+        <div class="topbar_content bg-white w-full py-2 md:py-3 flex flex-col md:flex-row">
+
+            <div style="border-bottom: 1px solid #dfe2e0"
+                class="topbar_divbox w-full flex flex-row justify-end md:justify-end px-4 md:px-12 text-white text-sm font-medium">
+                <div style="border-right: 1px solid #cddace" class="pr-4 md:pr-6">
+                    <a href="#"
+                        class="flex pb-1 transition duration-500 ease-in-out text-gray-800 hover:text-green-550">
+                        <i class="lni lni-map-marker m-auto pr-2 my-auto"></i>
+                        <h2>New York</h2>
+                    </a>
+                </div>
+                <div style="border-right: 1px solid #cddace" class="pl-2 pr-4 md:pr-6">
+                    <a href="checkout.html"
+                        class="hidden sm:flex pb-1 transition duration-500 ease-in-out text-gray-800 hover:text-green-550">
+                        <i class="lni lni-cart m-auto pr-1"></i>
+                        <h2>Checkout</h2>
+                    </a>
+                    <a href="wishlist.html"
+                        class="flex sm:hidden pb-1 transition duration-500 ease-in-out text-gray-800 hover:text-green-550">
+                        <i class="lni lni-heart m-auto pr-1"></i>
+                        <h2>Wishlist</h2>
+                    </a>
+                </div>
+                <div class="pl-2">
+                    <div class="auth-modal-btn">
+                        <li class="md:inline-block"><a
+                                class="auth-signup transition duration-500 ease-in-out text-gray-800 hover:text-green-550"
+                                href="#"> <i class="lni lni-lock m-auto pr-1"></i> SignIn</a></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ======================== TopBar:End ======================== -->
+
+    <!-- ======================== auth Modal:Begin ======================== -->
+    <div class="auth-user-modal fixed top-0 left-0 w-full h-full overflow-y-auto cursor-pointer invisible opacity-0"
+        style="z-index: 2000;">
+        <div
+            class="auth-user-modal-container relative w-9/10 max-w-md bg-white cursor-auto rounded transition transform duration-700">
+            <!-- this is the container wrapper -->
+            <ul class="auth_nav-switcher">
+                <li class="w-1/2 float-left text-center"><a href="#0" class="block w-full h-12 leading-10">Sign in</a>
+                </li>
+                <li class="w-1/2 float-left text-center"><a href="#0" class="block w-full h-12 leading-10">New
+                        account</a></li>
+            </ul>
+
+            <div id="auth-login">
+                <!-- log in form -->
+                <form class="auth-form p-8">
+                    <p class="fieldset relative my-8 mx-0">
+                        <label class="image-replace auth-email" for="signin-email">E-mail</label>
+                        <input class="full-width has-padding has-border" id="signin-email" type="email"
+                            placeholder="E-mail">
+                        <span class="auth-error-message">Error message here!</span>
+                    </p>
+
+                    <p class="fieldset relative my-8 mx-0">
+                        <label class="image-replace auth-password" for="signin-password">Password</label>
+                        <input class="full-width has-padding has-border" id="signin-password" type="text"
+                            placeholder="Password">
+                        <a href="#0" class="hide-password">Hide</a>
+                        <span class="auth-error-message">Error message here!</span>
+                    </p>
+
+                    <p class="fieldset relative my-8 mx-0">
+                        <input type="checkbox" id="remember-me" checked>
+                        <label for="remember-me">Remember me</label>
+                    </p>
+
+                    <p class="fieldset relative my-8 mx-0">
+                        <input class="full-width" type="submit" value="Login">
+                    </p>
+                </form>
+
+                <p class="auth-form-bottom-message text-sm text-center absolute left-0 w-full -bottom-8"><a
+                        class="text-white underline" href="#0">Forgot your password?</a></p>
+                <!-- <a href="#0" class="auth-close-form">Close</a> -->
+            </div> <!-- auth-login -->
+
+            <div id="auth-signup">
+                <!-- sign up form -->
+                <form class="auth-form p-8">
+                    <p class="fieldset relative my-8 mx-0">
+                        <label class="image-replace auth-username" for="signup-username">Username</label>
+                        <input class="full-width has-padding has-border" id="signup-username" type="text"
+                            placeholder="Username">
+                        <span class="auth-error-message">Error message here!</span>
+                    </p>
+
+                    <p class="fieldset relative my-8 mx-0">
+                        <label class="image-replace auth-email" for="signup-email">E-mail</label>
+                        <input class="full-width has-padding has-border" id="signup-email" type="email"
+                            placeholder="E-mail">
+                        <span class="auth-error-message">Error message here!</span>
+                    </p>
+
+                    <p class="fieldset relative my-8 mx-0">
+                        <label class="image-replace auth-password" for="signup-password">Password</label>
+                        <input class="full-width has-padding has-border" id="signup-password" type="text"
+                            placeholder="Password">
+                        <a href="#0" class="hide-password">Hide</a>
+                        <span class="auth-error-message">Error message here!</span>
+                    </p>
+
+                    <p class="fieldset relative my-8 mx-0">
+                        <input type="checkbox" id="accept-terms">
+                        <label for="accept-terms">I agree to the <a href="#0">Terms</a></label>
+                    </p>
+
+                    <p class="fieldset relative my-8 mx-0">
+                        <input class="full-width has-padding" type="submit" value="Create account">
+                    </p>
+                </form>
+
+                <!-- <a href="#0" class="auth-close-form">Close</a> -->
+            </div> <!-- auth-signup -->
+
+            <div id="auth-reset-password">
+                <!-- reset password form -->
+                <p class="auth-form-message">Lost your password? Please enter your email address. You will receive a
+                    link to create a new password.</p>
+
+                <form class="auth-form p-8">
+                    <p class="fieldset relative my-8 mx-0">
+                        <label class="image-replace auth-email" for="reset-email">E-mail</label>
+                        <input class="full-width has-padding has-border" id="reset-email" type="email"
+                            placeholder="E-mail">
+                        <span class="auth-error-message">Error message here!</span>
+                    </p>
+
+                    <p class="fieldset relative my-8 mx-0">
+                        <input class="full-width has-padding" type="submit" value="Reset password">
+                    </p>
+                </form>
+
+                <p class="auth-form-bottom-message text-sm text-center absolute left-0 w-full -bottom-8"><a
+                        class="text-white underline" href="#0">Back to log-in</a></p>
+            </div> <!-- auth-reset-password -->
+            <a href="#0" class="auth-close-form">Close</a>
+        </div> <!-- auth-user-modal-container -->
+    </div>
+    <!-- ======================== auth Modal:END ======================== -->
+
+    <!-- ======================== Main Header:Begin ======================== -->
+
+    <header class="header_container">
+        <div class="header_content bg-white w-full h-20 pb-4 px-4 md:px-12 flex items-center">
+            <div class="w-full flex">
+                <!-- Logo -->
+                <div class="logo_img_div w-4/10 md:w-2/12 flex items-center justify-start h-full">
+                    <div class="w-full">
+                        <a href="index.html" class="logo_image">
+                            <img src="src/img/logo.png" alt="Logo" class="object-cover w-36" />
+                        </a>
+                    </div>
+                </div>
+                <!-- Search -->
+                <div class="w-7/12 md:flex items-center justify-center hidden md:block">
+                    <!-- Categories -->
+                    <div class="border border-r-0 w-2/12 bg-gray-200 hidden md:block">
+                        <div class="relative w-full border-none">
+                            <div class="pointer-events-none absolute inset-y-0 flex items-center px-2">
+                                <i style="font-size: 14px" class="lni lni-envato text-gray-500"></i>
+                            </div>
+                            <select
+                                class="bg-gray-50 appearance-none font-light text-sm text-gray-700 border-none inline-block py-3 pl-7 rounded leading-tight w-full">
+                                <option class="pt-6" hidden>Categories</option>
+                                <option>Chips</option>
+                                <option>Potato</option>
+                                <option>Orange</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2">
+                                <i style="font-size: 10px" class="lni lni-chevron-down text-gray-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Search Box -->
+                    <div class="border md:border-l-0 w-9/12 overflow-hidden flex">
+                        <input type="text" class="px-3 md:px-8 py-2 w-full" placeholder="Search Product..." />
+                        <button class="text-xs text-white bg-green-550 flex items-center justify-center px-3 md:px-6">
+                            <svg class="h-4 w-4 text-grey-dark" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M16.32 14.9l5.39 5.4a1 1 0 0 1-1.42 1.4l-5.38-5.38a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Cart -->
+                <div
+                    class="w-6/10 md:w-3/12 text-sm text-gray-800 font-medium flex justify-end items-center transition-all">
+
+
+                    <!-- Wishlist Btn -->
+                    <div class="wishlist_order_btn hidden sm:flex w-1/2 md:w-1/2 justify-end">
+
+                        <a href="wishlist.html" class="flex items-center">
+                            <div
+                                class="flex relative items-center justify-center mr-2 rounded-full border border-gray-200 h-10 w-10 hover:shadow-sm">
+                                <i class="lni lni-heart z-50 text-green-550"></i>
+                                <span class="order-count-badge absolute left-0 top-0 text-sm">2</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <h3 class="text-gray-800 hover:text-green-550 font-bold text-sm">Wishlist</h3>
+                                <h4 class="text-gray-600 font-semibold text-sm">$0.00</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <!--  -->
+                    <div class="cart_order_btn w-full sm:w-1/2 flex justify-end">
+                        <!-- Search Box -->
+                        <div class="header-search_box flex justify-end header-search_box md:hidden">
+                            <div class="search-container relative inline-block align-bottom pt-1 w-12 h-12">
+                                <form action="/search" method="get">
+                                    <input
+                                        class="search absolute bg-white outline-none border-none  w-0 p-0 h-full z-10 left-12 expandright"
+                                        id="searchright" type="search" name="q" placeholder="Search Here......">
+                                    <label
+                                        class="header_search_btn inline-block text-sm px-8 text-center text-gray-800 cursor-pointer no-underline select-none hover:transition hover:duration-400 hover:bg-white hover:text-black searchbutton absolute w-full m-0 rounded-full border border-gray-200 justify-end"
+                                        for="searchright"><span
+                                            class="mglass transform -rotate-45 text-green-550 inline-block pointer-events-none">&#9906;</span></label>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- Cart Btn -->
+                        <a href="cart.html" class="flex items-center">
+                            <div
+                                class="flex relative items-center justify-center mr-2 rounded-full border border-gray-200 h-10 w-10 hover:shadow-sm">
+                                <i class="lni lni-cart z-50 text-green-550"></i>
+                                <span class="order-count-badge absolute left-0 top-0 text-sm">2</span>
+                            </div>
+                            <div class="flex flex-col">
+                                <h3 class="text-gray-800 hover:text-green-550 font-bold text-xs sm:text-sm">My Cart
+                                </h3>
+                                <h4 class="text-gray-600 font-semibold text-sm">$0.00</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============ Nav  Menubar =========== -->
+    <nav class="px-0 md:px-12 relative">
+        <a class="responsive-menu text-sm hamburger" id="nav-icon"><i class="lni lni-menu"></i> Shop By
+            Categories </a>
+        <a href="#" id="resp-menu" class="responsive-category absolute block md:hidden"><i class="lni lni-menu"></i></a>
+        <!-- Sidenav:Begin -->
+        <nav class="side-nav">
+            <ul class="side-nav-list">
+                <li class="side-nav-item">
+                    <a class="side-nav-link" href="">Home</a>
+                </li>
+                <li class="side-nav-item">
+                    <a class="side-nav-link" href="aboutus.html">About</a>
+                </li>
+                <li class="side-nav-item">
+                    <a class="side-nav-link" href="contactus.html">Contanct</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Sidenav:END -->
+        <ul class="menu">
+            <li class="shop_categories_li"><a href="#" class="homer mr-20"
+                    style="background-color:#14a753; color:#fff; font-size: 16px;"> <i class="lni lni-menu pr-1"></i>
+                    Shop By Categories</a>
+                <ul class="sub-menu categories_ul">
+                    <li class="transition duration-500 ease-in-out">
+                        <a href="productlist.html" style="display: flex; padding: 10px 10px"><span
+                                class="w-/12 pr-1 my-auto"><img
+                                    src="https://img.icons8.com/emoji/20/000000/peach-emoji.png" /></span>
+                            Fruits & Vegetables</a>
+                    </li>
+                    <li class="transition duration-500 ease-in-out">
+                        <a href="productlist.html" style="display: flex; padding: 10px 10px"><span
+                                class="w-/12 pr-1 my-auto"><img
+                                    src="https://img.icons8.com/emoji/20/000000/shopping-bags.png" /></span>Grocery
+                            & Staples</a>
+                        <ul class="sub-menu">
+
+                            <li><a href="#">Sub-Menu 1</a></li>
+                            <li><a href="#">Sub-Menu 2</a></li>
+                            <li><a href="#">Sub-Menu 3</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Sub-Menu 1</a></li>
+                                    <li><a href="#">Sub-Menu 2</a></li>
+                                    <li><a href="#">Sub-Menu 3</a></li>
+                                    <li><a href="#">Sub-Menu 4</a></li>
+                                    <li><a href="#">Sub-Menu 5</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Sub-Menu 4</a></li>
+                            <li><a href="#">Sub-Menu 5</a></li>
+                        </ul>
+                    </li>
+                    <li class="transition duration-500 ease-in-out">
+                        <a href="productlist.html" style="display: flex; padding: 10px 10px"><span
+                                class="w-/12 pr-1 my-auto"><img
+                                    src="https://img.icons8.com/emoji/20/000000/lotion-bottle.png" /></span>Personal
+                            Care</a>
+                    </li>
+                    <li class="transition duration-500 ease-in-out">
+                        <a href="productlist.html" style="display: flex; padding: 10px 10px"><span
+                                class="w-/12 pr-1 my-auto"><img
+                                    src="https://img.icons8.com/emoji/20/000000/couch-and-lamp.png" /></span>Furnishing
+                            Needs</a>
+                    </li>
+                    <li class="transition duration-500 ease-in-out">
+                        <a href="productlist.html" style="display: flex; padding: 10px 10px"><span
+                                class="w-/12 pr-1 my-auto"><img
+                                    src="https://img.icons8.com/emoji/20/000000/chocolate-bar-emoji.png" /></span>Chocolate
+                            & Fastfood</a>
+                    </li>
+                    <li class="transition duration-500 ease-in-out">
+                        <a href="productlist.html" style="display: flex; padding: 10px 10px"><span
+                                class="w-/12 pr-1 my-auto"><img
+                                    src="https://img.icons8.com/emoji/20/000000/glass-of-milk.png" /></span>Breakfast
+                            & Dairy</a>
+                    </li>
+                    <li class="transition duration-500 ease-in-out">
+                        <a href="productlist.html" style="display: flex; padding: 10px 10px"><span
+                                class="w-/12 pr-1 my-auto"><img
+                                    src="https://img.icons8.com/emoji/20/000000/peach-emoji.png" /></span>
+                            Fruits & Vegetables</a>
+                    </li>
+                    <li class="transition duration-500 ease-in-out">
+                        <a href="productlist.html" style="display: flex; padding: 10px 10px"><span
+                                class="w-/12 pr-1 my-auto"><img
+                                    src="https://img.icons8.com/emoji/20/000000/hammer-and-wrench.png" /></span>Household
+                            Needs</a>
+                    </li>
+                    <li class="transition duration-500 ease-in-out">
+                        <a href="productlist.html" style="display: flex; padding: 10px 10px"><span
+                                class="w-/12 pr-1 my-auto"><img
+                                    src="https://img.icons8.com/emoji/20/000000/lotion-bottle.png" /></span>Personal
+                            Care</a>
+                    </li>
+                    <li class="transition duration-500 ease-in-out">
+                        <a href="productlist.html" style="display: flex; padding: 10px 10px"><span
+                                class="w-/12 pr-1 my-auto"><img
+                                    src="https://img.icons8.com/emoji/20/000000/ice-cream-emoji.png" /></span>Biscuit
+                            & Snacks</a>
+
+                        <ul class="sub-menu">
+                            <li><a href="#">HTML/CSS</a></li>
+                            <li><a href="#">jQuery</a></li>
+                            <li><a href="#">Other</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </li>
+            <li><a class="home" href="index.html"> Home</a>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="#">Pages <i class="lni lni-chevron-down" style="font-size: 12px;"></i></a>
+                <ul class="sub-menu">
+                    <li><a href="account.html">Profile Info</a></li>
+                    <li><a href="productlist.html">Product List</a></li>
+                    <li><a href="productview.html">Product View</a></li>
+                    <li><a href="paymenthistory.html">Payment History</a></li>
+                    <li><a href="myaddress.html">Address</a></li>
+                    <li><a href="orderhistory.html">Order History</a></li>
+                    <li><a href="ordertracking.html">Order Tracking</a></li>
+                    <li><a href="orderconfirmation.html">Order Success</a></li>
+                    <li><a href="#">Sub-Menu 2 <i class="lni lni-chevron-right pl-6" style="font-size: 10px;"></i></a>
+                        <ul>
+                            <li><a href="account.html">Profile</a></li>
+                            <li><a href="productlist.html">Product List</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Sub-Menu 3 <i class="lni lni-chevron-right pl-6" style="font-size: 10px;"></i></a>
+                        <ul>
+                            <li><a href="#">Sub Sub-Menu 1</a></li>
+                            <li><a href="#">Sub Sub-Menu 2</a></li>
+                            <li><a href="#">Sub Sub-Menu 3</a></li>
+                            <li><a href="#">Sub Sub-Menu 4</a></li>
+                            <li><a href="#">Sub Sub-Menu 5</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Categories <i class="lni lni-chevron-down" style="font-size: 12px;"></i></a>
+                <ul class="sub-menu">
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                    <li><a href="wishlist.html">Wishlist</a></li>
+                    <li class="w-full"><a href="#">Sub-Menu 2 <i class="lni lni-chevron-right pl-6"
+                                style=" font-size: 10px;"></i></a>
+                        <ul>
+
+                            <li><a href="#">Sub Sub-Menu 4</a></li>
+                            <li><a href="#">Sub Sub-Menu 5</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Sub-Menu 3 <i class="lni lni-chevron-right pl-6" style="font-size: 10px;"></i></a>
+                        <ul>
+                            <li><a href="#">Sub Sub-Menu 1</a></li>
+                            <li><a href="#">Sub Sub-Menu 2</a></li>
+                            <li><a href="#">Sub Sub-Menu 3</a></li>
+                            <li><a href="#">Sub Sub-Menu 4</a></li>
+                            <li><a href="#">Sub Sub-Menu 5</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="contactus.html"> Contact</a></li>
+            <li><a href="#"> Sitemap</a></li>
+            <li><a href="aboutus.html">About</a></li>
+        </ul>
+    </nav>
+    <!-- ======================== Main Header:END ======================== -->
+
+    <!-- =================== Main Wrapper:Begin========================== -->
+    <main class="main_wrapper">
+        <!-- Breadcrumb:Begin -->
+        <div class="breadcrumbs_wrap dark bg-gray-800 text-white py-8 w-full">
+            <div class="container">
+                <div class="flex flex-wrap mx-4 items-center">
+                    <div class="w-full">
+                        <div class="text-center">
+                            <h2 class="breadcrumbs_title text-4xl font-medium mb-0 text-green-550">
+                                Order History
+                            </h2>
+                            <nav aria-label="breadcrumb">
+                                <ol class="p-0 bg-transparent list-none my-0 mx-auto flex justify-center border-0">
+                                    <li class="breadcrumb-item">
+                                        <a href="#"><i class="lni lni-home"></i></a>
+                                    </li>
+                                    <li class="breadcrumb-item">
+                                        <a href="#">My Account</a>
+                                    </li>
+                                    <li class="breadcrumb-item active" aria-current="page">
+                                        Order History
+                                    </li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Breadcrumb:END -->
+        <!-- ================ ProductView Section:Begin ================ -->
+        <section class="cart_total_container my-12 w-full px-4 border-b items-center border-gray-200">
+            <div class="container cart_content mt-6 p-4 mx-auto w-full rounded flex">
+                <div class="w-full">
+                    <div class="container w-full">
+                        <div class="w-full flex flex-wrap">
+                            <!-- Side -->
+                            <div class="col-lg-4 col-md-3 account_sidebar">
+                                <div class="dashboard-nav mb-10 bg-white rounded md:mb-0">
+                                    <div class="list-group flex flex-col mb-0 pl-0 list-group-sm list-group-flush-x">
+                                        <a style="display: flex" class="list-group-item w-full" href="account.html">
+                                            <h2 class="w-9/10 text-gray-700">
+                                                <i class="lni lni-user pl-2"></i>
+                                                Account Settings
+                                            </h2>
+                                            <i
+                                                class="w-1/12 text-gray-700 flex items-center text-sm lni lni-chevron-right"></i>
+                                        </a>
+
+                                        <a style="display: flex" class="list-group-item w-full side_active_link"
+                                            href="orderhistory.html">
+                                            <h2 class="w-9/10 text-gray-700">
+                                                <i class="lni lni-book pl-2"></i>
+                                                Order History
+                                            </h2>
+                                            <i
+                                                class="w-1/12 text-gray-700 flex items-center text-sm lni lni-chevron-right"></i>
+                                        </a>
+                                        <a style="display: flex" class="list-group-item w-full"
+                                            href="ordertracking.html">
+                                            <h2 class="w-9/10 text-gray-700">
+                                                <i class="lni lni-travel pl-2"></i> Order
+                                                Tracking
+                                            </h2>
+                                            <i
+                                                class="w-1/12 text-gray-700 flex items-center text-sm lni lni-chevron-right"></i>
+                                        </a>
+
+                                        <a style="display: flex" class="list-group-item w-full" href="wishlist.html">
+                                            <h2 class="w-9/10 text-gray-700">
+                                                <i class="lni lni-heart pl-2"></i>
+                                                Wishlist
+                                            </h2>
+                                            <i
+                                                class="w-1/12 text-gray-700 flex items-center text-sm lni lni-chevron-right"></i>
+                                        </a>
+
+                                        <a style="display: flex" class="list-group-item w-full" href="myaddress.html">
+                                            <h2 class="w-9/10 text-gray-700">
+                                                <i class="lni lni-map-marker pl-2"></i>
+                                                My Address
+                                            </h2>
+                                            <i
+                                                class="w-1/12 text-gray-700 flex items-center text-sm lni lni-chevron-right"></i>
+                                        </a>
+                                        <a style="display: flex" class="list-group-item w-full"
+                                            href="paymenthistory.html">
+                                            <h2 class="w-9/10 text-gray-700">
+                                                <i class="lni lni-money-protection pl-2"></i>
+                                                Payment History
+                                            </h2>
+                                            <i
+                                                class="w-1/12 text-gray-700 flex items-center text-sm lni lni-chevron-right"></i>
+                                        </a>
+                                        <a style="display: flex" class="list-group-item w-full" href="order.html">
+                                            <h2 class="w-9/10 text-gray-700">
+                                                <i class="lni lni-power-switch pl-2"></i>
+
+                                                Logout
+                                            </h2>
+                                            <i
+                                                class="w-1/12 text-gray-700 flex items-center text-sm lni lni-chevron-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-8 col-md-9">
+                                <!-- Total Order History -->
+                                <div
+                                    class="card relative flex flex-col min-w-0 word break-words bg-white bg-clip-border rounded border border-gray-300">
+                                    <div class="py-3 px-5 mb-0 bg-white border-b border-gray-300">
+                                        <h4 class="mb-0 text-2xl font-medium capitalize text-gray-800">
+                                            Total Order
+                                        </h4>
+                                    </div>
+                                    <div class="profile_card-body overflow-x-scroll p-5 flex-auto">
+                                        <div class="table-responsive">
+                                            <table class="table w-full max-w-full mb-1 bg-transparent">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Product</th>
+                                                        <th scope="col">Order No.</th>
+                                                        <th scope="col">Shipping Date</th>
+                                                        <th scope="col">Price</th>
+                                                        <th scope="col">Status</th>
+                                                        <th scope="col">Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <!-- 1 -->
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <div class="tbl_cart_product flex items-center w-full">
+                                                                <div class="tbl_cart_product_thumb m-0 mr-4">
+                                                                    <img src="./src/img/apple.jpg"
+                                                                        class="h-auto max-w-full" alt="" />
+                                                                </div>
+                                                            </div>
+                                                        </th>
+                                                        <td>8910563</td>
+                                                        <td>10 Jul 2020</td>
+                                                        <td>$89.00</td>
+                                                        <td>
+                                                            <h5
+                                                                class="status_btn bg-red-500 text-white py-1 px-3 text-sm text-center font-medium rounded-full">
+                                                                Canceled
+                                                            </h5>
+                                                        </td>
+                                                        <td>
+                                                            <a href="#"
+                                                                class="btn py-2 px-3 cursor-pointer rounded inline-block font-medium text-center align-middle select-none transition duration-500 ease-in-out bg-green-550 hover:bg-green-600 text-white border">Track
+                                                                Order</a>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 1 -->
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <div class="tbl_cart_product flex items-center w-full">
+                                                                <div class="tbl_cart_product_thumb m-0 mr-4">
+                                                                    <img src="./src/img/apple.jpg"
+                                                                        class="h-auto max-w-full" alt="" />
+                                                                </div>
+                                                            </div>
+                                                        </th>
+                                                        <td>8910563</td>
+                                                        <td>10 Jul 2020</td>
+                                                        <td>$89.00</td>
+                                                        <td>
+                                                            <h5
+                                                                class="status_btn bg-gray-800 text-white py-1 px-3 text-sm text-center font-medium rounded-full">
+                                                                Pending
+                                                            </h5>
+                                                        </td>
+                                                        <td>
+                                                            <a href="#"
+                                                                class="btn py-2 px-3 cursor-pointer rounded inline-block font-medium text-center align-middle select-none transition duration-500 ease-in-out bg-green-550 hover:bg-green-600 text-white border">Track
+                                                                Order</a>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 1 -->
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <div class="tbl_cart_product flex items-center w-full">
+                                                                <div class="tbl_cart_product_thumb m-0 mr-4">
+                                                                    <img src="./src/img/apple.jpg"
+                                                                        class="h-auto max-w-full" alt="" />
+                                                                </div>
+                                                            </div>
+                                                        </th>
+                                                        <td>8910563</td>
+                                                        <td>10 Jul 2020</td>
+                                                        <td>$89.00</td>
+                                                        <td>
+                                                            <h5
+                                                                class="status_btn bg-yellow-500 text-white py-1 px-3 text-sm text-center font-medium rounded-full">
+                                                                Pending
+                                                            </h5>
+                                                        </td>
+                                                        <td>
+                                                            <a href="#"
+                                                                class="btn py-2 px-3 cursor-pointer rounded inline-block font-medium text-center align-middle select-none transition duration-500 ease-in-out bg-green-550 hover:bg-green-600 text-white border">Track
+                                                                Order</a>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 1 -->
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <div class="tbl_cart_product flex items-center w-full">
+                                                                <div class="tbl_cart_product_thumb m-0 mr-4">
+                                                                    <img src="./src/img/apple.jpg"
+                                                                        class="h-auto max-w-full" alt="" />
+                                                                </div>
+                                                            </div>
+                                                        </th>
+                                                        <td>8910563</td>
+                                                        <td>10 Jul 2020</td>
+                                                        <td>$89.00</td>
+                                                        <td>
+                                                            <h5
+                                                                class="status_btn bg-green-550 text-white py-1 px-3 text-sm text-center font-medium rounded-full">
+                                                                Delivered
+                                                            </h5>
+                                                        </td>
+                                                        <td>
+                                                            <a href="#"
+                                                                class="btn py-2 px-3 cursor-pointer rounded inline-block font-medium text-center align-middle select-none transition duration-500 ease-in-out bg-green-550 hover:bg-green-600 text-white border">Track
+                                                                Order</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ================ ProductView Section:END ================ -->
+    </main>
+
+    <!-- =================== Main Wrapper:END========================== -->
+    <!-- =================== Footer:Begin========================== -->
+    <footer>
+        <div class="footer_section w-full items-center p-6 bg-white">
+            <div class="container mx-auto flex">
+                <div class="footer_container w-full flex">
+                    <div class="w-1/4 pl-4">
+                        <picture>
+                            <img src="./src/img/logo.svg" class="mb-2" alt="Logo" />
+                        </picture>
+                        <div class="text-sm pl-2">
+                            <h2 class="text-gray-800">
+                                <i class="w-1/12 text-xs py-1 lni lni-phone"></i>+61 525 240 310
+                            </h2>
+                            <h2 class="text-gray-800">
+                                <i class="w-1/12 text-xs py-1 lni lni-mobile"></i>01858 586930,
+                                01563-526387
+                            </h2>
+                            <h2 class="text-green-550">
+                                <i class="w-1/12 text-xs py-1 lni lni-envelope"></i>FreshGrocery@Gmail.com
+                            </h2>
+                            <h2 class="text-yellow-600">
+                                <i class="w-1/12 text-xs py-1 lni lni-world"></i>www.FreshGrocery.Com
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="w-1/7 text-gray-700 text-sm">
+                        <h2 class="pb-4 text-gray-900 text-base font-medium hover:text-yellow-600">
+                            <a href="#">TOP CITIES</a>
+                        </h2>
+                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                            <a href="#">Dhaka</a>
+                        </h4>
+                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                            <a href="#">Chittagong</a>
+                        </h4>
+                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                            <a href="#">Rajsahi</a>
+                        </h4>
+                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                            <a href="#">Barishal</a>
+                        </h4>
+                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                            <a href="#">Sylhet</a>
+                        </h4>
+                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                            <a href="#">Khulna</a>
+                        </h4>
+                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                            <a href="#">Feni</a>
+                        </h4>
+                    </div>
+                    <div class="w-1/5 text-gray-700 text-sm">
+                        <h2 class="pb-4 text-gray-900 text-base font-medium hover:text-yellow-600">
+                            <a href="#">CATEGORIES</a>
+                        </h2>
+                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                            <a href="#">Vegetables</a>
+                        </h4>
+                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                            <a href="#">Grocery & Staples</a>
+                        </h4>
+                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                            <a href="#">Breakfast & Dairy</a>
+                        </h4>
+                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                            <a href="#">Soft Drinks</a>
+                        </h4>
+                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                            <a href="#">Snacks</a>
+                        </h4>
+                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                            <a href="#">Fresh Juice</a>
+                        </h4>
+                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                            <a href="#">Biscuit & Cookies</a>
+                        </h4>
+                    </div>
+                    <div class="w-1/5 text-gray-700 text-sm">
+                        <h2 class="pb-4 text-gray-900 text-base font-medium hover:text-yellow-6000">
+                            USEFUL LINKS
+                        </h2>
+                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                            <a href="#">Privacy Policy</a>
+                        </h4>
+                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                            <a href="#">Terms Conditions</a>
+                        </h4>
+                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                            <a href="#">About Us</a>
+                        </h4>
+                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                            <a href="#">Affiliate Program</a>
+                        </h4>
+                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                            <a href="#">Store Locations</a>
+                        </h4>
+                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                            <a href="#">Copyright</a>
+                        </h4>
+                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                            <a href="#">Contact Us</a>
+                        </h4>
+                    </div>
+                    <div class="w-1/5">
+                        <div>
+                            <h2 class="text-gray-900 text-base font-medium">DOWNLOAD APP</h2>
+                            <div class="flex py-4">
+                                <a href="#" class="w-1/2">
+                                    <img class="w-8/10" src="https://jogaan.com/_nuxt/img/4ce869c.png"
+                                        alt="Google Play Store" />
+                                </a>
+                                <a href="#" class="w-1/2 -ml-3">
+                                    <img class="w-8/10" src="https://jogaan.com/_nuxt/img/62d930a.png"
+                                        alt="Apple Store" />
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="pt-4">
+                            <h2 class="text-gray-900 text-base font-medium">GET IN TOUCH</h2>
+                            <div class="Footer-Social-media flex justify-center">
+                                <a href="#"><i class="lni lni-facebook-oval hover:text-blue-600"></i></a>
+                                <a href="#"><i class="lni lni-twitter-original hover:text-blue-400"></i></a>
+                                <a href="#"><i class="lni lni-whatsapp hover:text-green-600"></i></a>
+                                <a href="#"><i class="lni lni-instagram hover:text-red-500"></i></a>
+                                <a href="#"><i class="lni lni-youtube hover:text-red-500"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="bottom_footer_section w-full items-center p-8 py-6 bg-gray-800 text-white">
+            <div class="container mx-auto flex">
+                <div class="bottom_footer_container w-full flex">
+                    <div class="text-sm w-1/2">
+                        &copy Copyright 2021
+                        <strong class="tracking-widest">FreshGrocery</strong>. All Rights
+                        Reserved <br />
+                        <span class="text-xs">Made With <i class="lni lni-heart-filled"></i> by JAHID</span>
+                    </div>
+                    <div class="w-1/2">
+                        <img src="https://www.khaasfood.com/wp-content/uploads/2020/06/SSL-Commerz-Pay-With-logo-All-Size-03-1.png"
+                            alt="payments" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- =================== Footer:END========================== -->
+</body>
+
+</html>

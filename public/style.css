@@ -1,0 +1,2863 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+
+/*-----------------------------------------------------------------------------------
+
+    Template Name: FreshGrocery - Grocery System Main CSS
+    Version: 1.0
+
+-----------------------------------------------------------------------------------
+
+    CSS INDEX
+    ===================
+	
+    01. Theme default CSS
+    02. Scrollbar Design CSS
+    03. Featured Offers CSS
+        03.1 FEATURED OFFERS Section Title CSS
+    04. Order Count Badge CSS
+    05. Small Cart CSS
+        05.1 Increment Btn CSS
+    06. Footer CSS
+        06.1 Follow Us Section CSS
+    07. Hero Slider CSS
+    08. Our Best Offers
+    09. Show Product Grid CSS
+    10. Single Product View CSS
+    11. CART Page Design CSS
+        11.1 CART Order Summary Css
+    12. SignIn SignUp Page CSS
+    13. Checkout Page CSS
+    14. ProductList Page Side Filter CSS 
+        14.2 Side Filter Section Collapse CSS
+    15. About Us Page
+    16. Account Breadcrumb CSS 
+    17. Account Settings CSS 
+    18. Order History CSS 
+    19. Wishlist Page CSS
+    20. Order Tracking CSS 
+    21. NavMenu Design CSS  
+    22. Contact Us CSS
+    23. Header Search Box CSS
+    24. Side Nav Design 
+    25. Auth Modal Design CSS
+
+
+-----------------------------------------------------------------------------------*/
+/*
+================================================
+|                                              |
+|            01.Theme default CSS              |
+|                                              |
+================================================
+*/
+body {
+    font-family: 'Mulish', sans-serif;
+}
+
+input:focus,
+option:focus,
+select:focus,
+button:focus,
+textarea:focus {
+    outline-color: #a3d6d5 !important;
+}
+
+@media(min-width:768px) {
+    .md\:revert {
+        display: revert;
+    }
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-2,
+.col-4,
+.col-12,
+.col-10,
+.col-lg-12,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-8,
+.col-lg-9,
+.col-md-8,
+.col-md-9,
+.col-xl-4,
+.col-xl-9,
+.col-md-12,
+.col-md-7,
+.col-sm-4,
+.col-sm-6,
+.col-sm-8,
+.col-sm-12,
+.col-md-6,
+.col-md-3,
+.col-md-4 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+.col-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+
+.col-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.col-10 {
+    -ms-flex: 0 0 83.333333%;
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%;
+}
+
+.col-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.col-2 {
+    -ms-flex: 0 0 16.666667%;
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+}
+
+@media (min-width: 992px) {
+    .col-lg-9 {
+        -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md-8 {
+        -ms-flex: 0 0 66.666667%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+}
+
+@media (min-width: 576px) {
+    .col-sm-6 {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 576px) {
+    .col-sm-4 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg-5 {
+        -ms-flex: 0 0 41.666667%;
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-xl-9 {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-xl-4 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg-3 {
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+@media (min-width: 576px) {
+    .col-sm-8 {
+        -ms-flex: 0 0 66.666667%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg-12 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md-4 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+@media (min-width: 576px) {
+    .col-sm-12 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md-12 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md-auto {
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        width: auto;
+        max-width: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md-6 {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg-8 {
+        -ms-flex: 0 0 66.666667%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg-6 {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md-9 {
+        -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg-4 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md-3 {
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md-7 {
+        -ms-flex: 0 0 58.333333%;
+        flex: 0 0 58.333333%;
+        max-width: 58.333333%;
+    }
+}
+
+@media (min-width: 992px) {
+    .offset-lg-1 {
+        margin-left: 8.333333%;
+    }
+}
+
+/*
+================================================
+|                                              |
+|         02. Scrollbar Design CSS             |
+|                                              |
+================================================
+*/
+::-webkit-scrollbar {
+    width: 6px;
+    height: 2px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: #14a753;
+}
+
+/*
+================================================
+|                                              |
+|           03. Featured Offers CSS            |
+|                                              |
+================================================
+*/
+.featured_offers_content li:last-child {
+    padding-right: 0px !important;
+}
+
+.featured_shopnow_btn:hover {
+    background-color: white !important;
+    color: #000;
+    font-weight: 500;
+    padding: 12px 25px 12px 20px !important;
+    transition: all 0.5s ease-in-out !important;
+}
+
+/*  ================   03.1 FEATURED OFFERS Section Title CSS   ================ */
+.featured_offers_section-title h3 {
+    margin-bottom: 0;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1em;
+    line-height: 1.5;
+    margin-right: 100px;
+    background: #14a753;
+    padding: 15px 25px 15px 10px;
+    position: relative;
+    display: inline-block;
+    z-index: 27;
+    border-radius: 0 5px 0 0;
+    font-weight: 500;
+}
+
+.featured_offers_section-title h3:before {
+    background: #14a753;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 15px;
+    z-index: 1;
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+
+.featured_offers_section-title h3:after {
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-top: 15px solid #14a753;
+    bottom: 1px;
+    content: '';
+    left: -15px;
+    position: absolute;
+    z-index: 1;
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+}
+
+/*
+================================================
+|                                              |
+|         04. Order Count Badge CSS            |
+|                                              |
+================================================
+*/
+.order-count-badge {
+    background: #14a753;
+    height: 20px;
+    width: 20px;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 50%;
+    top: -11px;
+    left: 24px;
+    font-size: 11px;
+    color: #fff;
+    font-weight: 700;
+}
+
+/*
+================================================
+|                                              |
+|             05. Small Cart CSS               |
+|                                              |
+================================================
+*/
+.small_cart-heading_container {
+    border-bottom: 1px solid rgba(129, 129, 129, 0.2);
+}
+
+#small_cart_head {
+    background-color: rgba(31, 41, 55);
+    color: #fff;
+    font-size: 25px;
+}
+
+.small_cart-healthbar {
+    width: 100%;
+    height: 26px;
+    margin: 0px 10px 10px 0px;
+    background: #888;
+}
+
+.small_cart-health_text {
+    padding: 2%;
+}
+
+.small_cart-healthbar__value {
+    background-color: #ff0c0c;
+    width: 0;
+    height: 100%;
+    transition: width 0.6s ease;
+    margin-top: -24px;
+}
+
+.small_cart-checkout-box {
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+}
+
+.small_cart-section {
+    padding: 6px;
+    border-bottom: 1px solid rgba(129, 129, 129, 0.2);
+}
+
+.small_cart-shopping-bag-sidebar {
+    z-index: 100 !important;
+    width: 75px;
+    transform: translateY(-50%);
+}
+
+.small-cart-container {
+    height: 70px;
+}
+
+.small_cart-small_bag {
+    padding: 3px 6px;
+}
+
+.small_cart-produc-size-container .selectbox::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
+    right: 0.7rem;
+    width: 0;
+    height: 0;
+    border: solid black;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+}
+
+.small_cart-produc-size-container select {
+    padding: 0.2rem 1.5rem 0.2rem 0.3rem;
+}
+
+/* 05.1 Increment CSS */
+
+.product_increment_btn .input-number {
+    width: 35px;
+    padding: 8px 8px;
+    outline: none;
+}
+
+.product_increment_btn .input-number,
+.product_increment_btn .input-number-decrement,
+.product_increment_btn .input-number-increment {
+    height: 20px;
+}
+
+.product_increment_btn .input-number-decrement,
+.product_increment_btn .input-number-increment {
+    width: 20px;
+}
+
+.product_increment_btn .input-number-decrement:active,
+.product_increment_btn .input-number-increment:active {
+    background: #ddd;
+}
+
+.product_increment_btn .input-number-decrement {
+    border-right: none;
+    border-radius: 3px 0 0 3px;
+}
+
+.product_increment_btn .input-number-increment {
+    border-left: none;
+    border-radius: 0 3px 3px 0;
+}
+
+/*
+================================================
+|                                              |
+|             06. Footer CSS                   |
+|                                              |
+================================================
+*/
+.footer-links:hover {
+    padding-left: 7px;
+    transition: all 0.3s ease-in;
+}
+
+/*  ==============    06.1 Follow Us Section CSS  ==============  */
+.Footer-Social-media a {
+    display: flex;
+    background: #e3edf7;
+    height: 40px;
+    width: 40px;
+    margin: 0 5px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 1px 3px 6px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0);
+    transition: transform 0.5s;
+}
+
+.Footer-Social-media a i {
+    padding: 7px;
+    color: #777;
+    transition: transform 0.5s;
+}
+
+.Footer-Social-media a:hover {
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+        inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+        -0.5px -0.5px 0px -1px rgba(255, 255, 255, 1), 0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+        0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 0, 0, 0.1);
+    transform: translateY(2px);
+}
+
+.Footer-Social-media a:hover i {
+    transform: scale(0.9);
+}
+
+/*
+================================================
+|                                              |
+|           07. Hero Slider CSS                |
+|                                              |
+================================================
+*/
+.slider_container .hero_slide {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+}
+
+.slider_container .hero_slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slider_container .hero_slide img {
+    border-radius: 6px;
+}
+
+.slider_container .owl-dots {
+    width: 100%;
+    bottom: 1%;
+    text-align: center;
+    position: absolute;
+    color: chocolate !important;
+}
+
+.slider_container .owl-dots button {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.slider_container .owl-dots button {
+    border: none !important;
+    outline: none !important;
+}
+
+.slider_container .owl-nav button {
+    border: none !important;
+    outline: none !important;
+}
+
+.slider_container .owl-prev,
+.slider_container .owl-next {
+    position: absolute;
+    top: 50%;
+    color: #fff !important;
+    transform: translateY(-50%);
+    font-size: 30px !important;
+    font-weight: 600 !important;
+    opacity: 0.4;
+    background: none !important;
+}
+
+.slider_container .owl-prev:hover,
+.slider_container .owl-next:hover {
+    color: #f59f3c !important;
+    opacity: 1;
+}
+
+.slider_container .owl-prev {
+    left: 1%;
+}
+
+.slider_container .owl-next {
+    right: 1%;
+}
+
+/*
+================================================
+|                                              |
+|       08. Our Best Offers Section CSS        |
+|                                              |
+================================================
+*/
+.our_best_offers_btn:hover {
+    padding: 22px;
+    transition: all 0.6s ease-in-out;
+}
+
+/*
+================================================
+|                                              |
+|           09. Show Product Grid CSS          |
+|                                              |
+================================================
+*/
+.product_grid_list_show_container .product-grid {
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    border: 4px solid #fff;
+}
+
+.product_grid_list_show_container .product-grid:before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+}
+
+.product_grid_list_show_container .product-grid:hover:before {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.product_grid_list_show_container .product-grid .product-image {
+    overflow: hidden;
+    position: relative;
+}
+
+.product_grid_list_show_container .product-grid .product-image a {
+    display: block;
+}
+
+.product_grid_list_show_container .product-grid .product-image img {
+    width: 100%;
+    height: 310px;
+}
+
+.product_grid_list_show_container .product-discount-label {
+    color: #fff;
+    background-color: #f59f3c;
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+
+.product_grid_list_show_container .product-grid .social {
+    width: 100%;
+    padding: 30px 0;
+    margin: 0;
+    list-style: none;
+    transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+}
+
+.product_grid_list_show_container .product-grid .social li {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(300%);
+    transition: all 0.5s ease 0s;
+}
+
+.product_grid_list_show_container .product-grid .social li:nth-child(2) {
+    transition-delay: 0.05s;
+}
+
+.product_grid_list_show_container .product-grid .social li:nth-child(3) {
+    transition-delay: 0.13s;
+}
+
+.product_grid_list_show_container .product-grid .social li:nth-child(4) {
+    transition-delay: 0.16s;
+}
+
+.product_grid_list_show_container .product-grid:hover .social li {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.product_grid_list_show_container .product-grid .social li a {
+    color: #000;
+    background-color: #fff;
+    line-height: 50px;
+    height: 50px;
+    width: 50px;
+    margin: 0 2px 10px;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s;
+}
+
+.product_grid_list_show_container .product-grid .social li a:hover {
+    color: #fff;
+    background-color: orange;
+}
+
+.product_grid_list_show_container .product-grid .product-content {
+    padding: 14px 8px;
+    position: relative;
+    z-index: 2;
+    background-color: white;
+}
+
+.product_grid_list_show_container .product-grid .price {
+    color: #14a753;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.product_grid_list_show_container .product-grid .addto_bag_btn:hover {
+    background: linear-gradient(to right, #288652, #45a247);
+}
+
+.product_grid_list_show_container .product-grid .price span {
+    color: #777;
+    margin: 0 0 0 5px;
+    font-weight: 300;
+    text-decoration: line-through;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 990px) {
+    .product_grid_list_show_container .product-grid {
+        margin-bottom: 30px;
+    }
+}
+
+@keyframes new {
+    0% {
+        transform: scaleX(1);
+    }
+
+    50% {
+        transform: scaleX(0.95);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+/*
+================================================
+|                                              |
+|        10. Single Product View CSS           |
+|                                              |
+================================================
+*/
+
+.product-view-content img {
+    width: 100%;
+    display: block;
+}
+
+.product-view-content .product-view-img-item {
+    margin: 0.3rem;
+}
+
+.product-view-content .product-view-img-item:first-child {
+    margin-left: 0;
+}
+
+.product-view-content .product-view-img-item:last-child,
+.product-view-content .product-view-img-item:nth-child(1n + 0) {
+    margin-right: 0;
+}
+
+.product-view-content .product-view-img-item:hover {
+    opacity: 0.8;
+}
+
+.product-view-content .product-view-product-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    height: 3px;
+    width: 80px;
+    background: #12263a;
+}
+
+.product-view-content .product-view-product-detail ul li {
+    margin: 0;
+    list-style: none;
+    background: url(./src/img/checked.png) left center no-repeat;
+    background-size: 18px;
+    padding-left: 1.7rem;
+    margin: 0.4rem 0;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.product-view-content .product-view-product-detail ul li span {
+    font-weight: 500;
+}
+
+.product-view-content .product-view-purchase-info input,
+.product-view-content .product-view-purchase-info .product-view-btn {
+    border: 1.5px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+    padding: 0.45rem 0.8rem;
+    margin-right: 0.2rem;
+    margin-bottom: 1rem;
+}
+
+.product-view-content .product-view-purchase-info .product-view-compare_btn {
+    border: 1px solid rgba(245, 158, 11);
+}
+
+.product-view-content .product-view-purchase-info .product-view-btn {
+    outline: 0;
+}
+
+.product-view-content .product-view-social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    color: #000;
+    border: 1px solid #000;
+    margin: 0 0.2rem;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: all 0.5s ease;
+}
+
+.product-view-content .product-view-social-links a:hover {
+    background: #000;
+    border-color: transparent;
+    color: #fff;
+}
+
+@media screen and (min-width: 992px) {
+    .product-view-content .product-view-card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.5rem;
+    }
+
+    .product-view-content .product-view-card-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .product-view-content .product-view-product-imgs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .product-view-content .product-view-product-content {
+        padding-top: 0;
+    }
+}
+
+/*
+================================================
+|                                              |
+|           11. CART Page Design CSS           |
+|                                              |
+================================================
+*/
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.tbl_cart_product {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.form-control.tbl_quan {
+    max-width: 85px;
+    height: 45px;
+    background: #f4f5f7;
+    font-weight: 600;
+}
+
+.tbl_pr_action {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.tbl_pr_action .tbl_total_price {
+    margin: 0;
+    font-weight: 400;
+    margin-right: 15px;
+}
+
+.tbl_pr_action .tbl_remove {
+    width: 24px;
+    height: 24px;
+    font-size: 10px;
+    background: #edf1f9;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.tbl_pr_quality {
+    color: rgb(97, 95, 95);
+    font-weight: 400;
+}
+
+.tbl_pr_title {
+    font-weight: 600;
+}
+
+.tbl_pr_action .tbl_remove:hover {
+    color: #fff;
+    transition: all 0.3s ease-in;
+    background-color: red;
+}
+
+.cart_coupon label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.form-row {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px;
+}
+
+.form-control {
+    height: 54px;
+    border-radius: 4px;
+    font-size: 15px;
+    box-shadow: none;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #e6eaf3;
+    background-clip: initial;
+}
+
+.form-row>.col,
+.form-row>[class*='col-'] {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media(max-width:450px) {
+
+    .cart_coupon_inpt_box {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+}
+
+/* ======== 11.1 CART Order Summary Css ======== */
+
+.list-group-flush-x .list-group-item {
+    padding-left: 0;
+    padding-right: 0;
+    border-left: none;
+    border-right: none;
+    background: transparent;
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+/* 
+================================================
+|                                              |
+|          12. SignIn SignUp Page CSS          |
+|                                              |
+================================================
+*/
+.auth_content .auth_signin-signup {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 75%;
+    width: 50%;
+    transition: 1s 0.7s ease-in-out;
+    display: grid;
+    grid-template-columns: 1fr;
+    z-index: 5;
+}
+
+.auth_content form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0rem 5rem;
+    transition: all 0.2s 0.7s;
+    overflow: hidden;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.auth_content .auth_input-field {
+    max-width: 380px;
+    width: 100%;
+    background-color: #f0f0f0;
+    margin: 10px 0;
+    height: 55px;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 0 0.4rem;
+    position: relative;
+}
+
+.auth_content .auth_input-field i {
+    text-align: center;
+    line-height: 55px;
+    color: #acacac;
+    transition: 0.5s;
+    font-size: 1.1rem;
+}
+
+.auth_content .auth_input-field input {
+    background: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.auth_content .auth_input-field input::placeholder {
+    color: #aaa;
+    font-weight: 500;
+}
+
+.auth_content .auth_social-icon {
+    height: 46px;
+    width: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.45rem;
+    color: #333;
+    border-radius: 50%;
+    border: 1px solid #333;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.auth_content .auth_social-icon:hover {
+    color: #4481eb;
+    border-color: #4481eb;
+}
+
+.auth_content .btn {
+    width: 150px;
+    background-color: #14a753;
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 49px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.auth_content .btn:hover {
+    background-color: #4d84e2;
+}
+
+.auth_content:before {
+    content: '';
+    position: absolute;
+    height: 2000px;
+    width: 2000px;
+    top: -10%;
+    right: 48%;
+    transform: translateY(-50%);
+    background-image: linear-gradient(-45deg, #14a753 0%, #14a753 100%);
+    transition: 1.8s ease-in-out;
+    border-radius: 50%;
+    z-index: 6;
+}
+
+.auth_content .image {
+    width: 100%;
+    transition: transform 1.1s ease-in-out;
+    transition-delay: 0.4s;
+}
+
+.auth_content .left-auth_panel {
+    pointer-events: all;
+    padding: 4rem 57% 2rem 12%
+}
+
+.auth_content .right-auth_panel {
+    pointer-events: none;
+    padding: 0rem 12% 2rem 12%
+}
+
+.auth_content .btn.transparent {
+    margin: 0;
+    background: none;
+    border: 2px solid #fff;
+    width: 130px;
+    height: 41px;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.auth_content .right-auth_panel .image,
+.auth_content .right-auth_panel .auth_main_content {
+    transform: translateX(800px);
+}
+
+/* ANIMATION */
+
+.auth_content.sign-up-mode:before {
+    transform: translate(100%, -50%);
+    right: 52%;
+}
+
+.auth_content.sign-up-mode .left-auth_panel .image,
+.auth_content.sign-up-mode .left-auth_panel .auth_main_content {
+    transform: translateX(-800px);
+}
+
+.auth_content.sign-up-mode .auth_signin-signup {
+    left: 25%;
+}
+
+.auth_content.sign-up-mode form.auth_sign-up-form {
+    opacity: 1;
+    z-index: 2;
+}
+
+.auth_content.sign-up-mode form.auth_sign-in-form {
+    opacity: 0;
+    z-index: 1;
+}
+
+.auth_content.sign-up-mode .right-auth_panel .image,
+.auth_content.sign-up-mode .right-auth_panel .auth_main_content {
+    transform: translateX(0%);
+}
+
+.auth_content.sign-up-mode .left-auth_panel {
+    pointer-events: none;
+}
+
+.auth_content.sign-up-mode .right-auth_panel {
+    pointer-events: all;
+}
+
+@media (max-width: 870px) {
+    .auth_content {
+        min-height: 800px;
+        height: 100vh;
+    }
+
+    .auth_content .auth_signin-signup {
+        width: 100%;
+        top: 95%;
+        transform: translate(-50%, -100%);
+        transition: 1s 0.8s ease-in-out;
+    }
+
+    .auth_content .auth_signin-signup,
+    .auth_content.sign-up-mode .auth_signin-signup {
+        left: 50%;
+    }
+
+    .auth_content .auth_panels-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+    }
+
+    .auth_content .auth_panel {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 2.5rem 8%;
+        grid-column: 1 / 2;
+    }
+
+    .auth_content .right-auth_panel {
+        grid-row: 3 / 4;
+    }
+
+    .auth_content .left-auth_panel {
+        grid-row: 1 / 2;
+    }
+
+    .auth_content .image {
+        width: 200px;
+        transition: transform 0.9s ease-in-out;
+        transition-delay: 0.6s;
+    }
+
+    .auth_content .auth_panel .auth_main_content {
+        padding-right: 15%;
+        transition: transform 0.9s ease-in-out;
+        transition-delay: 0.8s;
+    }
+
+    .auth_content .auth_panel h3 {
+        font-size: 1.2rem;
+    }
+
+    .auth_content .auth_panel p {
+        font-size: 0.7rem;
+        padding: 0.5rem 0;
+    }
+
+    .auth_content .btn.transparent {
+        width: 110px;
+        height: 35px;
+        font-size: 0.7rem;
+    }
+
+    .auth_content:before {
+        width: 1500px;
+        height: 1500px;
+        transform: translateX(-50%);
+        left: 30%;
+        bottom: 68%;
+        right: initial;
+        top: initial;
+        transition: 2s ease-in-out;
+    }
+
+    .auth_content.sign-up-mode:before {
+        transform: translate(-50%, 100%);
+        bottom: 32%;
+        right: initial;
+    }
+
+    .auth_content.sign-up-mode .left-auth_panel .image,
+    .auth_content.sign-up-mode .left-auth_panel .auth_main_content {
+        transform: translateY(-300px);
+    }
+
+    .auth_content.sign-up-mode .right-auth_panel .image,
+    .auth_content.sign-up-mode .right-auth_panel .auth_main_content {
+        transform: translateY(0px);
+    }
+
+    .auth_content .right-auth_panel .image,
+    .auth_content .right-auth_panel .auth_main_content {
+        transform: translateY(300px);
+    }
+
+    .auth_content.sign-up-mode .auth_signin-signup {
+        top: 5%;
+        transform: translate(-50%, 0);
+    }
+}
+
+@media (max-width: 570px) {
+    .auth_content form {
+        padding: 0 1.5rem;
+    }
+
+    .auth_content .image {
+        display: none;
+    }
+
+    .auth_content .auth_panel .auth_main_content {
+        padding: 0.5rem 1rem;
+    }
+
+    .auth_content {
+        padding: 1.5rem;
+    }
+
+    .auth_content:before {
+        bottom: 72%;
+        left: 50%;
+    }
+
+    .auth_content.auth_sign-up-mode:before {
+        bottom: 28%;
+        left: 50%;
+    }
+}
+
+/*
+================================================
+|                                              |
+|          13. Checkout Page CSS               |
+|                                              |
+================================================
+*/
+
+.checkout_content {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 1200px) {
+    .checkout_content {
+        max-width: 1140px;
+    }
+}
+
+.checkout_content form {
+    flex: 4;
+}
+
+.checkout_content .checkout_Yorder {
+    flex: 2;
+}
+
+.checkout_content .required {
+    color: red;
+}
+
+.checkout_content label,
+.checkout_content table {
+    display: flex;
+    margin: 15px;
+}
+
+@media(max-width:500px) {
+
+    .checkout_content label,
+    .checkout_content table {
+        margin: 15px 5px;
+    }
+}
+
+.checkout_content label>span {
+    float: left;
+    width: 25%;
+    font-weight: 500;
+    padding-right: 20px;
+}
+
+@media(max-width:500px) {
+    .checkout_content label>span {
+        font-size: 15px;
+    }
+}
+
+.checkout_content input[type='text'],
+.checkout_content input[type='tel'],
+.checkout_content input[type='email'],
+.checkout_content select {
+    width: 70%;
+    height: 40px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border: 1px solid #dadada;
+    color: #524e4e;
+    background: transparent;
+}
+
+.checkout_content select {
+    width: 70%;
+    height: 40px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+.checkout_content .checkout_Yorder {
+    margin-top: 15px;
+    height: 600px;
+    padding: 20px;
+    border: 1px solid #dadada;
+}
+
+@media(max-width:500px) {
+    .checkout_content .checkout_Yorder {
+        padding: 14px;
+    }
+}
+
+.checkout_content table {
+    margin: 0;
+    padding: 0;
+}
+
+.checkout_content th {
+    border-bottom: 1px solid #dadada;
+    padding: 10px 0;
+    font-size: 20px;
+}
+
+.checkout_content tr>td:nth-child(1) {
+    text-align: left;
+    color: #2d2d2a;
+}
+
+.checkout_content tr>td:nth-child(2) {
+    text-align: right;
+    color: #14a753;
+}
+
+.checkout_content td {
+    border-bottom: 1px solid #dadada;
+    padding: 25px 25px 25px 0;
+    font-weight: 500;
+}
+
+.checkout_content p {
+    display: block;
+    color: #888;
+    margin: 0;
+    padding-left: 25px;
+}
+
+.checkout_content .checkout_Yorder>div {
+    padding: 15px 0;
+    font-weight: 500;
+}
+
+/*
+=======================================================
+|                                                     |
+|   14. ProductList Page Side Filter Design CSS       |
+|                                                     |
+=======================================================
+*/
+.group_sidebar .sb-wrapper {
+    border: 1px solid #e5e5e5;
+    margin-bottom: 20px;
+}
+
+.group_sidebar .sb-wrapper .sb-title {
+    background: #f1f1f1;
+    padding: 9px 15px;
+    border-bottom: 1px solid #e5e5e5;
+    font-family: Lato;
+    font-size: 16px;
+    color: #2c2c2c;
+    text-transform: uppercase;
+}
+
+.group_sidebar .sb-wrapper .shop-by-content {
+    padding: 15px;
+}
+
+.group_sidebar .sb-wrapper .shop-by-content#tags-filter-content p.title {
+    font-weight: 700;
+}
+
+.group_sidebar .sb-wrapper .shop-by-content .tag-group .ficon {
+    float: right;
+}
+
+.tag-group p.title .ficon {
+    float: right;
+}
+
+.tag-group ul.collapse {
+    display: block;
+}
+
+.group_sidebar .sb-wrapper .shop-by-content#tags-filter-content ul li {
+    margin-bottom: 7px;
+}
+
+ul.collapse.color_filter li {
+    display: inline-block;
+    margin: 0 5px 5px 0;
+}
+
+ul.collapse.color_filter li span {
+    display: block;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #eee;
+}
+
+.group_sidebar .sb-wrapper .shop-by-content#tags-filter-content ul li a span.fe-checkbox {
+    margin-right: 8px;
+}
+
+.group_sidebar .sb-wrapper .shop-by-content#tags-filter-content ul li a span.fe-checkbox:before {
+    content: '\f096';
+    font: normal normal normal 14px/1 FontAwesome;
+}
+
+/* 14.2 Filter Section Collapse CSS  */
+.tag-group p.title.open+ul.collapse {
+    display: none;
+}
+
+.tag-group ul.collapse {
+    display: block;
+}
+
+ul.collapse.color_filter li {
+    display: inline-block;
+    margin: 0 5px 5px 0;
+}
+
+ul.collapse.color_filter li span {
+    display: block;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #eee;
+}
+
+ul.collapse.color_filter li span:hover {
+    border-color: #333;
+}
+
+ul.collapse.color_filter li a {
+    background: none;
+    padding: 0;
+}
+
+ul.collapse.color_filter li.active {
+    border-color: #333;
+}
+
+.group_sidebar .slider-banner-wrapper {
+    border: none;
+}
+
+/*
+================================================
+|                                              |
+|            15.About Us Page CSS              |
+|                                              |
+================================================
+*/
+.page-header {
+    padding: 4.6rem 0 5rem;
+}
+
+.page-header.page-header-big {
+    min-height: 250px;
+}
+
+.about-img-front {
+    border: 2rem solid #f9f9f9;
+}
+
+/* Meet Our Team*/
+.member {
+    max-width: 376px;
+}
+
+.member-overlay {
+    background-color: rgba(102, 102, 102, 0.7);
+}
+
+.member:hover .member-overlay {
+    visibility: visible;
+    opacity: 1;
+}
+
+.member:hover.member-anim .member-overlay .member-title,
+.member:hover.member-anim .member-overlay p,
+.member:hover.member-anim .member-overlay .social-icons {
+    animation-name: fadeInUpShort;
+    animation-duration: .65s;
+    animation-fill-mode: both;
+}
+
+/* Faq */
+.faq_accordion label:after {
+    content: '+';
+    position: absolute;
+    right: 1em;
+    color: rgba(31, 41, 55);
+}
+
+.faq_accordion input:checked+label:after {
+    content: '-';
+    line-height: .8em;
+}
+
+.faq_accordion .accordion__content {
+    max-height: 0em;
+    transition: all 0.4s cubic-bezier(0.865, 0.14, 0.095, 0.87);
+}
+
+.faq_accordion input[name='panel']:checked~.accordion__content {
+    max-height: 50em;
+}
+
+/*
+================================================
+|                                              |
+|          16. Account Breadcrumb CSS          |
+|                                              |
+================================================
+*/
+
+.breadcrumbs_wrap.dark li.breadcrumb-item a,
+.breadcrumbs_wrap.dark li.breadcrumb-item:before {
+    color: #7f8fa9 !important;
+}
+
+.breadcrumbs_wrap.dark .breadcrumb-item.active {
+    color: #fff;
+}
+
+.breadcrumbs_wrap.dark li.breadcrumb-item a,
+.breadcrumbs_wrap.dark li.breadcrumb-item:before {
+    color: #7f8fa9 !important;
+}
+
+.breadcrumbs_wrap.dark .breadcrumb-item.active {
+    color: #fff;
+}
+
+.breadcrumbs_wrap.dark .breadcrumb-item.active {
+    color: #fff;
+}
+
+.breadcrumbs_wrap.dark li.breadcrumb-item a,
+.breadcrumbs_wrap.dark li.breadcrumb-item:before {
+    color: #7f8fa9 !important;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    display: inline-block;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    color: #868e96;
+    content: '/';
+}
+
+.breadcrumb::after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+/*
+================================================
+|                                              |
+|          17. Account Settings CSS            |
+|                                              |
+================================================
+*/
+
+/* Sidebar */
+.account_sidebar .list-group-item:first-child {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+.account_sidebar .list-group-item {
+    position: relative;
+    display: block;
+    padding: 1.25rem;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid #e0e4ec;
+}
+
+.account_sidebar .list-group-item h2:hover,
+.account_sidebar .list-group-item i:hover,
+.account_sidebar .list-group-item:hover {
+    color: #14a753;
+    background-color: rgba(219, 234, 254);
+    transition: all 0.3s ease-in;
+}
+
+.account_sidebar .side_active_link,
+.account_sidebar .side_active_link h2,
+.account_sidebar .side_active_link i {
+    color: #14a753;
+    font-weight: 600;
+}
+
+.account_sidebar .profile_card-body .form-group {
+    margin-bottom: 1rem;
+}
+
+.account_sidebar .profile_card-body .form-group label {
+    display: inline-block;
+    --tw-text-opacity: 1;
+    color: rgba(55, 65, 81, var(--tw-text-opacity));
+    margin-bottom: 0.5rem;
+}
+
+.account_sidebar .submit-page .form-control {
+    background: #f9fafc;
+    border: 1px solid #ebedf5;
+    border-radius: 3px;
+    color: #646e77;
+}
+
+.account_sidebar .profile_card-body .form-group .form-control {
+    display: block;
+    width: 100%;
+    height: 54px;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+/*
+================================================
+|                                              |
+|           18. Order History CSS              |
+|                                              |
+================================================
+*/
+
+table {
+    border-collapse: collapse;
+}
+
+table.table tr th {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.table tr th,
+.table tr td {
+    border-color: #e8eaf1;
+    padding: 12px 15px;
+    --tw-text-opacity: 1;
+    color: rgba(55, 65, 81, var(--tw-text-opacity));
+    padding: 12px 15px;
+    vertical-align: middle;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 1px solid transparent;
+    border-top: 0 !important;
+    text-align: left;
+}
+
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+    border-top: 1px solid #e8eaf1;
+}
+
+.tbl_cart_product_thumb {
+    margin-right: 15px;
+    max-width: 70px;
+}
+
+/* 
+================================================
+|                                              |
+|           19. Wishlist Page CSS              |
+|                                              |
+================================================
+*/
+
+@media (min-width: 1024px) {
+    .section--wishlist .wishlist__product--mobile {
+        display: none;
+    }
+}
+
+.ps-product--vertical .ps-product__thumbnail {
+    width: 70px;
+    height: 70px;
+    margin-left: 1px;
+}
+
+/* 
+================================================
+|                                              |
+|          20. Order Tracking CSS              |
+|                                              |
+================================================
+*/
+
+.track_order_list li {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.trach_icon_list {
+    margin-right: 20px;
+    width: 80px;
+    height: 80px;
+    font-size: 32px;
+}
+
+.track_order_list li.complete .trach_icon_list {
+    border: 1px solid rgba(76, 175, 80, 0.3);
+    color: #1ca301;
+}
+
+.track_order_list li.order_confirmed .trach_icon_list {
+    border: 1px solid rgba(255, 152, 0, 0.3);
+    color: #ff9800;
+}
+
+.track_order_list li.processing .trach_icon_list {
+    border: 1px solid #afc2b7;
+}
+
+.track_list_active,
+.track_list_active h4,
+.track_list_active p {
+    color: #14a753 !important;
+}
+
+/* 
+================================================
+|                                              |
+|          21. NavMenu Design CSS              |
+|                                              |
+================================================
+*/
+
+
+nav {
+    display: block;
+    background-color: rgba(31, 41, 55);
+}
+
+.menu {
+    display: block;
+}
+
+.menu li {
+    display: inline-block;
+    position: relative;
+    z-index: 100;
+}
+
+.menu li:first-child {
+    margin-left: 0;
+}
+
+.menu li a {
+    font-weight: 600;
+    text-transform: none;
+    text-decoration: none;
+    padding: 15px 15px;
+    display: block;
+    font-size: 14px;
+    color: #fff;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.sub-menu li a {
+    padding: 8px 15px;
+}
+
+.menu li a:hover,
+.menu li:hover>a {
+    color: #14a753;
+    background: transparent;
+}
+
+
+.menu ul {
+    visibility: hidden;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    width: 170px;
+    position: absolute;
+    left: 0px;
+    background: #fff;
+    z-index: 99;
+    transform: translate(0, 20px);
+    transition: all 0.2s ease-out;
+}
+
+.menu ul.categories_ul {
+    width: 240px;
+}
+
+.menu ul:after {
+    bottom: 100%;
+    left: 20%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #fff;
+    border-width: 6px;
+    margin-left: -6px;
+}
+
+.menu ul li {
+    display: block;
+    float: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+}
+
+.menu ul li a {
+    font-size: 15px;
+    font-weight: normal;
+    display: block;
+    color: rgba(31, 41, 55);
+    background: #fff;
+}
+
+.menu ul li a:hover,
+.menu ul li:hover>a {
+    background: #14a753;
+    color: #fff;
+}
+
+.menu li:hover>ul {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.menu ul ul {
+    left: 100%;
+    top: 0px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(20px, 20px);
+    transition: all 0.2s ease-out;
+}
+
+.menu ul ul:after {
+    left: -6px;
+    top: 10%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-right-color: #fff;
+    border-width: 6px;
+    margin-top: -6px;
+}
+
+.menu li>ul ul:hover {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.responsive-menu {
+    display: none;
+    width: 100%;
+    padding: 13px 15px;
+    background-color: rgba(31, 41, 55);
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.responsive-category {
+    padding: 11px 20px;
+    color: #ffffff;
+    text-transform: capitalize;
+    font-weight: 600;
+    top: 0;
+    right: 1px;
+    border-left: 1px solid #676161;
+}
+
+.responsive-menu:hover {
+    background-color: rgba(31, 41, 55);
+    color: #fff;
+    text-decoration: none;
+}
+
+a.homer {
+    background: #14a753;
+}
+
+
+@media (min-width: 768px) and (max-width: 979px) {
+    .mainWrap {
+        width: 768px;
+    }
+
+    .menu ul {
+        top: 37px;
+    }
+
+    .menu li a {
+        font-size: 12px;
+    }
+
+    a.homer {
+        background: #374147;
+    }
+}
+
+@media (max-width: 767px) {
+    .mainWrap {
+        width: auto;
+        padding: 50px 20px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .responsive-menu {
+        display: block;
+    }
+
+    nav {
+        margin: 0;
+        background: none;
+    }
+
+    .menu li {
+        display: block;
+        margin: 0;
+    }
+
+    .shop_categories_li {
+        display: none !important;
+    }
+
+    .menu li a {
+        background: #fff;
+        color: #797979;
+    }
+
+    .menu li a:hover,
+    .menu li:hover>a {
+        background: #14a753;
+        color: #fff;
+    }
+
+    .menu ul {
+        visibility: hidden;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transform: initial;
+    }
+
+    .menu li:hover>ul {
+        visibility: visible;
+        opacity: 1;
+        position: relative;
+        transform: initial;
+    }
+
+    .menu ul ul {
+        left: 0;
+        transform: initial;
+    }
+
+    .menu li>ul ul:hover {
+        transform: initial;
+    }
+}
+
+@media(min-width: 768px) {
+    .shop_categories_li {
+        display: block;
+    }
+}
+
+/* 
+================================================
+|                                              |
+|        21. Order Confirmation CSS            |
+|                                              |
+================================================
+*/
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+}
+
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+/*
+================================================
+|                                              |
+|          22. Contact Us CSS                  |
+|                                              |
+================================================
+*/
+.fade-up-fast {
+    transition: all 500ms 100ms;
+}
+
+blockquote::after,
+.contactus_blockquote::after {
+    font-size: 30px;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    right: 50px;
+    content: '\275C \275C';
+    transform: translateY(-50%);
+}
+
+/* 2nd */
+
+.contact_style3 .contact_icon i {
+    line-height: 78px;
+    transition: all 0.5s ease-in-out;
+}
+
+.contact_style3:hover .contact_icon::before {
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.contact_style3 .contact_icon::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #14a753;
+    z-index: ;
+    transition: all 0.5s ease-in-out;
+    -moz-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    border-radius: 100%;
+    z-index: -1;
+}
+
+.contact_style3:hover .contact_icon i {
+    color: #fff;
+}
+
+/* 3rd */
+
+.contactus_form .form-control {
+    color: #000;
+    box-shadow: none;
+    height: 50px;
+    padding: 8px 15px;
+}
+
+.contactus_form .form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.contactus_form textarea.form-control,
+.contactus_form textarea.form-control:focus {
+    height: auto;
+    padding: 12px 15px;
+}
+
+
+/*
+================================================
+|                                              |
+|          23. Header Search Box CSS           |
+|                                              |
+================================================
+*/
+
+.header-search_box .header_search_btn {
+    height: 42px;
+    width: 42px;
+    line-height: 42px;
+
+}
+
+.header-search_box .searchbutton {
+    font-size: 30px;
+    padding: 0;
+}
+
+@media(max-width:490px) {
+    .header-search_box .searchbutton {
+        font-size: 22px;
+    }
+}
+
+.header-search_box .search:focus+.searchbutton {
+    transition-duration: 0.4s;
+    background-color: white;
+    color: black;
+}
+
+.header-search_box .search {
+    transition-duration: 0.4s;
+}
+
+.header-search_box .search:focus {
+    width: 300px;
+    padding: 0 16px 0 0;
+    z-index: 100;
+    border: 1px solid #4fa854;
+    border-radius: 5px;
+}
+
+@media(max-width:490px) {
+    .header-search_box .search:focus {
+        width: 300px;
+    }
+}
+
+@media(max-width:460px) {
+    .header-search_box .search:focus {
+        width: 250px;
+    }
+}
+
+@media(max-width:420px) {
+    .header-search_box .search:focus {
+        width: 400px;
+    }
+}
+
+@media(max-width:410px) {
+    .header-search_box .search:focus {
+        width: 380px;
+    }
+}
+
+@media(max-width:390px) {
+    .header-search_box .search:focus {
+        width: 350px;
+    }
+}
+
+@media(max-width:370px) {
+    .header-search_box .search:focus {
+        width: 345px;
+    }
+}
+
+@media(max-width:350px) {
+    .header-search_box .search:focus {
+        width: 325px;
+    }
+}
+
+
+.header-search_box .expandright {
+    left: auto;
+    right: 49px;
+}
+
+@media(max-width:420px) {
+    .header-search_box .expandright {
+        left: auto;
+        right: -100px;
+    }
+}
+
+.header-search_box .expandright:focus {
+    padding: 0 0 0 16px;
+    outline: none;
+}
+
+/*
+================================================
+|                                              |
+|          24. Side Nav Design CSS             |
+|                                              |
+================================================
+*/
+.side-nav {
+    position: relative;
+    top: 0;
+    left: 0;
+    border-top: 1px solid gray;
+}
+
+.side-nav-list {
+    position: absolute;
+    left: -100%;
+    top: -168px;
+    z-index: 10000;
+    width: 250px;
+    height: 100vh;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(31, 41, 55);
+    padding: 15px;
+    transition: all .7s ease-in-out;
+}
+
+.side-nav-item {
+    display: block;
+    margin: 15px 0;
+    padding: 0;
+    text-align: center;
+}
+
+.side-nav-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+}
+
+.slide-in {
+    left: 0;
+}
+
+/* --------------------- */
+/* Styling top level menu items. */
+/* .openMenuShadowDrop {
+    display: block;
+    background: rgba(0, 0, 0, .65);
+    position: fixed;
+    width: 100%;
+    top: 110px;
+    left: 0;
+    z-index: 2;
+    height: 100%;
+} */
+
+.nav a,
+.nav label {
+    display: block;
+    padding: .85rem;
+    color: #fff;
+    background-color: transparent;
+    box-shadow: inset 0 -1px #1d1d1d;
+    -webkit-transition: all .25s ease-in;
+    transition: all .25s ease-in;
+}
+
+.nav a:focus,
+.nav a:hover,
+.nav label:focus,
+.nav label:hover {
+    color: rgba(255, 255, 255, 0.5);
+    background: #030303;
+}
+
+.nav label {
+    cursor: pointer;
+}
+
+/* Styling sub menu items. */
+/**
+ * Styling first level lists items
+ */
+
+.group-list a,
+.group-list label {
+    padding-left: 2rem;
+    background: #252525;
+    box-shadow: inset 0 -1px #373737;
+}
+
+.group-list a:focus,
+.group-list a:hover,
+.group-list label:focus,
+.group-list label:hover {
+    background: #131313;
+}
+
+/**
+ * Styling second level list items
+ */
+
+.sub-group-list a,
+.sub-group-list label {
+    padding-left: 4rem;
+    background: #353535;
+    box-shadow: inset 0 -1px #474747;
+}
+
+.sub-group-list a:focus,
+.sub-group-list a:hover,
+.sub-group-list label:focus,
+.sub-group-list label:hover {
+    background: #232323;
+}
+
+/**
+ * Styling third level list items
+ */
+
+.sub-sub-group-list a,
+.sub-sub-group-list label {
+    padding-left: 6rem;
+    background: #454545;
+    box-shadow: inset 0 -1px #575757;
+}
+
+.sub-sub-group-list a:focus,
+.sub-sub-group-list a:hover,
+.sub-sub-group-list label:focus,
+.sub-sub-group-list label:hover {
+    background: #333333;
+}
+
+/**
+ * Hide nested lists
+ */
+
+.group-list,
+.sub-group-list,
+.sub-sub-group-list {
+    height: 100%;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height .5s ease-in-out;
+    transition: max-height .5s ease-in-out;
+}
+
+.nav__list input[type=checkbox]:checked+label+ul {
+    /* reset the height when checkbox is checked */
+    max-height: 1000px;
+}
+
+Rotating chevron icon on toggle. label>span {
+    float: right;
+    -webkit-transition: -webkit-transform .65s ease;
+    transition: transform .65s ease;
+}
+
+.nav__list input[type=checkbox]:checked+label>span {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+/*
+================================================
+|                                              |
+|          25. Auth Modal Design CSS           |
+|                                              |
+================================================
+*/
+
+.auth-user-modal {
+    background: rgba(52, 54, 66, 0.6);
+    transition: opacity 0.3s 0, visibility 0 0.3s;
+}
+
+.auth-user-modal.is-visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s 0, visibility 0 0;
+}
+
+.auth-user-modal.is-visible .auth-user-modal-container {
+    transform: translateY(0);
+}
+
+.auth-user-modal-container {
+    margin: 3em auto 4em;
+    transform: translateY(-30px);
+}
+
+.auth-user-modal-container .auth_nav-switcher::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.auth-user-modal-container .auth_nav-switcher li:first-child a {
+    border-radius: 0.25em 0 0 0;
+}
+
+.auth-user-modal-container .auth_nav-switcher li:last-child a {
+    border-radius: 0 0.25em 0 0;
+}
+
+.auth-user-modal-container .auth_nav-switcher a {
+    background: #d2d8d8;
+    color: #809191;
+}
+
+.auth-user-modal-container .auth_nav-switcher a.selected {
+    background: #FFF;
+    color: #505260;
+}
+
+@media only screen and (min-width: 600px) {
+    .auth-user-modal-container {
+        margin: 4em auto;
+    }
+
+    .auth-user-modal-container .auth_nav-switcher a {
+        height: 70px;
+        line-height: 70px;
+    }
+}
+
+.auth-form .fieldset:first-child {
+    margin-top: 0;
+}
+
+.auth-form .fieldset:last-child {
+    margin-bottom: 0;
+}
+
+.auth-form label {
+    font-size: 14px;
+    font-size: 0.875rem;
+}
+
+.auth-form label.image-replace {
+    /* replace text with an icon */
+    display: inline-block;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 20px;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    color: transparent;
+    text-shadow: none;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+}
+
+.auth-form label.auth-username {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M20.822 18.096c-3.439-.794-6.64-1.49-5.09-4.418 4.72-8.912 1.251-13.678-3.732-13.678-5.082 0-8.464 4.949-3.732 13.678 1.597 2.945-1.725 3.641-5.09 4.418-3.073.71-3.188 2.236-3.178 4.904l.004 1h23.99l.004-.969c.012-2.688-.092-4.222-3.176-4.935z"/></svg>') center no-repeat;
+    opacity: .6;
+}
+
+.auth-form label.auth-email {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.971l-11.986 9.713zm-5.425-1.822l-6.575-5.329v12.501l6.575-7.172zm10.85 0l6.575 7.172v-12.501l-6.575 5.329zm-1.557 1.261l-3.868 3.135-3.868-3.135-8.11 8.848h23.956l-8.11-8.848z"/></svg>') center no-repeat;
+    opacity: .6;
+}
+
+.auth-form label.auth-password {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M17 9.761v-4.761c0-2.761-2.238-5-5-5-2.763 0-5 2.239-5 5v4.761c-1.827 1.466-3 3.714-3 6.239 0 4.418 3.582 8 8 8s8-3.582 8-8c0-2.525-1.173-4.773-3-6.239zm-8-4.761c0-1.654 1.346-3 3-3s3 1.346 3 3v3.587c-.927-.376-1.938-.587-3-.587s-2.073.211-3 .587v-3.587zm3 17c-3.309 0-6-2.691-6-6s2.691-6 6-6 6 2.691 6 6-2.691 6-6 6zm2-6c0 1.104-.896 2-2 2s-2-.896-2-2 .896-2 2-2 2 .896 2 2z"/></svg>') center no-repeat;
+    opacity: .6;
+}
+
+.auth-form input {
+    margin: 0;
+    padding: 0;
+    border-radius: 0.25em;
+}
+
+.auth-form input.full-width {
+    width: 100%;
+}
+
+.auth-form input.has-padding {
+    padding: 12px 20px 12px 50px;
+}
+
+.auth-form input.has-border {
+    border: 1px solid #d2d8d8;
+    appearance: none;
+}
+
+.auth-form input.has-border:focus {
+    border-color: #14a753;
+    box-shadow: 0 0 5px rgba(52, 54, 66, 0.1);
+    outline: none;
+}
+
+.auth-form input.has-error {
+    border: 1px solid #d76666;
+}
+
+.auth-form input[type=password] {
+    padding-right: 65px;
+}
+
+.auth-form input[type=submit] {
+    padding: 16px 0;
+    cursor: pointer;
+    background: #14a753;
+    color: #FFF;
+    font-weight: bold;
+    border: none;
+    appearance: none;
+}
+
+.no-touch .auth-form input[type=submit]:hover,
+.no-touch .auth-form input[type=submit]:focus {
+    background: #3599ae;
+    outline: none;
+}
+
+.auth-form .hide-password {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 6px 15px;
+    border-left: 1px solid #d2d8d8;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    font-size: 14px;
+    font-size: 0.875rem;
+    color: #343642;
+}
+
+.auth-form .auth-error-message {
+    display: inline-block;
+    position: absolute;
+    left: -5px;
+    bottom: -35px;
+    background: rgba(215, 102, 102, 0.9);
+    padding: 0.8em;
+    z-index: 2;
+    color: #FFF;
+    font-size: 13px;
+    font-size: 0.8125rem;
+    border-radius: 0.25em;
+    /* prevent click and touch events */
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s 0, visibility 0 0.2s;
+}
+
+.auth-form .auth-error-message::after {
+    /* triangle */
+    content: "";
+    position: absolute;
+    left: 22px;
+    bottom: 100%;
+    height: 0;
+    width: 0;
+    border-bottom: 8px solid rgba(215, 102, 102, 0.9);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+}
+
+.auth-form .auth-error-message.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.2s 0, visibility 0 0;
+}
+
+@media only screen and (min-width: 600px) {
+    .auth-form {
+        padding: 2em;
+    }
+
+    .auth-form .fieldset {
+        margin: 2em 0;
+    }
+
+    .auth-form .fieldset:first-child {
+        margin-top: 0;
+    }
+
+    .auth-form .fieldset:last-child {
+        margin-bottom: 0;
+    }
+
+    .auth-form input.has-padding {
+        padding: 16px 20px 16px 50px;
+    }
+
+    .auth-form input[type=submit] {
+        padding: 16px 0;
+    }
+}
+
+.auth-form-message {
+    padding: 1.4em 1.4em 0;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+    .auth-form-message {
+        padding: 2em 2em 0;
+    }
+}
+
+
+.auth-close-form {
+    display: block;
+    position: absolute;
+    right: -23px;
+    top: -15px;
+    background: url('./src/img/close-icon.png') center no-repeat;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#auth-login,
+#auth-signup,
+#auth-reset-password {
+    display: none;
+}
+
+#auth-login.is-selected,
+#auth-signup.is-selected,
+#auth-reset-password.is-selected {
+    display: block;
+}
