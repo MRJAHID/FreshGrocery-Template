@@ -1,0 +1,1922 @@
+<!DOCTYPE html>
+<html lang="en" class="box-border">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fresh Grocery</title>
+        <!-- Favicon -->
+        <link rel="icon" href="src/img/favicon.ico" />
+        <!--LineIcons -->
+        <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet" />
+        <!-- Owl Carousel Slider -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        />
+        <!-- CSS -->
+        <link rel="stylesheet" href="./src/tailwind.css" />
+        <link rel="stylesheet" href="./src/css/style.css" />
+        <!-- ======================== ******* ======================== -->
+        <!-- ======================== Scripts ======================== -->
+        <!-- ======================== ******* ======================== -->
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Owl Carousel -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <!-- Main Custom JS-->
+        <script type="text/javascript" src="./src/js/main.js"></script>
+    </head>
+    <body class="box-border min-h-screen overflow-auto antialiased bg-blue-100">
+        <!-- ======================== Small Cart:Begin ======================== -->
+        <div id="small_cart">
+            <div>
+                <div
+                    id="small_cart_container"
+                    class="container fixed hidden w-full h-full"
+                    style="background-color: rgba(0, 0, 0, 0.5); z-index: 1000"
+                >
+                    <div
+                        class="fixed top-0 right-0 w-full h-full md:w-2/3 lg:w-1/3"
+                        style="background: rgb(255, 255, 255)"
+                    >
+                        <!-- Head:Begin -->
+                        <div
+                            id="small_cart_head"
+                            class="small_cart-heading_container"
+                            style="min-height: 5%; height: 5%"
+                        >
+                            <div
+                                id="small_cart_head"
+                                class="flex items-center justify-between h-full"
+                            >
+                                <div class="w-8/12">
+                                    <h5
+                                        style="color: #fff; font-size: 12px"
+                                        class="px-3 font-semibold tracking-wider  small_cart_shopping_heading"
+                                    >
+                                        <i class="lni lni-anchor"></i>
+                                        SHOPPING CART
+                                    </h5>
+                                </div>
+                                <div class="flex justify-end w-4/12 mr-2">
+                                    <p
+                                        style="font-size: 12px"
+                                        class="font-medium uppercase cursor-pointer  small_cart-close hover:text-red-600"
+                                    >
+                                        Close &nbsp;
+                                        <i class="lni lni-close"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Head:END -->
+
+                        <!-- HealthBar:Begin -->
+                        <div class="small_cart-healthbar">
+                            <span class="text-xs font-bold text-white small_cart-health_text"
+                                >You may checkout now.</span
+                            >
+                            <div
+                                class="small_cart-healthbar__value"
+                                style="background-color: rgb(39, 174, 96); width: 4800%"
+                            ></div>
+                        </div>
+                        <!-- HealthBar:END -->
+
+                        <!-- Main Body:Begin -->
+                        <div
+                            class="small_cart-body-container"
+                            style="overflow-y: scroll; height: 81%"
+                        >
+                            <!-- 1 -->
+                            <div class="flex flex-col small_cart-checkout-box items-between">
+                                <div class="relative flex small_cart-section">
+                                    <div class="small_cart-product-remove">
+                                        <i
+                                            class="absolute text-xs cursor-pointer  lni lni-close right-5 top-3 hover:text-red-700"
+                                        ></i>
+                                    </div>
+                                    <div class="flex items-center w-4/12">
+                                        <a href="#"
+                                            ><img
+                                                style="width: 80px"
+                                                src="./src/img/vegetables1.png"
+                                        /></a>
+                                    </div>
+                                    <div class="w-8/12 leading-normal" style="margin-left: 5px">
+                                        <div class="flex items-start justify-between pb-1">
+                                            <a href="#">
+                                                <p
+                                                    title=""
+                                                    class="text-sm font-medium text-gray-800  product-title"
+                                                >
+                                                    Mixed Fruit Salad
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <!-- Product Size Select Box -->
+                                        <div class="flex small_cart-produc-size-container">
+                                            <div class="relative selectbox">
+                                                <select
+                                                    name=""
+                                                    id=""
+                                                    class="flex text-xs text-gray-800 bg-gray-100 border border-gray-100 appearance-none cursor-pointer  outline-0"
+                                                >
+                                                    <option value="">1000 Gm</option>
+                                                    <option value="">1 Kg</option>
+                                                    <option value="">5 Litter</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex">
+                                            <!-- Inrement Button
+                                         -->
+                                            <div class="flex pt-2 product_increment_btn">
+                                                <span
+                                                    class="flex items-center justify-center inline-block font-bold text-gray-800 bg-gray-300 border-none cursor-pointer select-none  input-number-decrement hover:bg-gray-800 hover:text-white"
+                                                    >–</span
+                                                >
+                                                <input
+                                                    class="text-center text-gray-700 align-top border-none select-none  input-number"
+                                                    type="text"
+                                                    value="1"
+                                                    min="0"
+                                                    max="10"
+                                                />
+                                                <span
+                                                    class="flex items-center justify-center inline-block font-bold text-gray-800 bg-gray-300 border-none cursor-pointer select-none  input-number-increment hover:bg-gray-800 hover:text-white"
+                                                    >+</span
+                                                >
+                                            </div>
+                                            <!-- Price -->
+                                            <div
+                                                class="flex items-center justify-end w-7/12  small_cart-product-total"
+                                            >
+                                                <p class="text-base font-semibold text-yellow-550">
+                                                    ৳ 720
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 2 -->
+                            <div class="flex flex-col small_cart-checkout-box items-between">
+                                <div class="relative flex small_cart-section">
+                                    <div class="small_cart-product-remove">
+                                        <i
+                                            class="absolute text-xs cursor-pointer  lni lni-close right-5 top-3 hover:text-red-700"
+                                        ></i>
+                                    </div>
+                                    <div class="flex items-center w-4/12">
+                                        <a href="#"
+                                            ><img
+                                                style="width: 80px"
+                                                src="./src/img/vegetables2.png"
+                                        /></a>
+                                    </div>
+                                    <div class="w-8/12 leading-normal" style="margin-left: 5px">
+                                        <div class="flex items-start justify-between pb-1">
+                                            <a href="#">
+                                                <p
+                                                    title=""
+                                                    class="text-sm font-medium text-gray-800  product-title"
+                                                >
+                                                    Mixed Fruit Salad
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <!-- Product Size Select Box -->
+                                        <div class="flex small_cart-produc-size-container">
+                                            <div class="relative selectbox">
+                                                <select
+                                                    name=""
+                                                    id=""
+                                                    class="flex text-xs text-gray-800 bg-gray-100 border border-gray-100 appearance-none cursor-pointer  outline-0"
+                                                >
+                                                    <option value="">1000 Gm</option>
+                                                    <option value="">1 Kg</option>
+                                                    <option value="">5 Litter</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex">
+                                            <!-- Inrement Button
+                                         -->
+                                            <div class="flex pt-2 product_increment_btn">
+                                                <span
+                                                    class="flex items-center justify-center inline-block font-bold text-gray-800 bg-gray-300 border-none cursor-pointer select-none  input-number-decrement hover:bg-gray-800 hover:text-white"
+                                                    >–</span
+                                                >
+                                                <input
+                                                    class="text-center text-gray-700 align-top border-none select-none  input-number"
+                                                    type="text"
+                                                    value="1"
+                                                    min="0"
+                                                    max="10"
+                                                />
+                                                <span
+                                                    class="flex items-center justify-center inline-block font-bold text-gray-800 bg-gray-300 border-none cursor-pointer select-none  input-number-increment hover:bg-gray-800 hover:text-white"
+                                                    >+</span
+                                                >
+                                            </div>
+                                            <!-- Price -->
+                                            <div
+                                                class="flex items-center justify-end w-7/12  small_cart-product-total"
+                                            >
+                                                <p class="text-base font-semibold text-yellow-550">
+                                                    ৳ 720
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 3 -->
+                            <div class="flex flex-col small_cart-checkout-box items-between">
+                                <div class="relative flex small_cart-section">
+                                    <div class="small_cart-product-remove">
+                                        <i
+                                            class="absolute text-xs cursor-pointer  lni lni-close right-5 top-3 hover:text-red-700"
+                                        ></i>
+                                    </div>
+                                    <div class="flex items-center w-4/12">
+                                        <a href="#"
+                                            ><img
+                                                style="width: 80px"
+                                                src="./src/img/vegetables3.png"
+                                        /></a>
+                                    </div>
+                                    <div class="w-8/12 leading-normal" style="margin-left: 5px">
+                                        <div class="flex items-start justify-between pb-1">
+                                            <a href="#">
+                                                <p
+                                                    title=""
+                                                    class="text-sm font-medium text-gray-800  product-title"
+                                                >
+                                                    Mixed Fruit Salad
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <!-- Product Size Select Box -->
+                                        <div class="flex small_cart-produc-size-container">
+                                            <div class="relative selectbox">
+                                                <select
+                                                    name=""
+                                                    id=""
+                                                    class="flex text-xs text-gray-800 bg-gray-100 border border-gray-100 appearance-none cursor-pointer  outline-0"
+                                                >
+                                                    <option value="">1000 Gm</option>
+                                                    <option value="">1 Kg</option>
+                                                    <option value="">5 Litter</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex">
+                                            <!-- Inrement Button
+                                         -->
+                                            <div class="flex pt-2 product_increment_btn">
+                                                <span
+                                                    class="flex items-center justify-center inline-block font-bold text-gray-800 bg-gray-300 border-none cursor-pointer select-none  input-number-decrement hover:bg-gray-800 hover:text-white"
+                                                    >–</span
+                                                >
+                                                <input
+                                                    class="text-center text-gray-700 align-top border-none select-none  input-number"
+                                                    type="text"
+                                                    value="1"
+                                                    min="0"
+                                                    max="10"
+                                                />
+                                                <span
+                                                    class="flex items-center justify-center inline-block font-bold text-gray-800 bg-gray-300 border-none cursor-pointer select-none  input-number-increment hover:bg-gray-800 hover:text-white"
+                                                    >+</span
+                                                >
+                                            </div>
+                                            <!-- Price -->
+                                            <div
+                                                class="flex items-center justify-end w-7/12  small_cart-product-total"
+                                            >
+                                                <p class="text-base font-semibold text-yellow-550">
+                                                    ৳ 720
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 4 -->
+                            <div class="flex flex-col small_cart-checkout-box items-between">
+                                <div class="relative flex small_cart-section">
+                                    <div class="small_cart-product-remove">
+                                        <i
+                                            class="absolute text-xs cursor-pointer  lni lni-close right-5 top-3 hover:text-red-700"
+                                        ></i>
+                                    </div>
+                                    <div class="flex items-center w-4/12">
+                                        <a href="#"
+                                            ><img
+                                                style="width: 80px"
+                                                src="./src/img/vegetables4.png"
+                                        /></a>
+                                    </div>
+                                    <div class="w-8/12 leading-normal" style="margin-left: 5px">
+                                        <div class="flex items-start justify-between pb-1">
+                                            <a href="#">
+                                                <p
+                                                    title=""
+                                                    class="text-sm font-medium text-gray-800  product-title"
+                                                >
+                                                    Mixed Fruit Salad
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <!-- Product Size Select Box -->
+                                        <div class="flex small_cart-produc-size-container">
+                                            <div class="relative selectbox">
+                                                <select
+                                                    name=""
+                                                    id=""
+                                                    class="flex text-xs text-gray-800 bg-gray-100 border border-gray-100 appearance-none cursor-pointer  outline-0"
+                                                >
+                                                    <option value="">1000 Gm</option>
+                                                    <option value="">1 Kg</option>
+                                                    <option value="">5 Litter</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex">
+                                            <!-- Inrement Button
+                                         -->
+                                            <div class="flex pt-2 product_increment_btn">
+                                                <span
+                                                    class="flex items-center justify-center inline-block font-bold text-gray-800 bg-gray-300 border-none cursor-pointer select-none  input-number-decrement hover:bg-gray-800 hover:text-white"
+                                                    >–</span
+                                                >
+                                                <input
+                                                    class="text-center text-gray-700 align-top border-none select-none  input-number"
+                                                    type="text"
+                                                    value="1"
+                                                    min="0"
+                                                    max="10"
+                                                />
+                                                <span
+                                                    class="flex items-center justify-center inline-block font-bold text-gray-800 bg-gray-300 border-none cursor-pointer select-none  input-number-increment hover:bg-gray-800 hover:text-white"
+                                                    >+</span
+                                                >
+                                            </div>
+                                            <!-- Price -->
+                                            <div
+                                                class="flex items-center justify-end w-7/12  small_cart-product-total"
+                                            >
+                                                <p class="text-base font-semibold text-yellow-550">
+                                                    ৳ 720
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Main Body:END -->
+
+                        <!-- Bottom:Begin -->
+                        <div
+                            class="small_cart-checkout-container"
+                            style="min-height: 10%; height: 10%"
+                        >
+                            <div class="flex items-center justify-between h-full">
+                                <div
+                                    class="flex flex-col items-center justify-start w-6/12 h-full border border-gray-300  small_cart-total"
+                                >
+                                    <p
+                                        class="text-base font-medium text-left text-gray-800 capitalize "
+                                    >
+                                        Cart Total
+                                        <br />
+                                    </p>
+
+                                    <div class="text-center">
+                                        <span class="text-base font-semibold text-green-550"
+                                            >৳
+                                        </span>
+                                        <span class="text-base font-semibold text-green-550"
+                                            >720</span
+                                        >
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex items-center justify-center w-6/12 h-full text-white uppercase transition duration-300 ease-in-out  small_cart-checkout bg-green-550 hover:bg-gray-800"
+                                    style="border-top: 1px solid rgba(129, 129, 129, 0.2)"
+                                >
+                                    <a href="cart.html"
+                                        ><button
+                                            style="outline: none"
+                                            class="flex items-center justify-center w-6/12 h-full ml-auto mr-auto font-medium  small_cart-checkout-btn focus:outline-none"
+                                        >
+                                            PROCEED
+                                            <i
+                                                class="pl-2  lni lni-chevron-right-circle focus:outline-none"
+                                            ></i></button
+                                    ></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Small Cart Small Bag  -->
+                <div
+                    id="small_cart_section_div"
+                    class="container fixed right-0  small_cart-shopping-bag-sidebar top-5/10 opacity-70 hover:opacity-100"
+                >
+                    <div
+                        class="flex flex-col items-center justify-between rounded cursor-pointer  small-cart-container bg-green-550"
+                    >
+                        <span
+                            class="flex justify-center text-lg cursor-pointer small_cart-small_bag"
+                            ><i class="text-white lni lni-shopify"></i
+                        ></span>
+                        <p
+                            id="small_total_cart"
+                            class="text-xs font-semibold tracking-wider text-white"
+                        >
+                            1 ITEMS
+                        </p>
+                        <p
+                            class="w-full text-sm font-semibold text-center text-white"
+                            style="background: rgb(45, 55, 72)"
+                        >
+                            <span>৳&nbsp;</span> <span id="small_cart_amount"> 720 </span>
+                            <input id="small_cart_amount_2" type="hidden" />
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ======================== Small Cart:End ======================== -->
+
+        <!-- ======================== TopBar:Begin ======================== -->
+        <div class="overflow-hidden topbar_container">
+            <div class="flex flex-col w-full py-2 bg-white topbar_content md:py-3 md:flex-row">
+                <div
+                    style="border-bottom: 1px solid #dfe2e0"
+                    class="flex flex-row justify-end w-full px-4 text-sm font-medium text-white  topbar_divbox md:justify-end md:px-12"
+                >
+                    <div style="border-right: 1px solid #cddace" class="pr-4 md:pr-6">
+                        <a
+                            href="#"
+                            class="flex pb-1 text-gray-800 transition duration-500 ease-in-out  hover:text-green-550"
+                        >
+                            <i class="pr-2 m-auto my-auto lni lni-map-marker"></i>
+                            <h2>New York</h2>
+                        </a>
+                    </div>
+                    <div style="border-right: 1px solid #cddace" class="pl-2 pr-4 md:pr-6">
+                        <a
+                            href="checkout.html"
+                            class="hidden pb-1 text-gray-800 transition duration-500 ease-in-out  sm:flex hover:text-green-550"
+                        >
+                            <i class="pr-1 m-auto lni lni-cart"></i>
+                            <h2>Checkout</h2>
+                        </a>
+                        <a
+                            href="wishlist.html"
+                            class="flex pb-1 text-gray-800 transition duration-500 ease-in-out  sm:hidden hover:text-green-550"
+                        >
+                            <i class="pr-1 m-auto lni lni-heart"></i>
+                            <h2>Wishlist</h2>
+                        </a>
+                    </div>
+                    <div class="pl-2">
+                        <div class="auth-modal-btn">
+                            <li class="md:inline-block">
+                                <a
+                                    class="text-gray-800 transition duration-500 ease-in-out  auth-signup hover:text-green-550"
+                                    href="#"
+                                >
+                                    <i class="pr-1 m-auto lni lni-lock"></i> SignIn</a
+                                >
+                            </li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ======================== TopBar:End ======================== -->
+
+        <!-- ======================== auth Modal:Begin ======================== -->
+        <div
+            class="fixed top-0 left-0 invisible w-full h-full overflow-y-auto opacity-0 cursor-pointer  auth-user-modal"
+            style="z-index: 2000"
+        >
+            <div
+                class="relative max-w-md transition duration-700 transform bg-white rounded cursor-auto  auth-user-modal-container w-9/10"
+            >
+                <!-- this is the container wrapper -->
+                <ul class="auth_nav-switcher">
+                    <li class="float-left w-1/2 text-center">
+                        <a href="#0" class="block w-full h-12 leading-10">Sign in</a>
+                    </li>
+                    <li class="float-left w-1/2 text-center">
+                        <a href="#0" class="block w-full h-12 leading-10">New account</a>
+                    </li>
+                </ul>
+
+                <div id="auth-login">
+                    <!-- log in form -->
+                    <form class="p-8 auth-form">
+                        <p class="relative mx-0 my-8 fieldset">
+                            <label class="image-replace auth-email" for="signin-email"
+                                >E-mail</label
+                            >
+                            <input
+                                class="full-width has-padding has-border"
+                                id="signin-email"
+                                type="email"
+                                placeholder="E-mail"
+                            />
+                            <span class="auth-error-message">Error message here!</span>
+                        </p>
+
+                        <p class="relative mx-0 my-8 fieldset">
+                            <label class="image-replace auth-password" for="signin-password"
+                                >Password</label
+                            >
+                            <input
+                                class="full-width has-padding has-border"
+                                id="signin-password"
+                                type="text"
+                                placeholder="Password"
+                            />
+                            <a href="#0" class="hide-password">Hide</a>
+                            <span class="auth-error-message">Error message here!</span>
+                        </p>
+
+                        <p class="relative mx-0 my-8 fieldset">
+                            <input type="checkbox" id="remember-me" checked />
+                            <label for="remember-me">Remember me</label>
+                        </p>
+
+                        <p class="relative mx-0 my-8 fieldset">
+                            <input class="full-width" type="submit" value="Login" />
+                        </p>
+                    </form>
+
+                    <p
+                        class="absolute left-0 w-full text-sm text-center  auth-form-bottom-message -bottom-8"
+                    >
+                        <a class="text-white underline" href="#0">Forgot your password?</a>
+                    </p>
+                    <!-- <a href="#0" class="auth-close-form">Close</a> -->
+                </div>
+                <!-- auth-login -->
+
+                <div id="auth-signup">
+                    <!-- sign up form -->
+                    <form class="p-8 auth-form">
+                        <p class="relative mx-0 my-8 fieldset">
+                            <label class="image-replace auth-username" for="signup-username"
+                                >Username</label
+                            >
+                            <input
+                                class="full-width has-padding has-border"
+                                id="signup-username"
+                                type="text"
+                                placeholder="Username"
+                            />
+                            <span class="auth-error-message">Error message here!</span>
+                        </p>
+
+                        <p class="relative mx-0 my-8 fieldset">
+                            <label class="image-replace auth-email" for="signup-email"
+                                >E-mail</label
+                            >
+                            <input
+                                class="full-width has-padding has-border"
+                                id="signup-email"
+                                type="email"
+                                placeholder="E-mail"
+                            />
+                            <span class="auth-error-message">Error message here!</span>
+                        </p>
+
+                        <p class="relative mx-0 my-8 fieldset">
+                            <label class="image-replace auth-password" for="signup-password"
+                                >Password</label
+                            >
+                            <input
+                                class="full-width has-padding has-border"
+                                id="signup-password"
+                                type="text"
+                                placeholder="Password"
+                            />
+                            <a href="#0" class="hide-password">Hide</a>
+                            <span class="auth-error-message">Error message here!</span>
+                        </p>
+
+                        <p class="relative mx-0 my-8 fieldset">
+                            <input type="checkbox" id="accept-terms" />
+                            <label for="accept-terms">I agree to the <a href="#0">Terms</a></label>
+                        </p>
+
+                        <p class="relative mx-0 my-8 fieldset">
+                            <input
+                                class="full-width has-padding"
+                                type="submit"
+                                value="Create account"
+                            />
+                        </p>
+                    </form>
+
+                    <!-- <a href="#0" class="auth-close-form">Close</a> -->
+                </div>
+                <!-- auth-signup -->
+
+                <div id="auth-reset-password">
+                    <!-- reset password form -->
+                    <p class="auth-form-message">
+                        Lost your password? Please enter your email address. You will receive a link
+                        to create a new password.
+                    </p>
+
+                    <form class="p-8 auth-form">
+                        <p class="relative mx-0 my-8 fieldset">
+                            <label class="image-replace auth-email" for="reset-email">E-mail</label>
+                            <input
+                                class="full-width has-padding has-border"
+                                id="reset-email"
+                                type="email"
+                                placeholder="E-mail"
+                            />
+                            <span class="auth-error-message">Error message here!</span>
+                        </p>
+
+                        <p class="relative mx-0 my-8 fieldset">
+                            <input
+                                class="full-width has-padding"
+                                type="submit"
+                                value="Reset password"
+                            />
+                        </p>
+                    </form>
+
+                    <p
+                        class="absolute left-0 w-full text-sm text-center  auth-form-bottom-message -bottom-8"
+                    >
+                        <a class="text-white underline" href="#0">Back to log-in</a>
+                    </p>
+                </div>
+                <!-- auth-reset-password -->
+                <a href="#0" class="auth-close-form">Close</a>
+            </div>
+            <!-- auth-user-modal-container -->
+        </div>
+        <!-- ======================== auth Modal:END ======================== -->
+
+        <!-- ======================== Main Header:Begin ======================== -->
+        <header class="header_container">
+            <div class="flex items-center w-full h-20 px-4 pb-4 bg-white header_content md:px-12">
+                <div class="flex w-full">
+                    <!-- Logo -->
+                    <div
+                        class="flex items-center justify-start h-full logo_img_div w-4/10 md:w-2/12"
+                    >
+                        <div class="w-full">
+                            <a href="index.html" class="logo_image">
+                                <img src="src/img/logo.png" alt="Logo" class="object-cover w-36" />
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Search -->
+                    <div class="items-center justify-center hidden w-7/12 md:flex md:block">
+                        <!-- Categories -->
+                        <div class="hidden w-2/12 bg-gray-200 border border-r-0 md:block">
+                            <div class="relative w-full border-none">
+                                <div
+                                    class="absolute inset-y-0 flex items-center px-2 pointer-events-none "
+                                >
+                                    <i
+                                        style="font-size: 14px"
+                                        class="text-gray-500 lni lni-envato"
+                                    ></i>
+                                </div>
+                                <select
+                                    class="inline-block w-full py-3 text-sm font-light leading-tight text-gray-700 border-none rounded appearance-none  bg-gray-50 pl-7"
+                                >
+                                    <option class="pt-6" hidden>Categories</option>
+                                    <option>Chips</option>
+                                    <option>Potato</option>
+                                    <option>Orange</option>
+                                </select>
+                                <div
+                                    class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none "
+                                >
+                                    <i
+                                        style="font-size: 10px"
+                                        class="text-gray-500 lni lni-chevron-down"
+                                    ></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Search Box -->
+                        <div class="flex w-9/12 overflow-hidden border md:border-l-0">
+                            <input
+                                type="text"
+                                class="w-full px-3 py-2 md:px-8"
+                                placeholder="Search Product..."
+                            />
+                            <button
+                                class="flex items-center justify-center px-3 text-xs text-white  bg-green-550 md:px-6"
+                            >
+                                <svg
+                                    class="w-4 h-4 text-grey-dark"
+                                    fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M16.32 14.9l5.39 5.4a1 1 0 0 1-1.42 1.4l-5.38-5.38a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"
+                                    />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Cart -->
+                    <div
+                        class="flex items-center justify-end text-sm font-medium text-gray-800 transition-all  w-6/10 md:w-3/12"
+                    >
+                        <!-- Wishlist Btn -->
+                        <div class="justify-end hidden w-1/2 wishlist_order_btn sm:flex md:w-1/2">
+                            <a href="wishlist.html" class="flex items-center">
+                                <div
+                                    class="relative flex items-center justify-center w-10 h-10 mr-2 border border-gray-200 rounded-full  hover:shadow-sm"
+                                >
+                                    <i class="z-50 lni lni-heart text-green-550"></i>
+                                    <span class="absolute top-0 left-0 text-sm order-count-badge"
+                                        >2</span
+                                    >
+                                </div>
+                                <div class="flex flex-col">
+                                    <h3
+                                        class="text-sm font-bold text-gray-800 hover:text-green-550"
+                                    >
+                                        Wishlist
+                                    </h3>
+                                    <h4 class="text-sm font-semibold text-gray-600">$0.00</h4>
+                                </div>
+                            </a>
+                        </div>
+                        <!--  -->
+                        <div class="flex justify-end w-full cart_order_btn sm:w-1/2">
+                            <!-- Search Box -->
+                            <div class="flex justify-end header-search_box md:hidden">
+                                <div
+                                    class="relative inline-block w-12 h-12 pt-1 align-bottom  search-container"
+                                >
+                                    <form action="/search" method="get">
+                                        <input
+                                            class="absolute z-10 w-0 h-full p-0 bg-white border-none outline-none  search left-12 expandright"
+                                            id="searchright"
+                                            type="search"
+                                            name="q"
+                                            placeholder="Search Here......"
+                                        />
+                                        <label
+                                            class="absolute justify-end inline-block w-full px-8 m-0 text-sm text-center text-gray-800 no-underline border border-gray-200 rounded-full cursor-pointer select-none  header_search_btn hover:transition hover:duration-400 hover:bg-white hover:text-black searchbutton"
+                                            for="searchright"
+                                            ><span
+                                                class="inline-block transform -rotate-45 pointer-events-none  mglass text-green-550"
+                                                >&#9906;</span
+                                            ></label
+                                        >
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- Cart Btn -->
+                            <a href="cart.html" class="flex items-center">
+                                <div
+                                    class="relative flex items-center justify-center w-10 h-10 mr-2 border border-gray-200 rounded-full  hover:shadow-sm"
+                                >
+                                    <i class="z-50 lni lni-cart text-green-550"></i>
+                                    <span class="absolute top-0 left-0 text-sm order-count-badge"
+                                        >2</span
+                                    >
+                                </div>
+                                <div class="flex flex-col">
+                                    <h3
+                                        class="text-xs font-bold text-gray-800  hover:text-green-550 sm:text-sm"
+                                    >
+                                        My Cart
+                                    </h3>
+                                    <h4 class="text-sm font-semibold text-gray-600">$0.00</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- ============ Nav  Menubar =========== -->
+        <nav class="relative px-0 md:px-12">
+            <a class="text-sm responsive-menu hamburger" id="nav-icon"
+                ><i class="lni lni-menu"></i> Shop By Categories
+            </a>
+            <a href="#" id="resp-menu" class="absolute block responsive-category md:hidden"
+                ><i class="lni lni-menu"></i
+            ></a>
+            <!-- Sidenav:Begin -->
+            <nav class="side-nav">
+                <ul class="side-nav-list">
+                    <li class="side-nav-item">
+                        <a class="side-nav-link" href="">Home</a>
+                    </li>
+                    <li class="side-nav-item">
+                        <a class="side-nav-link" href="aboutus.html">About</a>
+                    </li>
+                    <li class="side-nav-item">
+                        <a class="side-nav-link" href="contactus.html">Contanct</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Sidenav:END -->
+            <ul class="menu">
+                <li class="shop_categories_li">
+                    <a
+                        href="#"
+                        class="mr-20 homer"
+                        style="background-color: #14a753; color: #fff; font-size: 16px"
+                    >
+                        <i class="pr-1 lni lni-menu"></i> Shop By Categories</a
+                    >
+                    <ul class="sub-menu categories_ul">
+                        <li class="transition duration-500 ease-in-out">
+                            <a href="productlist.html" style="display: flex; padding: 10px 10px"
+                                ><span class="pr-1 my-auto w-/12"
+                                    ><img
+                                        src="https://img.icons8.com/emoji/20/000000/peach-emoji.png"
+                                /></span>
+                                Fruits & Vegetables</a
+                            >
+                        </li>
+                        <li class="transition duration-500 ease-in-out">
+                            <a href="productlist.html" style="display: flex; padding: 10px 10px"
+                                ><span class="pr-1 my-auto w-/12"
+                                    ><img
+                                        src="https://img.icons8.com/emoji/20/000000/shopping-bags.png" /></span
+                                >Grocery & Staples</a
+                            >
+                            <ul class="sub-menu">
+                                <li><a href="#">Sub-Menu 1</a></li>
+                                <li><a href="#">Sub-Menu 2</a></li>
+                                <li>
+                                    <a href="#">Sub-Menu 3</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Sub-Menu 1</a></li>
+                                        <li><a href="#">Sub-Menu 2</a></li>
+                                        <li><a href="#">Sub-Menu 3</a></li>
+                                        <li><a href="#">Sub-Menu 4</a></li>
+                                        <li><a href="#">Sub-Menu 5</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Sub-Menu 4</a></li>
+                                <li><a href="#">Sub-Menu 5</a></li>
+                            </ul>
+                        </li>
+                        <li class="transition duration-500 ease-in-out">
+                            <a href="productlist.html" style="display: flex; padding: 10px 10px"
+                                ><span class="pr-1 my-auto w-/12"
+                                    ><img
+                                        src="https://img.icons8.com/emoji/20/000000/lotion-bottle.png" /></span
+                                >Personal Care</a
+                            >
+                        </li>
+                        <li class="transition duration-500 ease-in-out">
+                            <a href="productlist.html" style="display: flex; padding: 10px 10px"
+                                ><span class="pr-1 my-auto w-/12"
+                                    ><img
+                                        src="https://img.icons8.com/emoji/20/000000/couch-and-lamp.png" /></span
+                                >Furnishing Needs</a
+                            >
+                        </li>
+                        <li class="transition duration-500 ease-in-out">
+                            <a href="productlist.html" style="display: flex; padding: 10px 10px"
+                                ><span class="pr-1 my-auto w-/12"
+                                    ><img
+                                        src="https://img.icons8.com/emoji/20/000000/chocolate-bar-emoji.png" /></span
+                                >Chocolate & Fastfood</a
+                            >
+                        </li>
+                        <li class="transition duration-500 ease-in-out">
+                            <a href="productlist.html" style="display: flex; padding: 10px 10px"
+                                ><span class="pr-1 my-auto w-/12"
+                                    ><img
+                                        src="https://img.icons8.com/emoji/20/000000/glass-of-milk.png" /></span
+                                >Breakfast & Dairy</a
+                            >
+                        </li>
+                        <li class="transition duration-500 ease-in-out">
+                            <a href="productlist.html" style="display: flex; padding: 10px 10px"
+                                ><span class="pr-1 my-auto w-/12"
+                                    ><img
+                                        src="https://img.icons8.com/emoji/20/000000/peach-emoji.png"
+                                /></span>
+                                Fruits & Vegetables</a
+                            >
+                        </li>
+                        <li class="transition duration-500 ease-in-out">
+                            <a href="productlist.html" style="display: flex; padding: 10px 10px"
+                                ><span class="pr-1 my-auto w-/12"
+                                    ><img
+                                        src="https://img.icons8.com/emoji/20/000000/hammer-and-wrench.png" /></span
+                                >Household Needs</a
+                            >
+                        </li>
+                        <li class="transition duration-500 ease-in-out">
+                            <a href="productlist.html" style="display: flex; padding: 10px 10px"
+                                ><span class="pr-1 my-auto w-/12"
+                                    ><img
+                                        src="https://img.icons8.com/emoji/20/000000/lotion-bottle.png" /></span
+                                >Personal Care</a
+                            >
+                        </li>
+                        <li class="transition duration-500 ease-in-out">
+                            <a href="productlist.html" style="display: flex; padding: 10px 10px"
+                                ><span class="pr-1 my-auto w-/12"
+                                    ><img
+                                        src="https://img.icons8.com/emoji/20/000000/ice-cream-emoji.png" /></span
+                                >Biscuit & Snacks</a
+                            >
+
+                            <ul class="sub-menu">
+                                <li><a href="#">HTML/CSS</a></li>
+                                <li><a href="#">jQuery</a></li>
+                                <li><a href="#">Other</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a class="home" href="index.html"> Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li>
+                    <a href="#"
+                        >Pages <i class="lni lni-chevron-down" style="font-size: 12px"></i
+                    ></a>
+                    <ul class="sub-menu">
+                        <li><a href="account.html">Profile Info</a></li>
+                        <li><a href="productlist.html">Product List</a></li>
+                        <li><a href="productview.html">Product View</a></li>
+                        <li><a href="paymenthistory.html">Payment History</a></li>
+                        <li><a href="myaddress.html">Address</a></li>
+                        <li><a href="orderhistory.html">Order History</a></li>
+                        <li><a href="ordertracking.html">Order Tracking</a></li>
+                        <li><a href="orderconfirmation.html">Order Success</a></li>
+                        <li>
+                            <a href="#"
+                                >Sub-Menu 2
+                                <i class="pl-6 lni lni-chevron-right" style="font-size: 10px"></i
+                            ></a>
+                            <ul>
+                                <li><a href="account.html">Profile</a></li>
+                                <li><a href="productlist.html">Product List</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"
+                                >Sub-Menu 3
+                                <i class="pl-6 lni lni-chevron-right" style="font-size: 10px"></i
+                            ></a>
+                            <ul>
+                                <li><a href="#">Sub Sub-Menu 1</a></li>
+                                <li><a href="#">Sub Sub-Menu 2</a></li>
+                                <li><a href="#">Sub Sub-Menu 3</a></li>
+                                <li><a href="#">Sub Sub-Menu 4</a></li>
+                                <li><a href="#">Sub Sub-Menu 5</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">Blog</a></li>
+                <li>
+                    <a href="#"
+                        >Categories <i class="lni lni-chevron-down" style="font-size: 12px"></i
+                    ></a>
+                    <ul class="sub-menu">
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="checkout.html">Checkout</a></li>
+                        <li><a href="wishlist.html">Wishlist</a></li>
+                        <li class="w-full">
+                            <a href="#"
+                                >Sub-Menu 2
+                                <i class="pl-6 lni lni-chevron-right" style="font-size: 10px"></i
+                            ></a>
+                            <ul>
+                                <li><a href="#">Sub Sub-Menu 4</a></li>
+                                <li><a href="#">Sub Sub-Menu 5</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"
+                                >Sub-Menu 3
+                                <i class="pl-6 lni lni-chevron-right" style="font-size: 10px"></i
+                            ></a>
+                            <ul>
+                                <li><a href="#">Sub Sub-Menu 1</a></li>
+                                <li><a href="#">Sub Sub-Menu 2</a></li>
+                                <li><a href="#">Sub Sub-Menu 3</a></li>
+                                <li><a href="#">Sub Sub-Menu 4</a></li>
+                                <li><a href="#">Sub Sub-Menu 5</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="contactus.html"> Contact</a></li>
+                <li><a href="#"> Sitemap</a></li>
+                <li><a href="aboutus.html">About</a></li>
+            </ul>
+        </nav>
+        <!-- ======================== Main Header:END ======================== -->
+
+        <!-- =================== Main Wrapper:Begin========================== -->
+        <main class="main_wrapper">
+            <!-- ================ ProductView Section:Begin ================ -->
+            <section
+                class="items-center w-full px-12 my-12 border-b border-gray-200  product-view-container"
+            >
+                <div
+                    class="container flex w-full p-4 mx-auto mt-6 bg-white rounded  product-view-content"
+                >
+                    <div class="max-w-screen-xl mx-auto my-0 product-view-card-wrapper">
+                        <div class="product-view-card">
+                            <!-- card left -->
+                            <div class="product-view-product-imgs">
+                                <div class="overflow-hidden product-view-img-display">
+                                    <div
+                                        class="flex w-full transition duration-500 ease-in-out  product-view-img-showcase"
+                                    >
+                                        <img
+                                            class="min-w-full"
+                                            src="./src/img/shoe_1.jpg"
+                                            alt="shoe image"
+                                        />
+                                        <img
+                                            class="min-w-full"
+                                            src="./src/img/shoe_2.jpg"
+                                            alt="shoe image"
+                                        />
+                                        <img
+                                            class="min-w-full"
+                                            src="./src/img/shoe_3.jpg"
+                                            alt="shoe image"
+                                        />
+                                        <img
+                                            class="min-w-full"
+                                            src="./src/img/shoe_4.jpg"
+                                            alt="shoe image"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="flex product-view-img-select">
+                                    <div class="product-view-img-item">
+                                        <a href="#" data-id="1">
+                                            <img src="./src/img/shoe_1.jpg" alt="shoe image" />
+                                        </a>
+                                    </div>
+                                    <div class="product-view-img-item">
+                                        <a href="#" data-id="2">
+                                            <img src="./src/img/shoe_2.jpg" alt="shoe image" />
+                                        </a>
+                                    </div>
+                                    <div class="product-view-img-item">
+                                        <a href="#" data-id="3">
+                                            <img src="./src/img/shoe_3.jpg" alt="shoe image" />
+                                        </a>
+                                    </div>
+                                    <div class="product-view-img-item">
+                                        <a href="#" data-id="4">
+                                            <img src="./src/img/shoe_4.jpg" alt="shoe image" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card right -->
+                            <div class="px-4 py-8 product-view-product-content">
+                                <h2
+                                    class="relative mx-0 my-4 text-3xl font-semibold text-gray-800 capitalize  product-view-product-title"
+                                >
+                                    Grogeous nike shoes
+                                </h2>
+                                <div class="text-yellow-500 product-view-product-rating">
+                                    <i class="lni lni-star-filled"></i>
+                                    <i class="lni lni-star-filled"></i>
+                                    <i class="lni lni-star-filled"></i>
+                                    <i class="lni lni-star-filled"></i>
+                                    <i class="lni lni-star-half"></i>
+                                    <span class="font-semibold text-gray-800">4.7(21)</span>
+                                </div>
+
+                                <div
+                                    class="mx-0 my-4 text-base font-semibold tracking-wider text-gray-800  product-view-product-price"
+                                >
+                                    <p class="product-view-last-price">
+                                        Price:
+                                        <span
+                                            class="font-semibold tracking-widest text-yellow-500 line-through "
+                                            >$257.00</span
+                                        >
+                                    </p>
+                                    <p class="product-view-new-price">
+                                        Discounted Price:
+                                        <span class="font-semibold tracking-widest text-green-500"
+                                            >$249.00 (5%)</span
+                                        >
+                                    </p>
+                                </div>
+
+                                <div class="product-view-product-detail">
+                                    <h2
+                                        class="pb-2 text-lg font-semibold tracking-wider text-gray-800 capitalize "
+                                    >
+                                        about this item:
+                                    </h2>
+                                    <p class="p-1 text-sm opacity-90">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Illo eveniet veniam tempora fuga tenetur placeat sapiente
+                                        architecto illum soluta consequuntur, aspernatur quidem at
+                                        sequi ipsa!
+                                        <br />
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Consequatur, perferendis eius. Dignissimos, labore suscipit.
+                                        Unde.
+                                    </p>
+
+                                    <ul class="mx-0 my-4 text-sm">
+                                        <li>Color: <span>Black</span></li>
+                                        <li>Available: <span>in stock</span></li>
+                                        <li>Category: <span>Shoes</span></li>
+                                        <li>Shipping Area: <span>All over the world</span></li>
+                                        <li>Shipping Fee: <span>Free</span></li>
+                                    </ul>
+                                </div>
+
+                                <div class="mx-0 my-6 product-view-purchase-info">
+                                    <input class="w-16" type="number" min="0" value="1" />
+                                    <button
+                                        type="button"
+                                        class="text-white cursor-pointer  product-view-btn bg-green-550 hover:bg-green-600"
+                                    >
+                                        <i class="lni lni-cart"></i> Add to Cart
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="text-yellow-500 border-2 cursor-pointer  product-view-btn product-view-compare_btn hover:text-white hover:bg-yellow-500"
+                                    >
+                                        Wishlist
+                                    </button>
+                                </div>
+
+                                <div class="flex items-center product-view-social-links">
+                                    <p class="mr-2">Share At</p>
+                                    <a href="#">
+                                        <i class="lni lni-facebook"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="lni lni-twitter-original"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="lni lni-instagram"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="lni lni-whatsapp"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="lni lni-pinterest"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ================ ProductView Section:END ================ -->
+            <!-- ================ Top Featured Product Section:Begin ================ -->
+            <div
+                class="items-center w-full px-12 my-16 border-b border-gray-200  product_grid_list_show_container"
+            >
+                <!-- Section Title -->
+                <div class="container section_title">
+                    <h2 class="text-base font-medium text-green-550">For You</h2>
+                    <h3 class="text-2xl font-medium text-gray-800">New Arrivals Products</h3>
+                </div>
+                <!-- Section Title -->
+                <div class="container w-full pt-6 mx-auto">
+                    <div class="product_grid_list_show_content">
+                        <!-- Image Size Is Height-330 px -->
+                        <!-- 1 -->
+                        <div class="product-grid">
+                            <div class="product-image">
+                                <a href="#">
+                                    <img
+                                        class="pic-1"
+                                        src="https://images.pexels.com/photos/4617820/pexels-photo-4617820.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=950&w=940"
+                                    />
+                                </a>
+                                <span class="product-discount-label">-20%</span>
+                            </div>
+                            <div class="product-content">
+                                <h3
+                                    class="text-sm font-semibold tracking-wider text-gray-800  hover:text-yellow-500"
+                                >
+                                    <a href="productview.html">Amul Salted Butter</a>
+                                </h3>
+                                <h4 class="text-xs text-gray-500">
+                                    <a href="#">
+                                        <svg
+                                            class="inline-block pr-1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            x="0px"
+                                            y="0px"
+                                            width="18"
+                                            height="18"
+                                            viewBox="0 0 172 172"
+                                            style="fill: #000000"
+                                        >
+                                            <g
+                                                fill="none"
+                                                fill-rule="nonzero"
+                                                stroke="none"
+                                                stroke-width="1"
+                                                stroke-linecap="butt"
+                                                stroke-linejoin="miter"
+                                                stroke-miterlimit="10"
+                                                stroke-dasharray=""
+                                                stroke-dashoffset="0"
+                                                font-family="none"
+                                                font-weight="none"
+                                                font-size="none"
+                                                text-anchor="none"
+                                                style="mix-blend-mode: normal"
+                                            >
+                                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                                <g>
+                                                    <path
+                                                        d="M157.67383,85.99642c0,-2.06042 -0.87075,-4.042 -2.39008,-5.43592l-5.0525,-4.86975l3.34325,-5.92325c1.0105,-1.79525 1.22908,-3.95242 0.59125,-5.9125c-0.63783,-1.96367 -2.07833,-3.57975 -3.956,-4.43617l-6.30667,-3.07092l1.34733,-6.665c0.40492,-2.01742 -0.05375,-4.13158 -1.26492,-5.80142c-1.21117,-1.66983 -3.07808,-2.76275 -5.13492,-2.99925l-6.94808,-0.97467l-0.77758,-6.76175c-0.23292,-2.04608 -1.32583,-3.91658 -2.99208,-5.12775c-1.66625,-1.21117 -3.784,-1.66983 -5.80858,-1.2685l-6.91225,1.22192l-2.82725,-6.18483c-0.85642,-1.8705 -2.4725,-3.311 -4.429,-3.94883c-1.96367,-0.645 -4.11367,-0.42283 -5.91608,0.58767l-6.192,3.29667l-4.60458,-5.00592c-1.39392,-1.51575 -3.3755,-2.38292 -5.43233,-2.38292h-0.01075c-2.064,0.00358 -4.05275,0.8815 -5.44308,2.40083l-4.86975,5.0525l-5.92325,-3.33967c-1.79525,-1.01408 -3.956,-1.22192 -5.90892,-0.59125c-1.96008,0.63425 -3.57975,2.07833 -4.43617,3.95242l-3.07092,6.30667l-6.665,-1.34375c-2.021,-0.41567 -4.13517,0.05017 -5.79783,1.26133c-1.66983,1.21117 -2.76275,3.07808 -3.00283,5.13492l-0.97108,6.95167l-6.76533,0.774c-2.04608,0.2365 -3.91658,1.32583 -5.13133,2.99567c-1.21117,1.66625 -1.67342,3.784 -1.2685,5.80858l1.2255,6.90867l-6.18125,2.82725c-1.87408,0.85642 -3.31817,2.46892 -3.956,4.429c-0.63425,1.96008 -0.41925,4.11725 0.59483,5.91608l3.29667,6.192l-5.00233,4.601c-1.52292,1.39392 -2.39367,3.3755 -2.39367,5.4395c0,2.064 0.87075,4.04558 2.39008,5.44308l5.0525,4.86975l-3.34325,5.92325c-1.0105,1.79525 -1.22908,3.95242 -0.59125,5.9125c0.63783,1.96008 2.07833,3.57975 3.956,4.43258l6.30667,3.07092l-1.35092,6.67217c-0.40492,2.01742 0.05375,4.13158 1.26492,5.80142c1.21117,1.66983 3.07808,2.76275 5.14208,3.00283l6.94808,0.95675l0.78117,6.751c0.22933,2.04608 1.31867,3.91658 2.98492,5.12775c1.677,1.21475 3.79117,1.68058 5.81575,1.2685l6.91225,-1.2255l2.82725,6.18842c0.85642,1.8705 2.4725,3.311 4.43258,3.94883c1.96008,0.63783 4.11367,0.41925 5.90892,-0.59125l6.19558,-3.29667l4.601,5.0095c1.39392,1.51933 3.37908,2.39008 5.4395,2.39008h0.00358c2.06042,0 4.042,-0.87433 5.43592,-2.39008l4.86975,-5.0525l5.92325,3.33967c1.79883,1.01767 3.956,1.22908 5.90892,0.59125c1.96008,-0.63425 3.57975,-2.07833 4.43617,-3.956l3.07092,-6.30667l6.66858,1.34733c2.00308,0.40492 4.128,-0.05375 5.79783,-1.26492c1.66625,-1.21117 2.76275,-3.07808 2.99925,-5.13133l0.97108,-6.95167l6.75817,-0.77758c2.04608,-0.2365 3.91658,-1.32583 5.13133,-2.99567c1.21475,-1.66983 1.67342,-3.784 1.2685,-5.80858l-1.2255,-6.91225l6.18125,-2.82725c1.87408,-0.85642 3.31817,-2.46892 3.956,-4.429c0.64142,-1.96008 0.42283,-4.11367 -0.58767,-5.91608l-3.29667,-6.19558l5.00592,-4.601c1.52292,-1.38675 2.39367,-3.37192 2.39367,-5.43233z"
+                                                        fill="#14a753"
+                                                    ></path>
+                                                    <path
+                                                        d="M81.1195,118.60475c-2.83442,0 -5.37142,-1.50858 -6.78683,-4.03483c-12.76025,-22.84017 -33.0885,-33.48267 -33.29275,-33.59017l-1.25417,-0.645l1.47275,-6.13108h1.41183c19.3715,0 30.03192,6.87642 37.6895,14.08608c11.9755,-19.13142 37.30608,-30.85967 48.08833,-33.61167l1.45842,-0.37267l2.69108,5.96267l-1.247,0.84567c-22.82942,15.51942 -35.56817,37.69667 -43.16125,53.02975c-1.36883,2.752 -4.07425,4.46125 -7.06992,4.46125z"
+                                                        fill="#000000"
+                                                        opacity="0.05"
+                                                    ></path>
+                                                    <path
+                                                        d="M81.1195,116.81308c-2.17867,0 -4.128,-1.16458 -5.22092,-3.1175c-13.08633,-23.43142 -33.83025,-34.20292 -34.04167,-34.31042l0.817,-3.38625c21.285,0 31.44017,8.54983 38.06933,15.1575c11.08683,-19.74417 36.93342,-31.87733 48.15283,-34.74042l1.45125,3.21783c-23.18058,15.75592 -36.07342,38.20192 -43.75967,53.71417c-1.06425,2.13567 -3.15692,3.46508 -5.46817,3.46508z"
+                                                        fill="#000000"
+                                                        opacity="0.07"
+                                                    ></path>
+                                                    <path
+                                                        d="M42.67033,77.79058c0,0 21.285,10.85392 34.79058,35.03067c1.71283,3.06375 5.95908,2.88458 7.51783,-0.26875c7.353,-14.84575 20.28167,-38.0335 44.35808,-54.39858c-12.83908,3.27517 -38.51725,16.36867 -48.14925,36.00533c-6.42133,-6.55033 -16.04975,-16.36867 -38.51725,-16.36867z"
+                                                        fill="#ffffff"
+                                                    ></path>
+                                                </g>
+                                            </g></svg
+                                        >Available in - 500gm
+                                    </a>
+                                </h4>
+                                <div class="price">
+                                    ৳16.00
+                                    <span>৳20.00</span>
+                                </div>
+                                <div class="pt-2">
+                                    <button
+                                        style="padding: 4px 10px"
+                                        class="text-sm font-medium text-white rounded-full  addto_bag_btn bg-green-550"
+                                    >
+                                        Add To Bag <i class="lni lni-shopify"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <ul class="social">
+                                <li>
+                                    <a href="" data-tip="Quick View"><i class="lni lni-eye"></i></a>
+                                </li>
+                                <li>
+                                    <a href="" data-tip="Wishlist"><i class="lni lni-heart"></i></a>
+                                </li>
+                                <li>
+                                    <a href="" data-tip="add to cart"
+                                        ><i class="lni lni-cart"></i
+                                    ></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 2 -->
+                        <div class="product-grid">
+                            <div class="product-image">
+                                <a href="#">
+                                    <img class="pic-1" src="./src/img/apple.jpg" />
+                                </a>
+                            </div>
+                            <div class="product-content">
+                                <h3
+                                    class="text-sm font-semibold tracking-wider text-gray-800  hover:text-yellow-500"
+                                >
+                                    <a href="productview.html">Amul Salted Butter</a>
+                                </h3>
+                                <h4 class="text-xs text-gray-500">
+                                    <a href="#">
+                                        <svg
+                                            class="inline-block pr-1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            x="0px"
+                                            y="0px"
+                                            width="18"
+                                            height="18"
+                                            viewBox="0 0 172 172"
+                                            style="fill: #000000"
+                                        >
+                                            <g
+                                                fill="none"
+                                                fill-rule="nonzero"
+                                                stroke="none"
+                                                stroke-width="1"
+                                                stroke-linecap="butt"
+                                                stroke-linejoin="miter"
+                                                stroke-miterlimit="10"
+                                                stroke-dasharray=""
+                                                stroke-dashoffset="0"
+                                                font-family="none"
+                                                font-weight="none"
+                                                font-size="none"
+                                                text-anchor="none"
+                                                style="mix-blend-mode: normal"
+                                            >
+                                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                                <g>
+                                                    <path
+                                                        d="M157.67383,85.99642c0,-2.06042 -0.87075,-4.042 -2.39008,-5.43592l-5.0525,-4.86975l3.34325,-5.92325c1.0105,-1.79525 1.22908,-3.95242 0.59125,-5.9125c-0.63783,-1.96367 -2.07833,-3.57975 -3.956,-4.43617l-6.30667,-3.07092l1.34733,-6.665c0.40492,-2.01742 -0.05375,-4.13158 -1.26492,-5.80142c-1.21117,-1.66983 -3.07808,-2.76275 -5.13492,-2.99925l-6.94808,-0.97467l-0.77758,-6.76175c-0.23292,-2.04608 -1.32583,-3.91658 -2.99208,-5.12775c-1.66625,-1.21117 -3.784,-1.66983 -5.80858,-1.2685l-6.91225,1.22192l-2.82725,-6.18483c-0.85642,-1.8705 -2.4725,-3.311 -4.429,-3.94883c-1.96367,-0.645 -4.11367,-0.42283 -5.91608,0.58767l-6.192,3.29667l-4.60458,-5.00592c-1.39392,-1.51575 -3.3755,-2.38292 -5.43233,-2.38292h-0.01075c-2.064,0.00358 -4.05275,0.8815 -5.44308,2.40083l-4.86975,5.0525l-5.92325,-3.33967c-1.79525,-1.01408 -3.956,-1.22192 -5.90892,-0.59125c-1.96008,0.63425 -3.57975,2.07833 -4.43617,3.95242l-3.07092,6.30667l-6.665,-1.34375c-2.021,-0.41567 -4.13517,0.05017 -5.79783,1.26133c-1.66983,1.21117 -2.76275,3.07808 -3.00283,5.13492l-0.97108,6.95167l-6.76533,0.774c-2.04608,0.2365 -3.91658,1.32583 -5.13133,2.99567c-1.21117,1.66625 -1.67342,3.784 -1.2685,5.80858l1.2255,6.90867l-6.18125,2.82725c-1.87408,0.85642 -3.31817,2.46892 -3.956,4.429c-0.63425,1.96008 -0.41925,4.11725 0.59483,5.91608l3.29667,6.192l-5.00233,4.601c-1.52292,1.39392 -2.39367,3.3755 -2.39367,5.4395c0,2.064 0.87075,4.04558 2.39008,5.44308l5.0525,4.86975l-3.34325,5.92325c-1.0105,1.79525 -1.22908,3.95242 -0.59125,5.9125c0.63783,1.96008 2.07833,3.57975 3.956,4.43258l6.30667,3.07092l-1.35092,6.67217c-0.40492,2.01742 0.05375,4.13158 1.26492,5.80142c1.21117,1.66983 3.07808,2.76275 5.14208,3.00283l6.94808,0.95675l0.78117,6.751c0.22933,2.04608 1.31867,3.91658 2.98492,5.12775c1.677,1.21475 3.79117,1.68058 5.81575,1.2685l6.91225,-1.2255l2.82725,6.18842c0.85642,1.8705 2.4725,3.311 4.43258,3.94883c1.96008,0.63783 4.11367,0.41925 5.90892,-0.59125l6.19558,-3.29667l4.601,5.0095c1.39392,1.51933 3.37908,2.39008 5.4395,2.39008h0.00358c2.06042,0 4.042,-0.87433 5.43592,-2.39008l4.86975,-5.0525l5.92325,3.33967c1.79883,1.01767 3.956,1.22908 5.90892,0.59125c1.96008,-0.63425 3.57975,-2.07833 4.43617,-3.956l3.07092,-6.30667l6.66858,1.34733c2.00308,0.40492 4.128,-0.05375 5.79783,-1.26492c1.66625,-1.21117 2.76275,-3.07808 2.99925,-5.13133l0.97108,-6.95167l6.75817,-0.77758c2.04608,-0.2365 3.91658,-1.32583 5.13133,-2.99567c1.21475,-1.66983 1.67342,-3.784 1.2685,-5.80858l-1.2255,-6.91225l6.18125,-2.82725c1.87408,-0.85642 3.31817,-2.46892 3.956,-4.429c0.64142,-1.96008 0.42283,-4.11367 -0.58767,-5.91608l-3.29667,-6.19558l5.00592,-4.601c1.52292,-1.38675 2.39367,-3.37192 2.39367,-5.43233z"
+                                                        fill="#14a753"
+                                                    ></path>
+                                                    <path
+                                                        d="M81.1195,118.60475c-2.83442,0 -5.37142,-1.50858 -6.78683,-4.03483c-12.76025,-22.84017 -33.0885,-33.48267 -33.29275,-33.59017l-1.25417,-0.645l1.47275,-6.13108h1.41183c19.3715,0 30.03192,6.87642 37.6895,14.08608c11.9755,-19.13142 37.30608,-30.85967 48.08833,-33.61167l1.45842,-0.37267l2.69108,5.96267l-1.247,0.84567c-22.82942,15.51942 -35.56817,37.69667 -43.16125,53.02975c-1.36883,2.752 -4.07425,4.46125 -7.06992,4.46125z"
+                                                        fill="#000000"
+                                                        opacity="0.05"
+                                                    ></path>
+                                                    <path
+                                                        d="M81.1195,116.81308c-2.17867,0 -4.128,-1.16458 -5.22092,-3.1175c-13.08633,-23.43142 -33.83025,-34.20292 -34.04167,-34.31042l0.817,-3.38625c21.285,0 31.44017,8.54983 38.06933,15.1575c11.08683,-19.74417 36.93342,-31.87733 48.15283,-34.74042l1.45125,3.21783c-23.18058,15.75592 -36.07342,38.20192 -43.75967,53.71417c-1.06425,2.13567 -3.15692,3.46508 -5.46817,3.46508z"
+                                                        fill="#000000"
+                                                        opacity="0.07"
+                                                    ></path>
+                                                    <path
+                                                        d="M42.67033,77.79058c0,0 21.285,10.85392 34.79058,35.03067c1.71283,3.06375 5.95908,2.88458 7.51783,-0.26875c7.353,-14.84575 20.28167,-38.0335 44.35808,-54.39858c-12.83908,3.27517 -38.51725,16.36867 -48.14925,36.00533c-6.42133,-6.55033 -16.04975,-16.36867 -38.51725,-16.36867z"
+                                                        fill="#ffffff"
+                                                    ></path>
+                                                </g>
+                                            </g></svg
+                                        >Available in - 500gm
+                                    </a>
+                                </h4>
+                                <div class="price">
+                                    ৳16.00
+                                    <span>৳20.00</span>
+                                </div>
+                                <div class="pt-2">
+                                    <button
+                                        style="padding: 4px 10px"
+                                        class="text-sm font-medium text-white rounded-full  addto_bag_btn bg-green-550"
+                                    >
+                                        Add To Bag <i class="lni lni-shopify"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <ul class="social">
+                                <li>
+                                    <a href="" data-tip="Quick View"><i class="lni lni-eye"></i></a>
+                                </li>
+                                <li>
+                                    <a href="" data-tip="Wishlist"><i class="lni lni-heart"></i></a>
+                                </li>
+                                <li>
+                                    <a href="" data-tip="add to cart"
+                                        ><i class="lni lni-cart"></i
+                                    ></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 3 -->
+                        <div class="product-grid">
+                            <div class="product-image">
+                                <a href="#">
+                                    <img class="pic-1" src="./src/img/redtomato.jpg" />
+                                </a>
+                            </div>
+                            <div class="product-content">
+                                <h3
+                                    class="text-sm font-semibold tracking-wider text-gray-800  hover:text-yellow-500"
+                                >
+                                    <a href="productview.html">Amul Salted Butter</a>
+                                </h3>
+                                <h4 class="text-xs text-gray-500">
+                                    <a href="#">
+                                        <svg
+                                            class="inline-block pr-1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            x="0px"
+                                            y="0px"
+                                            width="18"
+                                            height="18"
+                                            viewBox="0 0 172 172"
+                                            style="fill: #000000"
+                                        >
+                                            <g
+                                                fill="none"
+                                                fill-rule="nonzero"
+                                                stroke="none"
+                                                stroke-width="1"
+                                                stroke-linecap="butt"
+                                                stroke-linejoin="miter"
+                                                stroke-miterlimit="10"
+                                                stroke-dasharray=""
+                                                stroke-dashoffset="0"
+                                                font-family="none"
+                                                font-weight="none"
+                                                font-size="none"
+                                                text-anchor="none"
+                                                style="mix-blend-mode: normal"
+                                            >
+                                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                                <g>
+                                                    <path
+                                                        d="M157.67383,85.99642c0,-2.06042 -0.87075,-4.042 -2.39008,-5.43592l-5.0525,-4.86975l3.34325,-5.92325c1.0105,-1.79525 1.22908,-3.95242 0.59125,-5.9125c-0.63783,-1.96367 -2.07833,-3.57975 -3.956,-4.43617l-6.30667,-3.07092l1.34733,-6.665c0.40492,-2.01742 -0.05375,-4.13158 -1.26492,-5.80142c-1.21117,-1.66983 -3.07808,-2.76275 -5.13492,-2.99925l-6.94808,-0.97467l-0.77758,-6.76175c-0.23292,-2.04608 -1.32583,-3.91658 -2.99208,-5.12775c-1.66625,-1.21117 -3.784,-1.66983 -5.80858,-1.2685l-6.91225,1.22192l-2.82725,-6.18483c-0.85642,-1.8705 -2.4725,-3.311 -4.429,-3.94883c-1.96367,-0.645 -4.11367,-0.42283 -5.91608,0.58767l-6.192,3.29667l-4.60458,-5.00592c-1.39392,-1.51575 -3.3755,-2.38292 -5.43233,-2.38292h-0.01075c-2.064,0.00358 -4.05275,0.8815 -5.44308,2.40083l-4.86975,5.0525l-5.92325,-3.33967c-1.79525,-1.01408 -3.956,-1.22192 -5.90892,-0.59125c-1.96008,0.63425 -3.57975,2.07833 -4.43617,3.95242l-3.07092,6.30667l-6.665,-1.34375c-2.021,-0.41567 -4.13517,0.05017 -5.79783,1.26133c-1.66983,1.21117 -2.76275,3.07808 -3.00283,5.13492l-0.97108,6.95167l-6.76533,0.774c-2.04608,0.2365 -3.91658,1.32583 -5.13133,2.99567c-1.21117,1.66625 -1.67342,3.784 -1.2685,5.80858l1.2255,6.90867l-6.18125,2.82725c-1.87408,0.85642 -3.31817,2.46892 -3.956,4.429c-0.63425,1.96008 -0.41925,4.11725 0.59483,5.91608l3.29667,6.192l-5.00233,4.601c-1.52292,1.39392 -2.39367,3.3755 -2.39367,5.4395c0,2.064 0.87075,4.04558 2.39008,5.44308l5.0525,4.86975l-3.34325,5.92325c-1.0105,1.79525 -1.22908,3.95242 -0.59125,5.9125c0.63783,1.96008 2.07833,3.57975 3.956,4.43258l6.30667,3.07092l-1.35092,6.67217c-0.40492,2.01742 0.05375,4.13158 1.26492,5.80142c1.21117,1.66983 3.07808,2.76275 5.14208,3.00283l6.94808,0.95675l0.78117,6.751c0.22933,2.04608 1.31867,3.91658 2.98492,5.12775c1.677,1.21475 3.79117,1.68058 5.81575,1.2685l6.91225,-1.2255l2.82725,6.18842c0.85642,1.8705 2.4725,3.311 4.43258,3.94883c1.96008,0.63783 4.11367,0.41925 5.90892,-0.59125l6.19558,-3.29667l4.601,5.0095c1.39392,1.51933 3.37908,2.39008 5.4395,2.39008h0.00358c2.06042,0 4.042,-0.87433 5.43592,-2.39008l4.86975,-5.0525l5.92325,3.33967c1.79883,1.01767 3.956,1.22908 5.90892,0.59125c1.96008,-0.63425 3.57975,-2.07833 4.43617,-3.956l3.07092,-6.30667l6.66858,1.34733c2.00308,0.40492 4.128,-0.05375 5.79783,-1.26492c1.66625,-1.21117 2.76275,-3.07808 2.99925,-5.13133l0.97108,-6.95167l6.75817,-0.77758c2.04608,-0.2365 3.91658,-1.32583 5.13133,-2.99567c1.21475,-1.66983 1.67342,-3.784 1.2685,-5.80858l-1.2255,-6.91225l6.18125,-2.82725c1.87408,-0.85642 3.31817,-2.46892 3.956,-4.429c0.64142,-1.96008 0.42283,-4.11367 -0.58767,-5.91608l-3.29667,-6.19558l5.00592,-4.601c1.52292,-1.38675 2.39367,-3.37192 2.39367,-5.43233z"
+                                                        fill="#14a753"
+                                                    ></path>
+                                                    <path
+                                                        d="M81.1195,118.60475c-2.83442,0 -5.37142,-1.50858 -6.78683,-4.03483c-12.76025,-22.84017 -33.0885,-33.48267 -33.29275,-33.59017l-1.25417,-0.645l1.47275,-6.13108h1.41183c19.3715,0 30.03192,6.87642 37.6895,14.08608c11.9755,-19.13142 37.30608,-30.85967 48.08833,-33.61167l1.45842,-0.37267l2.69108,5.96267l-1.247,0.84567c-22.82942,15.51942 -35.56817,37.69667 -43.16125,53.02975c-1.36883,2.752 -4.07425,4.46125 -7.06992,4.46125z"
+                                                        fill="#000000"
+                                                        opacity="0.05"
+                                                    ></path>
+                                                    <path
+                                                        d="M81.1195,116.81308c-2.17867,0 -4.128,-1.16458 -5.22092,-3.1175c-13.08633,-23.43142 -33.83025,-34.20292 -34.04167,-34.31042l0.817,-3.38625c21.285,0 31.44017,8.54983 38.06933,15.1575c11.08683,-19.74417 36.93342,-31.87733 48.15283,-34.74042l1.45125,3.21783c-23.18058,15.75592 -36.07342,38.20192 -43.75967,53.71417c-1.06425,2.13567 -3.15692,3.46508 -5.46817,3.46508z"
+                                                        fill="#000000"
+                                                        opacity="0.07"
+                                                    ></path>
+                                                    <path
+                                                        d="M42.67033,77.79058c0,0 21.285,10.85392 34.79058,35.03067c1.71283,3.06375 5.95908,2.88458 7.51783,-0.26875c7.353,-14.84575 20.28167,-38.0335 44.35808,-54.39858c-12.83908,3.27517 -38.51725,16.36867 -48.14925,36.00533c-6.42133,-6.55033 -16.04975,-16.36867 -38.51725,-16.36867z"
+                                                        fill="#ffffff"
+                                                    ></path>
+                                                </g>
+                                            </g></svg
+                                        >Available in - 500gm
+                                    </a>
+                                </h4>
+                                <div class="price">
+                                    ৳16.00
+                                    <span>৳20.00</span>
+                                </div>
+                                <div class="pt-2">
+                                    <button
+                                        style="padding: 4px 10px"
+                                        class="text-sm font-medium text-white rounded-full  addto_bag_btn bg-green-550"
+                                    >
+                                        Add To Bag <i class="lni lni-shopify"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <ul class="social">
+                                <li>
+                                    <a href="" data-tip="Quick View"><i class="lni lni-eye"></i></a>
+                                </li>
+                                <li>
+                                    <a href="" data-tip="Wishlist"><i class="lni lni-heart"></i></a>
+                                </li>
+                                <li>
+                                    <a href="" data-tip="add to cart"
+                                        ><i class="lni lni-cart"></i
+                                    ></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 4 -->
+                        <div class="product-grid">
+                            <div class="product-image">
+                                <a href="#">
+                                    <img class="pic-1" src="./src/img/Bhutta.jpg" />
+                                </a>
+                            </div>
+                            <div class="product-content">
+                                <h3
+                                    class="text-sm font-semibold tracking-wider text-gray-800  hover:text-yellow-500"
+                                >
+                                    <a href="productview.html">Amul Salted Butter</a>
+                                </h3>
+                                <h4 class="text-xs text-gray-500">
+                                    <a href="#">
+                                        <svg
+                                            class="inline-block pr-1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            x="0px"
+                                            y="0px"
+                                            width="18"
+                                            height="18"
+                                            viewBox="0 0 172 172"
+                                            style="fill: #000000"
+                                        >
+                                            <g
+                                                fill="none"
+                                                fill-rule="nonzero"
+                                                stroke="none"
+                                                stroke-width="1"
+                                                stroke-linecap="butt"
+                                                stroke-linejoin="miter"
+                                                stroke-miterlimit="10"
+                                                stroke-dasharray=""
+                                                stroke-dashoffset="0"
+                                                font-family="none"
+                                                font-weight="none"
+                                                font-size="none"
+                                                text-anchor="none"
+                                                style="mix-blend-mode: normal"
+                                            >
+                                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                                <g>
+                                                    <path
+                                                        d="M157.67383,85.99642c0,-2.06042 -0.87075,-4.042 -2.39008,-5.43592l-5.0525,-4.86975l3.34325,-5.92325c1.0105,-1.79525 1.22908,-3.95242 0.59125,-5.9125c-0.63783,-1.96367 -2.07833,-3.57975 -3.956,-4.43617l-6.30667,-3.07092l1.34733,-6.665c0.40492,-2.01742 -0.05375,-4.13158 -1.26492,-5.80142c-1.21117,-1.66983 -3.07808,-2.76275 -5.13492,-2.99925l-6.94808,-0.97467l-0.77758,-6.76175c-0.23292,-2.04608 -1.32583,-3.91658 -2.99208,-5.12775c-1.66625,-1.21117 -3.784,-1.66983 -5.80858,-1.2685l-6.91225,1.22192l-2.82725,-6.18483c-0.85642,-1.8705 -2.4725,-3.311 -4.429,-3.94883c-1.96367,-0.645 -4.11367,-0.42283 -5.91608,0.58767l-6.192,3.29667l-4.60458,-5.00592c-1.39392,-1.51575 -3.3755,-2.38292 -5.43233,-2.38292h-0.01075c-2.064,0.00358 -4.05275,0.8815 -5.44308,2.40083l-4.86975,5.0525l-5.92325,-3.33967c-1.79525,-1.01408 -3.956,-1.22192 -5.90892,-0.59125c-1.96008,0.63425 -3.57975,2.07833 -4.43617,3.95242l-3.07092,6.30667l-6.665,-1.34375c-2.021,-0.41567 -4.13517,0.05017 -5.79783,1.26133c-1.66983,1.21117 -2.76275,3.07808 -3.00283,5.13492l-0.97108,6.95167l-6.76533,0.774c-2.04608,0.2365 -3.91658,1.32583 -5.13133,2.99567c-1.21117,1.66625 -1.67342,3.784 -1.2685,5.80858l1.2255,6.90867l-6.18125,2.82725c-1.87408,0.85642 -3.31817,2.46892 -3.956,4.429c-0.63425,1.96008 -0.41925,4.11725 0.59483,5.91608l3.29667,6.192l-5.00233,4.601c-1.52292,1.39392 -2.39367,3.3755 -2.39367,5.4395c0,2.064 0.87075,4.04558 2.39008,5.44308l5.0525,4.86975l-3.34325,5.92325c-1.0105,1.79525 -1.22908,3.95242 -0.59125,5.9125c0.63783,1.96008 2.07833,3.57975 3.956,4.43258l6.30667,3.07092l-1.35092,6.67217c-0.40492,2.01742 0.05375,4.13158 1.26492,5.80142c1.21117,1.66983 3.07808,2.76275 5.14208,3.00283l6.94808,0.95675l0.78117,6.751c0.22933,2.04608 1.31867,3.91658 2.98492,5.12775c1.677,1.21475 3.79117,1.68058 5.81575,1.2685l6.91225,-1.2255l2.82725,6.18842c0.85642,1.8705 2.4725,3.311 4.43258,3.94883c1.96008,0.63783 4.11367,0.41925 5.90892,-0.59125l6.19558,-3.29667l4.601,5.0095c1.39392,1.51933 3.37908,2.39008 5.4395,2.39008h0.00358c2.06042,0 4.042,-0.87433 5.43592,-2.39008l4.86975,-5.0525l5.92325,3.33967c1.79883,1.01767 3.956,1.22908 5.90892,0.59125c1.96008,-0.63425 3.57975,-2.07833 4.43617,-3.956l3.07092,-6.30667l6.66858,1.34733c2.00308,0.40492 4.128,-0.05375 5.79783,-1.26492c1.66625,-1.21117 2.76275,-3.07808 2.99925,-5.13133l0.97108,-6.95167l6.75817,-0.77758c2.04608,-0.2365 3.91658,-1.32583 5.13133,-2.99567c1.21475,-1.66983 1.67342,-3.784 1.2685,-5.80858l-1.2255,-6.91225l6.18125,-2.82725c1.87408,-0.85642 3.31817,-2.46892 3.956,-4.429c0.64142,-1.96008 0.42283,-4.11367 -0.58767,-5.91608l-3.29667,-6.19558l5.00592,-4.601c1.52292,-1.38675 2.39367,-3.37192 2.39367,-5.43233z"
+                                                        fill="#14a753"
+                                                    ></path>
+                                                    <path
+                                                        d="M81.1195,118.60475c-2.83442,0 -5.37142,-1.50858 -6.78683,-4.03483c-12.76025,-22.84017 -33.0885,-33.48267 -33.29275,-33.59017l-1.25417,-0.645l1.47275,-6.13108h1.41183c19.3715,0 30.03192,6.87642 37.6895,14.08608c11.9755,-19.13142 37.30608,-30.85967 48.08833,-33.61167l1.45842,-0.37267l2.69108,5.96267l-1.247,0.84567c-22.82942,15.51942 -35.56817,37.69667 -43.16125,53.02975c-1.36883,2.752 -4.07425,4.46125 -7.06992,4.46125z"
+                                                        fill="#000000"
+                                                        opacity="0.05"
+                                                    ></path>
+                                                    <path
+                                                        d="M81.1195,116.81308c-2.17867,0 -4.128,-1.16458 -5.22092,-3.1175c-13.08633,-23.43142 -33.83025,-34.20292 -34.04167,-34.31042l0.817,-3.38625c21.285,0 31.44017,8.54983 38.06933,15.1575c11.08683,-19.74417 36.93342,-31.87733 48.15283,-34.74042l1.45125,3.21783c-23.18058,15.75592 -36.07342,38.20192 -43.75967,53.71417c-1.06425,2.13567 -3.15692,3.46508 -5.46817,3.46508z"
+                                                        fill="#000000"
+                                                        opacity="0.07"
+                                                    ></path>
+                                                    <path
+                                                        d="M42.67033,77.79058c0,0 21.285,10.85392 34.79058,35.03067c1.71283,3.06375 5.95908,2.88458 7.51783,-0.26875c7.353,-14.84575 20.28167,-38.0335 44.35808,-54.39858c-12.83908,3.27517 -38.51725,16.36867 -48.14925,36.00533c-6.42133,-6.55033 -16.04975,-16.36867 -38.51725,-16.36867z"
+                                                        fill="#ffffff"
+                                                    ></path>
+                                                </g>
+                                            </g></svg
+                                        >Available in - 500gm
+                                    </a>
+                                </h4>
+                                <div class="price">
+                                    ৳16.00
+                                    <span>৳20.00</span>
+                                </div>
+                                <div class="pt-2">
+                                    <button
+                                        style="padding: 4px 10px"
+                                        class="text-sm font-medium text-white rounded-full  addto_bag_btn bg-green-550"
+                                    >
+                                        Add To Bag <i class="lni lni-shopify"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <ul class="social">
+                                <li>
+                                    <a href="" data-tip="Quick View"><i class="lni lni-eye"></i></a>
+                                </li>
+                                <li>
+                                    <a href="" data-tip="Wishlist"><i class="lni lni-heart"></i></a>
+                                </li>
+                                <li>
+                                    <a href="" data-tip="add to cart"
+                                        ><i class="lni lni-cart"></i
+                                    ></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 5 -->
+                        <div class="product-grid">
+                            <div class="product-image">
+                                <a href="#">
+                                    <img class="pic-1" src="./src/img/tomato.jpg" />
+                                </a>
+                            </div>
+                            <div class="product-content">
+                                <h3
+                                    class="text-sm font-semibold tracking-wider text-gray-800  hover:text-yellow-500"
+                                >
+                                    <a href="productview.html">Amul Salted Butter</a>
+                                </h3>
+                                <h4 class="text-xs text-gray-500">
+                                    <a href="#">
+                                        <svg
+                                            class="inline-block pr-1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            x="0px"
+                                            y="0px"
+                                            width="18"
+                                            height="18"
+                                            viewBox="0 0 172 172"
+                                            style="fill: #000000"
+                                        >
+                                            <g
+                                                fill="none"
+                                                fill-rule="nonzero"
+                                                stroke="none"
+                                                stroke-width="1"
+                                                stroke-linecap="butt"
+                                                stroke-linejoin="miter"
+                                                stroke-miterlimit="10"
+                                                stroke-dasharray=""
+                                                stroke-dashoffset="0"
+                                                font-family="none"
+                                                font-weight="none"
+                                                font-size="none"
+                                                text-anchor="none"
+                                                style="mix-blend-mode: normal"
+                                            >
+                                                <path d="M0,172v-172h172v172z" fill="none"></path>
+                                                <g>
+                                                    <path
+                                                        d="M157.67383,85.99642c0,-2.06042 -0.87075,-4.042 -2.39008,-5.43592l-5.0525,-4.86975l3.34325,-5.92325c1.0105,-1.79525 1.22908,-3.95242 0.59125,-5.9125c-0.63783,-1.96367 -2.07833,-3.57975 -3.956,-4.43617l-6.30667,-3.07092l1.34733,-6.665c0.40492,-2.01742 -0.05375,-4.13158 -1.26492,-5.80142c-1.21117,-1.66983 -3.07808,-2.76275 -5.13492,-2.99925l-6.94808,-0.97467l-0.77758,-6.76175c-0.23292,-2.04608 -1.32583,-3.91658 -2.99208,-5.12775c-1.66625,-1.21117 -3.784,-1.66983 -5.80858,-1.2685l-6.91225,1.22192l-2.82725,-6.18483c-0.85642,-1.8705 -2.4725,-3.311 -4.429,-3.94883c-1.96367,-0.645 -4.11367,-0.42283 -5.91608,0.58767l-6.192,3.29667l-4.60458,-5.00592c-1.39392,-1.51575 -3.3755,-2.38292 -5.43233,-2.38292h-0.01075c-2.064,0.00358 -4.05275,0.8815 -5.44308,2.40083l-4.86975,5.0525l-5.92325,-3.33967c-1.79525,-1.01408 -3.956,-1.22192 -5.90892,-0.59125c-1.96008,0.63425 -3.57975,2.07833 -4.43617,3.95242l-3.07092,6.30667l-6.665,-1.34375c-2.021,-0.41567 -4.13517,0.05017 -5.79783,1.26133c-1.66983,1.21117 -2.76275,3.07808 -3.00283,5.13492l-0.97108,6.95167l-6.76533,0.774c-2.04608,0.2365 -3.91658,1.32583 -5.13133,2.99567c-1.21117,1.66625 -1.67342,3.784 -1.2685,5.80858l1.2255,6.90867l-6.18125,2.82725c-1.87408,0.85642 -3.31817,2.46892 -3.956,4.429c-0.63425,1.96008 -0.41925,4.11725 0.59483,5.91608l3.29667,6.192l-5.00233,4.601c-1.52292,1.39392 -2.39367,3.3755 -2.39367,5.4395c0,2.064 0.87075,4.04558 2.39008,5.44308l5.0525,4.86975l-3.34325,5.92325c-1.0105,1.79525 -1.22908,3.95242 -0.59125,5.9125c0.63783,1.96008 2.07833,3.57975 3.956,4.43258l6.30667,3.07092l-1.35092,6.67217c-0.40492,2.01742 0.05375,4.13158 1.26492,5.80142c1.21117,1.66983 3.07808,2.76275 5.14208,3.00283l6.94808,0.95675l0.78117,6.751c0.22933,2.04608 1.31867,3.91658 2.98492,5.12775c1.677,1.21475 3.79117,1.68058 5.81575,1.2685l6.91225,-1.2255l2.82725,6.18842c0.85642,1.8705 2.4725,3.311 4.43258,3.94883c1.96008,0.63783 4.11367,0.41925 5.90892,-0.59125l6.19558,-3.29667l4.601,5.0095c1.39392,1.51933 3.37908,2.39008 5.4395,2.39008h0.00358c2.06042,0 4.042,-0.87433 5.43592,-2.39008l4.86975,-5.0525l5.92325,3.33967c1.79883,1.01767 3.956,1.22908 5.90892,0.59125c1.96008,-0.63425 3.57975,-2.07833 4.43617,-3.956l3.07092,-6.30667l6.66858,1.34733c2.00308,0.40492 4.128,-0.05375 5.79783,-1.26492c1.66625,-1.21117 2.76275,-3.07808 2.99925,-5.13133l0.97108,-6.95167l6.75817,-0.77758c2.04608,-0.2365 3.91658,-1.32583 5.13133,-2.99567c1.21475,-1.66983 1.67342,-3.784 1.2685,-5.80858l-1.2255,-6.91225l6.18125,-2.82725c1.87408,-0.85642 3.31817,-2.46892 3.956,-4.429c0.64142,-1.96008 0.42283,-4.11367 -0.58767,-5.91608l-3.29667,-6.19558l5.00592,-4.601c1.52292,-1.38675 2.39367,-3.37192 2.39367,-5.43233z"
+                                                        fill="#14a753"
+                                                    ></path>
+                                                    <path
+                                                        d="M81.1195,118.60475c-2.83442,0 -5.37142,-1.50858 -6.78683,-4.03483c-12.76025,-22.84017 -33.0885,-33.48267 -33.29275,-33.59017l-1.25417,-0.645l1.47275,-6.13108h1.41183c19.3715,0 30.03192,6.87642 37.6895,14.08608c11.9755,-19.13142 37.30608,-30.85967 48.08833,-33.61167l1.45842,-0.37267l2.69108,5.96267l-1.247,0.84567c-22.82942,15.51942 -35.56817,37.69667 -43.16125,53.02975c-1.36883,2.752 -4.07425,4.46125 -7.06992,4.46125z"
+                                                        fill="#000000"
+                                                        opacity="0.05"
+                                                    ></path>
+                                                    <path
+                                                        d="M81.1195,116.81308c-2.17867,0 -4.128,-1.16458 -5.22092,-3.1175c-13.08633,-23.43142 -33.83025,-34.20292 -34.04167,-34.31042l0.817,-3.38625c21.285,0 31.44017,8.54983 38.06933,15.1575c11.08683,-19.74417 36.93342,-31.87733 48.15283,-34.74042l1.45125,3.21783c-23.18058,15.75592 -36.07342,38.20192 -43.75967,53.71417c-1.06425,2.13567 -3.15692,3.46508 -5.46817,3.46508z"
+                                                        fill="#000000"
+                                                        opacity="0.07"
+                                                    ></path>
+                                                    <path
+                                                        d="M42.67033,77.79058c0,0 21.285,10.85392 34.79058,35.03067c1.71283,3.06375 5.95908,2.88458 7.51783,-0.26875c7.353,-14.84575 20.28167,-38.0335 44.35808,-54.39858c-12.83908,3.27517 -38.51725,16.36867 -48.14925,36.00533c-6.42133,-6.55033 -16.04975,-16.36867 -38.51725,-16.36867z"
+                                                        fill="#ffffff"
+                                                    ></path>
+                                                </g>
+                                            </g></svg
+                                        >Available in - 500gm
+                                    </a>
+                                </h4>
+                                <div class="price">
+                                    ৳16.00
+                                    <span>৳20.00</span>
+                                </div>
+                                <div class="pt-2">
+                                    <button
+                                        style="padding: 4px 10px"
+                                        class="text-sm font-medium text-white rounded-full  addto_bag_btn bg-green-550"
+                                    >
+                                        Add To Bag <i class="lni lni-shopify"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <ul class="social">
+                                <li>
+                                    <a href="" data-tip="Quick View"><i class="lni lni-eye"></i></a>
+                                </li>
+                                <li>
+                                    <a href="" data-tip="Wishlist"><i class="lni lni-heart"></i></a>
+                                </li>
+                                <li>
+                                    <a href="" data-tip="add to cart"
+                                        ><i class="lni lni-cart"></i
+                                    ></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ================ Top Featured Product Section:END ================ -->
+        </main>
+
+        <!-- =================== Footer:Begin========================== -->
+        <footer>
+            <div class="items-center w-full p-6 bg-white footer_section">
+                <div class="container flex mx-auto">
+                    <div class="flex w-full footer_container">
+                        <div class="w-1/4 pl-4">
+                            <picture>
+                                <img src="./src/img/logo.svg" class="mb-2" alt="Logo" />
+                            </picture>
+                            <div class="pl-2 text-sm">
+                                <h2 class="text-gray-800">
+                                    <i class="w-1/12 py-1 text-xs lni lni-phone"></i>+61 525 240 310
+                                </h2>
+                                <h2 class="text-gray-800">
+                                    <i class="w-1/12 py-1 text-xs lni lni-mobile"></i>01858 586930,
+                                    01563-526387
+                                </h2>
+                                <h2 class="text-green-550">
+                                    <i class="w-1/12 py-1 text-xs lni lni-envelope"></i
+                                    >FreshGrocery@Gmail.com
+                                </h2>
+                                <h2 class="text-yellow-600">
+                                    <i class="w-1/12 py-1 text-xs lni lni-world"></i
+                                    >www.FreshGrocery.Com
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="text-sm text-gray-700 w-1/7">
+                            <h2
+                                class="pb-4 text-base font-medium text-gray-900  hover:text-yellow-600"
+                            >
+                                <a href="#">TOP CITIES</a>
+                            </h2>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Dhaka</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Chittagong</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Rajsahi</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Barishal</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Sylhet</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Khulna</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Feni</a>
+                            </h4>
+                        </div>
+                        <div class="w-1/5 text-sm text-gray-700">
+                            <h2
+                                class="pb-4 text-base font-medium text-gray-900  hover:text-yellow-600"
+                            >
+                                <a href="#">CATEGORIES</a>
+                            </h2>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Vegetables</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Grocery & Staples</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Breakfast & Dairy</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Soft Drinks</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Snacks</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Fresh Juice</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Biscuit & Cookies</a>
+                            </h4>
+                        </div>
+                        <div class="w-1/5 text-sm text-gray-700">
+                            <h2
+                                class="pb-4 text-base font-medium text-gray-900  hover:text-yellow-6000"
+                            >
+                                USEFUL LINKS
+                            </h2>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Privacy Policy</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Terms Conditions</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">About Us</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Affiliate Program</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Store Locations</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Copyright</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Contact Us</a>
+                            </h4>
+                        </div>
+                        <div class="w-1/5">
+                            <div>
+                                <h2 class="text-base font-medium text-gray-900">DOWNLOAD APP</h2>
+                                <div class="flex py-4">
+                                    <a href="#" class="w-1/2">
+                                        <img
+                                            class="w-8/10"
+                                            src="./src/img/google.4ce869c.png"
+                                            alt="Google Play Store"
+                                        />
+                                    </a>
+                                    <a href="#" class="w-1/2 -ml-3">
+                                        <img
+                                            class="w-8/10"
+                                            src="./src/img/ios.62d930a.png"
+                                            alt="Apple Store"
+                                        />
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="pt-4">
+                                <h2 class="text-base font-medium text-gray-900">GET IN TOUCH</h2>
+                                <div class="flex justify-center Footer-Social-media">
+                                    <a href="#"
+                                        ><i class="lni lni-facebook-oval hover:text-blue-600"></i
+                                    ></a>
+                                    <a href="#"
+                                        ><i class="lni lni-twitter-original hover:text-blue-400"></i
+                                    ></a>
+                                    <a href="#"
+                                        ><i class="lni lni-whatsapp hover:text-green-600"></i
+                                    ></a>
+                                    <a href="#"
+                                        ><i class="lni lni-instagram hover:text-red-500"></i
+                                    ></a>
+                                    <a href="#"
+                                        ><i class="lni lni-youtube hover:text-red-500"></i
+                                    ></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="items-center w-full p-8 py-6 text-white bg-gray-800 bottom_footer_section">
+                <div class="container flex mx-auto">
+                    <div class="flex w-full bottom_footer_container">
+                        <div class="w-1/2 text-sm">
+                            &copy Copyright 2021
+                            <strong class="tracking-widest">FreshGrocery</strong>. All Rights
+                            Reserved <br />
+                            <span class="text-xs"
+                                >Made With <i class="lni lni-heart-filled"></i> by JAHID</span
+                            >
+                        </div>
+                        <div class="w-1/2">
+                            <img
+                                src="./src/img/SSL-Commerz-Pay-With-logo-All-Size-03-1.png"
+                                alt="payments"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- =================== Footer:END========================== -->
+    </body>
+</html>

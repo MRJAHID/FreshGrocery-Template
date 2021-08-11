@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="en" class="box-border">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fresh Grocery</title>
+        <!-- Favicon -->
+        <link rel="icon" href="src/img/favicon.ico" />
+        <!--LineIcons -->
+        <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet" />
+        <!-- Owl Carousel Slider -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        />
+        <!-- CSS -->
+        <link rel="stylesheet" href="./src/tailwind.css" />
+        <link rel="stylesheet" href="./src/css/style.css" />
+        <!-- ======================== ******* ======================== -->
+        <!-- ======================== Scripts ======================== -->
+        <!-- ======================== ******* ======================== -->
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Owl Carousel -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <!-- Main Custom JS-->
+        <script type="text/javascript" src="./src/js/main.js"></script>
+    </head>
+    <body class="box-border min-h-screen overflow-auto antialiased bg-blue-100">
+        <!-- ======================== Small Cart:Begin ======================== -->
+        <div id="small_cart">
+            <div>
+                <div
+                    id="small_cart_container"
+                    class="container fixed hidden w-full h-full"
+                    style="background-color: rgba(0, 0, 0, 0.5); z-index: 1000"
+                >
+                    <div
+                        class="fixed top-0 right-0 w-full h-full md:w-2/3 lg:w-1/3"
+                        style="background: rgb(255, 255, 255)"
+                    >
+                        <!-- Head:Begin -->
+                        <div
+                            id="small_cart_head"
+                            class="small_cart-heading_container"
+                            style="min-height: 5%; height: 5%"
+                        >
+                            <div
+                                id="small_cart_head"
+                                class="flex items-center justify-between h-full"
+                            >
+                                <div class="w-8/12">
+                                    <h5
+                                        style="color: #fff; font-size: 12px"
+                                        class="px-3 font-semibold tracking-wider  small_cart_shopping_heading"
+                                    >
+                                        <i class="lni lni-anchor"></i>
+                                        SHOPPING CART
+                                    </h5>
+                                </div>
+                                <div class="flex justify-end w-4/12 mr-2">
+                                    <p
+                                        style="font-size: 12px"
+                                        class="font-medium uppercase cursor-pointer  small_cart-close hover:text-red-600"
+                                    >
+                                        Close &nbsp;
+                                        <i class="lni lni-close"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Head:END -->
+
+                        <!-- HealthBar:Begin -->
+                        <div class="small_cart-healthbar">
+                            <span class="text-xs font-bold text-white small_cart-health_text"
+                                >You may checkout now.</span
+                            >
+                            <div
+                                class="small_cart-healthbar__value"
+                                style="background-color: rgb(39, 174, 96); width: 4800%"
+                            ></div>
+                        </div>
+                        <!-- HealthBar:END -->
+
+                        <!-- Main Body:Begin -->
+                        <div
+                            class="small_cart-body-container"
+                            style="overflow-y: scroll; height: 81%"
+                        >
+                            <!-- 1 -->
+                            <div class="flex flex-col small_cart-checkout-box items-between">
+                                <div class="relative flex small_cart-section">
+                                    <div class="small_cart-product-remove">
+                                        <i
+                                            class="absolute text-xs cursor-pointer  lni lni-close right-5 top-3 hover:text-red-700"
+                                        ></i>
+                                    </div>
+                                    <div class="flex items-center w-4/12">
+                                        <a href="#"
+                                            ><img
+                                                style="width: 80px"
+                                                src="./src/img/vegetables1.png"
+                                        /></a>
+                                    </div>
+                                    <div class="w-8/12 leading-normal" style="margin-left: 5px">
+                                        <div class="flex items-start justify-between pb-1">
+                                            <a href="#">
+                                                <p
+                                                    title=""
+                                                    class="text-sm font-medium text-gray-800  product-title"
+                                                >
+                                                    Mixed Fruit Salad
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <!-- Product Size Select Box -->
+                                        <div class="flex small_cart-produc-size-container">
+                                            <div class="relative selectbox">
+                                                <select
+                                                    name=""
+                                                    id=""
+                                                    class="flex text-xs text-gray-800 bg-gray-100 border border-gray-100 appearance-none cursor-pointer  outline-0"
+                                                >
+                                                    <option value="">1000 Gm</option>
+                                                    <option value="">1 Kg</option>
+                                                    <option value="">5 Litter</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex">
+                                            <!-- Inrement Button
+                                         -->
+                                            <div class="flex pt-2 product_increment_btn">
+                                                <span
+                                                    class="flex items-center justify-center inline-block font-bold text-gray-800 bg-gray-300 border-none cursor-pointer select-none  input-number-decrement hover:bg-gray-800 hover:text-white"
+                                                    >–</span
+                                                >
+                                                <input
+                                                    class="text-center text-gray-700 align-top border-none select-none  input-number"
+                                                    type="text"
+                                                    value="1"
+                                                    min="0"
+                                                    max="10"
+                                                />
+                                                <span
+                                                    class="flex items-center justify-center inline-block font-bold text-gray-800 bg-gray-300 border-none cursor-pointer select-none  input-number-increment hover:bg-gray-800 hover:text-white"
+                                                    >+</span
+                                                >
+                                            </div>
+                                            <!-- Price -->
+                                            <div
+                                                class="flex items-center justify-end w-7/12  small_cart-product-total"
+                                            >
+                                                <p class="text-base font-semibold text-yellow-550">
+                                                    ৳ 720
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 2 -->
+                            <div class="flex flex-col small_cart-checkout-box items-between">
+                                <div class="relative flex small_cart-section">
+                                    <div class="small_cart-product-remove">
+                                        <i
+                                            class="absolute text-xs cursor-pointer  lni lni-close right-5 top-3 hover:text-red-700"
+                                        ></i>
+                                    </div>
+                                    <div class="flex items-center w-4/12">
+                                        <a href="#"
+                                            ><img
+                                                style="width: 80px"
+                                                src="./src/img/vegetables2.png"
+                                        /></a>
+                                    </div>
+                                    <div class="w-8/12 leading-normal" style="margin-left: 5px">
+                                        <div class="flex items-start justify-between pb-1">
+                                            <a href="#">
+                                                <p
+                                                    title=""
+                                                    class="text-sm font-medium text-gray-800  product-title"
+                                                >
+                                                    Mixed Fruit Salad
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <!-- Product Size Select Box -->
+                                        <div class="flex small_cart-produc-size-container">
+                                            <div class="relative selectbox">
+                                                <select
+                                                    name=""
+                                                    id=""
+                                                    class="flex text-xs text-gray-800 bg-gray-100 border border-gray-100 appearance-none cursor-pointer  outline-0"
+                                                >
+                                                    <option value="">1000 Gm</option>
+                                                    <option value="">1 Kg</option>
+                                                    <option value="">5 Litter</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex">
+                                            <!-- Inrement Button
+                                         -->
+                                            <div class="flex pt-2 product_increment_btn">
+                                                <span
+                                                    class="flex items-center justify-center inline-block font-bold text-gray-800 bg-gray-300 border-none cursor-pointer select-none  input-number-decrement hover:bg-gray-800 hover:text-white"
+                                                    >–</span
+                                                >
+                                                <input
+                                                    class="text-center text-gray-700 align-top border-none select-none  input-number"
+                                                    type="text"
+                                                    value="1"
+                                                    min="0"
+                                                    max="10"
+                                                />
+                                                <span
+                                                    class="flex items-center justify-center inline-block font-bold text-gray-800 bg-gray-300 border-none cursor-pointer select-none  input-number-increment hover:bg-gray-800 hover:text-white"
+                                                    >+</span
+                                                >
+                                            </div>
+                                            <!-- Price -->
+                                            <div
+                                                class="flex items-center justify-end w-7/12  small_cart-product-total"
+                                            >
+                                                <p class="text-base font-semibold text-yellow-550">
+                                                    ৳ 720
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 3 -->
+                            <div class="flex flex-col small_cart-checkout-box items-between">
+                                <div class="relative flex small_cart-section">
+                                    <div class="small_cart-product-remove">
+                                        <i
+                                            class="absolute text-xs cursor-pointer  lni lni-close right-5 top-3 hover:text-red-700"
+                                        ></i>
+                                    </div>
+                                    <div class="flex items-center w-4/12">
+                                        <a href="#"
+                                            ><img
+                                                style="width: 80px"
+                                                src="./src/img/vegetables3.png"
+                                        /></a>
+                                    </div>
+                                    <div class="w-8/12 leading-normal" style="margin-left: 5px">
+                                        <div class="flex items-start justify-between pb-1">
+                                            <a href="#">
+                                                <p
+                                                    title=""
+                                                    class="text-sm font-medium text-gray-800  product-title"
+                                                >
+                                                    Mixed Fruit Salad
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <!-- Product Size Select Box -->
+                                        <div class="flex small_cart-produc-size-container">
+                                            <div class="relative selectbox">
+                                                <select
+                                                    name=""
+                                                    id=""
+                                                    class="flex text-xs text-gray-800 bg-gray-100 border border-gray-100 appearance-none cursor-pointer  outline-0"
+                                                >
+                                                    <option value="">1000 Gm</option>
+                                                    <option value="">1 Kg</option>
+                                                    <option value="">5 Litter</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex">
+                                            <!-- Inrement Button
+                                         -->
+                                            <div class="flex pt-2 product_increment_btn">
+                                                <span
+                                                    class="flex items-center justify-center inline-block font-bold text-gray-800 bg-gray-300 border-none cursor-pointer select-none  input-number-decrement hover:bg-gray-800 hover:text-white"
+                                                    >–</span
+                                                >
+                                                <input
+                                                    class="text-center text-gray-700 align-top border-none select-none  input-number"
+                                                    type="text"
+                                                    value="1"
+                                                    min="0"
+                                                    max="10"
+                                                />
+                                                <span
+                                                    class="flex items-center justify-center inline-block font-bold text-gray-800 bg-gray-300 border-none cursor-pointer select-none  input-number-increment hover:bg-gray-800 hover:text-white"
+                                                    >+</span
+                                                >
+                                            </div>
+                                            <!-- Price -->
+                                            <div
+                                                class="flex items-center justify-end w-7/12  small_cart-product-total"
+                                            >
+                                                <p class="text-base font-semibold text-yellow-550">
+                                                    ৳ 720
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 4 -->
+                            <div class="flex flex-col small_cart-checkout-box items-between">
+                                <div class="relative flex small_cart-section">
+                                    <div class="small_cart-product-remove">
+                                        <i
+                                            class="absolute text-xs cursor-pointer  lni lni-close right-5 top-3 hover:text-red-700"
+                                        ></i>
+                                    </div>
+                                    <div class="flex items-center w-4/12">
+                                        <a href="#"
+                                            ><img
+                                                style="width: 80px"
+                                                src="./src/img/vegetables4.png"
+                                        /></a>
+                                    </div>
+                                    <div class="w-8/12 leading-normal" style="margin-left: 5px">
+                                        <div class="flex items-start justify-between pb-1">
+                                            <a href="#">
+                                                <p
+                                                    title=""
+                                                    class="text-sm font-medium text-gray-800  product-title"
+                                                >
+                                                    Mixed Fruit Salad
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <!-- Product Size Select Box -->
+                                        <div class="flex small_cart-produc-size-container">
+                                            <div class="relative selectbox">
+                                                <select
+                                                    name=""
+                                                    id=""
+                                                    class="flex text-xs text-gray-800 bg-gray-100 border border-gray-100 appearance-none cursor-pointer  outline-0"
+                                                >
+                                                    <option value="">1000 Gm</option>
+                                                    <option value="">1 Kg</option>
+                                                    <option value="">5 Litter</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex">
+                                            <!-- Inrement Button
+                                         -->
+                                            <div class="flex pt-2 product_increment_btn">
+                                                <span
+                                                    class="flex items-center justify-center inline-block font-bold text-gray-800 bg-gray-300 border-none cursor-pointer select-none  input-number-decrement hover:bg-gray-800 hover:text-white"
+                                                    >–</span
+                                                >
+                                                <input
+                                                    class="text-center text-gray-700 align-top border-none select-none  input-number"
+                                                    type="text"
+                                                    value="1"
+                                                    min="0"
+                                                    max="10"
+                                                />
+                                                <span
+                                                    class="flex items-center justify-center inline-block font-bold text-gray-800 bg-gray-300 border-none cursor-pointer select-none  input-number-increment hover:bg-gray-800 hover:text-white"
+                                                    >+</span
+                                                >
+                                            </div>
+                                            <!-- Price -->
+                                            <div
+                                                class="flex items-center justify-end w-7/12  small_cart-product-total"
+                                            >
+                                                <p class="text-base font-semibold text-yellow-550">
+                                                    ৳ 720
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Main Body:END -->
+
+                        <!-- Bottom:Begin -->
+                        <div
+                            class="small_cart-checkout-container"
+                            style="min-height: 10%; height: 10%"
+                        >
+                            <div class="flex items-center justify-between h-full">
+                                <div
+                                    class="flex flex-col items-center justify-start w-6/12 h-full border border-gray-300  small_cart-total"
+                                >
+                                    <p
+                                        class="text-base font-medium text-left text-gray-800 capitalize "
+                                    >
+                                        Cart Total
+                                        <br />
+                                    </p>
+
+                                    <div class="text-center">
+                                        <span class="text-base font-semibold text-green-550"
+                                            >৳
+                                        </span>
+                                        <span class="text-base font-semibold text-green-550"
+                                            >720</span
+                                        >
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex items-center justify-center w-6/12 h-full text-white uppercase transition duration-300 ease-in-out  small_cart-checkout bg-green-550 hover:bg-gray-800"
+                                    style="border-top: 1px solid rgba(129, 129, 129, 0.2)"
+                                >
+                                    <a href="cart.html"
+                                        ><button
+                                            style="outline: none"
+                                            class="flex items-center justify-center w-6/12 h-full ml-auto mr-auto font-medium  small_cart-checkout-btn focus:outline-none"
+                                        >
+                                            PROCEED
+                                            <i
+                                                class="pl-2  lni lni-chevron-right-circle focus:outline-none"
+                                            ></i></button
+                                    ></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Small Cart Small Bag  -->
+                <div
+                    id="small_cart_section_div"
+                    class="container fixed right-0  small_cart-shopping-bag-sidebar top-5/10 opacity-70 hover:opacity-100"
+                >
+                    <div
+                        class="flex flex-col items-center justify-between rounded cursor-pointer  small-cart-container bg-green-550"
+                    >
+                        <span
+                            class="flex justify-center text-lg cursor-pointer small_cart-small_bag"
+                            ><i class="text-white lni lni-shopify"></i
+                        ></span>
+                        <p
+                            id="small_total_cart"
+                            class="text-xs font-semibold tracking-wider text-white"
+                        >
+                            1 ITEMS
+                        </p>
+                        <p
+                            class="w-full text-sm font-semibold text-center text-white"
+                            style="background: rgb(45, 55, 72)"
+                        >
+                            <span>৳&nbsp;</span> <span id="small_cart_amount"> 720 </span>
+                            <input id="small_cart_amount_2" type="hidden" />
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ======================== Small Cart:End ======================== -->
+
+        <!-- ======================== TopBar:Begin ======================== -->
+        <div class="overflow-hidden topbar_container">
+            <div class="flex flex-col w-full py-2 bg-white topbar_content md:py-3 md:flex-row">
+                <div
+                    style="border-bottom: 1px solid #dfe2e0"
+                    class="flex flex-row justify-end w-full px-4 text-sm font-medium text-white  topbar_divbox md:justify-end md:px-12"
+                >
+                    <div style="border-right: 1px solid #cddace" class="pr-4 md:pr-6">
+                        <a
+                            href="#"
+                            class="flex pb-1 text-gray-800 transition duration-500 ease-in-out  hover:text-green-550"
+                        >
+                            <i class="pr-2 m-auto my-auto lni lni-map-marker"></i>
+                            <h2>New York</h2>
+                        </a>
+                    </div>
+                    <div style="border-right: 1px solid #cddace" class="pl-2 pr-4 md:pr-6">
+                        <a
+                            href="checkout.html"
+                            class="hidden pb-1 text-gray-800 transition duration-500 ease-in-out  sm:flex hover:text-green-550"
+                        >
+                            <i class="pr-1 m-auto lni lni-cart"></i>
+                            <h2>Checkout</h2>
+                        </a>
+                        <a
+                            href="wishlist.html"
+                            class="flex pb-1 text-gray-800 transition duration-500 ease-in-out  sm:hidden hover:text-green-550"
+                        >
+                            <i class="pr-1 m-auto lni lni-heart"></i>
+                            <h2>Wishlist</h2>
+                        </a>
+                    </div>
+                    <div class="pl-2">
+                        <div class="auth-modal-btn">
+                            <li class="md:inline-block">
+                                <a
+                                    class="text-gray-800 transition duration-500 ease-in-out  auth-signup hover:text-green-550"
+                                    href="#"
+                                >
+                                    <i class="pr-1 m-auto lni lni-lock"></i> SignIn</a
+                                >
+                            </li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ======================== TopBar:End ======================== -->
+
+        <!-- ======================== auth Modal:Begin ======================== -->
+        <div
+            class="fixed top-0 left-0 invisible w-full h-full overflow-y-auto opacity-0 cursor-pointer  auth-user-modal"
+            style="z-index: 2000"
+        >
+            <div
+                class="relative max-w-md transition duration-700 transform bg-white rounded cursor-auto  auth-user-modal-container w-9/10"
+            >
+                <!-- this is the container wrapper -->
+                <ul class="auth_nav-switcher">
+                    <li class="float-left w-1/2 text-center">
+                        <a href="#0" class="block w-full h-12 leading-10">Sign in</a>
+                    </li>
+                    <li class="float-left w-1/2 text-center">
+                        <a href="#0" class="block w-full h-12 leading-10">New account</a>
+                    </li>
+                </ul>
+
+                <div id="auth-login">
+                    <!-- log in form -->
+                    <form class="p-8 auth-form">
+                        <p class="relative mx-0 my-8 fieldset">
+                            <label class="image-replace auth-email" for="signin-email"
+                                >E-mail</label
+                            >
+                            <input
+                                class="full-width has-padding has-border"
+                                id="signin-email"
+                                type="email"
+                                placeholder="E-mail"
+                            />
+                            <span class="auth-error-message">Error message here!</span>
+                        </p>
+
+                        <p class="relative mx-0 my-8 fieldset">
+                            <label class="image-replace auth-password" for="signin-password"
+                                >Password</label
+                            >
+                            <input
+                                class="full-width has-padding has-border"
+                                id="signin-password"
+                                type="text"
+                                placeholder="Password"
+                            />
+                            <a href="#0" class="hide-password">Hide</a>
+                            <span class="auth-error-message">Error message here!</span>
+                        </p>
+
+                        <p class="relative mx-0 my-8 fieldset">
+                            <input type="checkbox" id="remember-me" checked />
+                            <label for="remember-me">Remember me</label>
+                        </p>
+
+                        <p class="relative mx-0 my-8 fieldset">
+                            <input class="full-width" type="submit" value="Login" />
+                        </p>
+                    </form>
+
+                    <p
+                        class="absolute left-0 w-full text-sm text-center  auth-form-bottom-message -bottom-8"
+                    >
+                        <a class="text-white underline" href="#0">Forgot your password?</a>
+                    </p>
+                    <!-- <a href="#0" class="auth-close-form">Close</a> -->
+                </div>
+                <!-- auth-login -->
+
+                <div id="auth-signup">
+                    <!-- sign up form -->
+                    <form class="p-8 auth-form">
+                        <p class="relative mx-0 my-8 fieldset">
+                            <label class="image-replace auth-username" for="signup-username"
+                                >Username</label
+                            >
+                            <input
+                                class="full-width has-padding has-border"
+                                id="signup-username"
+                                type="text"
+                                placeholder="Username"
+                            />
+                            <span class="auth-error-message">Error message here!</span>
+                        </p>
+
+                        <p class="relative mx-0 my-8 fieldset">
+                            <label class="image-replace auth-email" for="signup-email"
+                                >E-mail</label
+                            >
+                            <input
+                                class="full-width has-padding has-border"
+                                id="signup-email"
+                                type="email"
+                                placeholder="E-mail"
+                            />
+                            <span class="auth-error-message">Error message here!</span>
+                        </p>
+
+                        <p class="relative mx-0 my-8 fieldset">
+                            <label class="image-replace auth-password" for="signup-password"
+                                >Password</label
+                            >
+                            <input
+                                class="full-width has-padding has-border"
+                                id="signup-password"
+                                type="text"
+                                placeholder="Password"
+                            />
+                            <a href="#0" class="hide-password">Hide</a>
+                            <span class="auth-error-message">Error message here!</span>
+                        </p>
+
+                        <p class="relative mx-0 my-8 fieldset">
+                            <input type="checkbox" id="accept-terms" />
+                            <label for="accept-terms">I agree to the <a href="#0">Terms</a></label>
+                        </p>
+
+                        <p class="relative mx-0 my-8 fieldset">
+                            <input
+                                class="full-width has-padding"
+                                type="submit"
+                                value="Create account"
+                            />
+                        </p>
+                    </form>
+
+                    <!-- <a href="#0" class="auth-close-form">Close</a> -->
+                </div>
+                <!-- auth-signup -->
+
+                <div id="auth-reset-password">
+                    <!-- reset password form -->
+                    <p class="auth-form-message">
+                        Lost your password? Please enter your email address. You will receive a link
+                        to create a new password.
+                    </p>
+
+                    <form class="p-8 auth-form">
+                        <p class="relative mx-0 my-8 fieldset">
+                            <label class="image-replace auth-email" for="reset-email">E-mail</label>
+                            <input
+                                class="full-width has-padding has-border"
+                                id="reset-email"
+                                type="email"
+                                placeholder="E-mail"
+                            />
+                            <span class="auth-error-message">Error message here!</span>
+                        </p>
+
+                        <p class="relative mx-0 my-8 fieldset">
+                            <input
+                                class="full-width has-padding"
+                                type="submit"
+                                value="Reset password"
+                            />
+                        </p>
+                    </form>
+
+                    <p
+                        class="absolute left-0 w-full text-sm text-center  auth-form-bottom-message -bottom-8"
+                    >
+                        <a class="text-white underline" href="#0">Back to log-in</a>
+                    </p>
+                </div>
+                <!-- auth-reset-password -->
+                <a href="#0" class="auth-close-form">Close</a>
+            </div>
+            <!-- auth-user-modal-container -->
+        </div>
+        <!-- ======================== auth Modal:END ======================== -->
+
+        <!-- ======================== Main Header:Begin ======================== -->
+
+        <header class="header_container">
+            <div class="flex items-center w-full h-20 px-4 pb-4 bg-white header_content md:px-12">
+                <div class="flex w-full">
+                    <!-- Logo -->
+                    <div
+                        class="flex items-center justify-start h-full logo_img_div w-4/10 md:w-2/12"
+                    >
+                        <div class="w-full">
+                            <a href="index.html" class="logo_image">
+                                <img src="src/img/logo.png" alt="Logo" class="object-cover w-36" />
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Search -->
+                    <div class="items-center justify-center hidden w-7/12 md:flex md:block">
+                        <!-- Categories -->
+                        <div class="hidden w-2/12 bg-gray-200 border border-r-0 md:block">
+                            <div class="relative w-full border-none">
+                                <div
+                                    class="absolute inset-y-0 flex items-center px-2 pointer-events-none "
+                                >
+                                    <i
+                                        style="font-size: 14px"
+                                        class="text-gray-500 lni lni-envato"
+                                    ></i>
+                                </div>
+                                <select
+                                    class="inline-block w-full py-3 text-sm font-light leading-tight text-gray-700 border-none rounded appearance-none  bg-gray-50 pl-7"
+                                >
+                                    <option class="pt-6" hidden>Categories</option>
+                                    <option>Chips</option>
+                                    <option>Potato</option>
+                                    <option>Orange</option>
+                                </select>
+                                <div
+                                    class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none "
+                                >
+                                    <i
+                                        style="font-size: 10px"
+                                        class="text-gray-500 lni lni-chevron-down"
+                                    ></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Search Box -->
+                        <div class="flex w-9/12 overflow-hidden border md:border-l-0">
+                            <input
+                                type="text"
+                                class="w-full px-3 py-2 md:px-8"
+                                placeholder="Search Product..."
+                            />
+                            <button
+                                class="flex items-center justify-center px-3 text-xs text-white  bg-green-550 md:px-6"
+                            >
+                                <svg
+                                    class="w-4 h-4 text-grey-dark"
+                                    fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M16.32 14.9l5.39 5.4a1 1 0 0 1-1.42 1.4l-5.38-5.38a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"
+                                    />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Cart -->
+                    <div
+                        class="flex items-center justify-end text-sm font-medium text-gray-800 transition-all  w-6/10 md:w-3/12"
+                    >
+                        <!-- Wishlist Btn -->
+                        <div class="justify-end hidden w-1/2 wishlist_order_btn sm:flex md:w-1/2">
+                            <a href="wishlist.html" class="flex items-center">
+                                <div
+                                    class="relative flex items-center justify-center w-10 h-10 mr-2 border border-gray-200 rounded-full  hover:shadow-sm"
+                                >
+                                    <i class="z-50 lni lni-heart text-green-550"></i>
+                                    <span class="absolute top-0 left-0 text-sm order-count-badge"
+                                        >2</span
+                                    >
+                                </div>
+                                <div class="flex flex-col">
+                                    <h3
+                                        class="text-sm font-bold text-gray-800 hover:text-green-550"
+                                    >
+                                        Wishlist
+                                    </h3>
+                                    <h4 class="text-sm font-semibold text-gray-600">$0.00</h4>
+                                </div>
+                            </a>
+                        </div>
+                        <!--  -->
+                        <div class="flex justify-end w-full cart_order_btn sm:w-1/2">
+                            <!-- Search Box -->
+                            <div
+                                class="flex justify-end  header-search_box md:hidden"
+                            >
+                                <div
+                                    class="relative inline-block w-12 h-12 pt-1 align-bottom  search-container"
+                                >
+                                    <form action="/search" method="get">
+                                        <input
+                                            class="absolute z-10 w-0 h-full p-0 bg-white border-none outline-none  search left-12 expandright"
+                                            id="searchright"
+                                            type="search"
+                                            name="q"
+                                            placeholder="Search Here......"
+                                        />
+                                        <label
+                                            class="absolute justify-end inline-block w-full px-8 m-0 text-sm text-center text-gray-800 no-underline border border-gray-200 rounded-full cursor-pointer select-none  header_search_btn hover:transition hover:duration-400 hover:bg-white hover:text-black searchbutton"
+                                            for="searchright"
+                                            ><span
+                                                class="inline-block transform -rotate-45 pointer-events-none  mglass text-green-550"
+                                                >&#9906;</span
+                                            ></label
+                                        >
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- Cart Btn -->
+                            <a href="cart.html" class="flex items-center">
+                                <div
+                                    class="relative flex items-center justify-center w-10 h-10 mr-2 border border-gray-200 rounded-full  hover:shadow-sm"
+                                >
+                                    <i class="z-50 lni lni-cart text-green-550"></i>
+                                    <span class="absolute top-0 left-0 text-sm order-count-badge"
+                                        >2</span
+                                    >
+                                </div>
+                                <div class="flex flex-col">
+                                    <h3
+                                        class="text-xs font-bold text-gray-800  hover:text-green-550 sm:text-sm"
+                                    >
+                                        My Cart
+                                    </h3>
+                                    <h4 class="text-sm font-semibold text-gray-600">$0.00</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ============ Nav  Menubar =========== -->
+        <nav class="relative px-0 md:px-12">
+            <a class="text-sm responsive-menu hamburger" id="nav-icon"
+                ><i class="lni lni-menu"></i> Shop By Categories
+            </a>
+            <a href="#" id="resp-menu" class="absolute block responsive-category md:hidden"
+                ><i class="lni lni-menu"></i
+            ></a>
+            <!-- Sidenav:Begin -->
+            <nav class="side-nav">
+                <ul class="side-nav-list">
+                    <li class="side-nav-item">
+                        <a class="side-nav-link" href="">Home</a>
+                    </li>
+                    <li class="side-nav-item">
+                        <a class="side-nav-link" href="aboutus.html">About</a>
+                    </li>
+                    <li class="side-nav-item">
+                        <a class="side-nav-link" href="contactus.html">Contanct</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Sidenav:END -->
+            <ul class="menu">
+                <li class="shop_categories_li">
+                    <a
+                        href="#"
+                        class="mr-20 homer"
+                        style="background-color: #14a753; color: #fff; font-size: 16px"
+                    >
+                        <i class="pr-1 lni lni-menu"></i> Shop By Categories</a
+                    >
+                    <ul class="sub-menu categories_ul">
+                        <li class="transition duration-500 ease-in-out">
+                            <a href="productlist.html" style="display: flex; padding: 10px 10px"
+                                ><span class="pr-1 my-auto w-/12"
+                                    ><img
+                                        src="https://img.icons8.com/emoji/20/000000/peach-emoji.png"
+                                /></span>
+                                Fruits & Vegetables</a
+                            >
+                        </li>
+                        <li class="transition duration-500 ease-in-out">
+                            <a href="productlist.html" style="display: flex; padding: 10px 10px"
+                                ><span class="pr-1 my-auto w-/12"
+                                    ><img
+                                        src="https://img.icons8.com/emoji/20/000000/shopping-bags.png" /></span
+                                >Grocery & Staples</a
+                            >
+                            <ul class="sub-menu">
+                                <li><a href="#">Sub-Menu 1</a></li>
+                                <li><a href="#">Sub-Menu 2</a></li>
+                                <li>
+                                    <a href="#">Sub-Menu 3</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Sub-Menu 1</a></li>
+                                        <li><a href="#">Sub-Menu 2</a></li>
+                                        <li><a href="#">Sub-Menu 3</a></li>
+                                        <li><a href="#">Sub-Menu 4</a></li>
+                                        <li><a href="#">Sub-Menu 5</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Sub-Menu 4</a></li>
+                                <li><a href="#">Sub-Menu 5</a></li>
+                            </ul>
+                        </li>
+                        <li class="transition duration-500 ease-in-out">
+                            <a href="productlist.html" style="display: flex; padding: 10px 10px"
+                                ><span class="pr-1 my-auto w-/12"
+                                    ><img
+                                        src="https://img.icons8.com/emoji/20/000000/lotion-bottle.png" /></span
+                                >Personal Care</a
+                            >
+                        </li>
+                        <li class="transition duration-500 ease-in-out">
+                            <a href="productlist.html" style="display: flex; padding: 10px 10px"
+                                ><span class="pr-1 my-auto w-/12"
+                                    ><img
+                                        src="https://img.icons8.com/emoji/20/000000/couch-and-lamp.png" /></span
+                                >Furnishing Needs</a
+                            >
+                        </li>
+                        <li class="transition duration-500 ease-in-out">
+                            <a href="productlist.html" style="display: flex; padding: 10px 10px"
+                                ><span class="pr-1 my-auto w-/12"
+                                    ><img
+                                        src="https://img.icons8.com/emoji/20/000000/chocolate-bar-emoji.png" /></span
+                                >Chocolate & Fastfood</a
+                            >
+                        </li>
+                        <li class="transition duration-500 ease-in-out">
+                            <a href="productlist.html" style="display: flex; padding: 10px 10px"
+                                ><span class="pr-1 my-auto w-/12"
+                                    ><img
+                                        src="https://img.icons8.com/emoji/20/000000/glass-of-milk.png" /></span
+                                >Breakfast & Dairy</a
+                            >
+                        </li>
+                        <li class="transition duration-500 ease-in-out">
+                            <a href="productlist.html" style="display: flex; padding: 10px 10px"
+                                ><span class="pr-1 my-auto w-/12"
+                                    ><img
+                                        src="https://img.icons8.com/emoji/20/000000/peach-emoji.png"
+                                /></span>
+                                Fruits & Vegetables</a
+                            >
+                        </li>
+                        <li class="transition duration-500 ease-in-out">
+                            <a href="productlist.html" style="display: flex; padding: 10px 10px"
+                                ><span class="pr-1 my-auto w-/12"
+                                    ><img
+                                        src="https://img.icons8.com/emoji/20/000000/hammer-and-wrench.png" /></span
+                                >Household Needs</a
+                            >
+                        </li>
+                        <li class="transition duration-500 ease-in-out">
+                            <a href="productlist.html" style="display: flex; padding: 10px 10px"
+                                ><span class="pr-1 my-auto w-/12"
+                                    ><img
+                                        src="https://img.icons8.com/emoji/20/000000/lotion-bottle.png" /></span
+                                >Personal Care</a
+                            >
+                        </li>
+                        <li class="transition duration-500 ease-in-out">
+                            <a href="productlist.html" style="display: flex; padding: 10px 10px"
+                                ><span class="pr-1 my-auto w-/12"
+                                    ><img
+                                        src="https://img.icons8.com/emoji/20/000000/ice-cream-emoji.png" /></span
+                                >Biscuit & Snacks</a
+                            >
+
+                            <ul class="sub-menu">
+                                <li><a href="#">HTML/CSS</a></li>
+                                <li><a href="#">jQuery</a></li>
+                                <li><a href="#">Other</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a class="home" href="index.html"> Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li>
+                    <a href="#"
+                        >Pages <i class="lni lni-chevron-down" style="font-size: 12px"></i
+                    ></a>
+                    <ul class="sub-menu">
+                        <li><a href="account.html">Profile Info</a></li>
+                        <li><a href="productlist.html">Product List</a></li>
+                        <li><a href="productview.html">Product View</a></li>
+                        <li><a href="paymenthistory.html">Payment History</a></li>
+                        <li><a href="myaddress.html">Address</a></li>
+                        <li><a href="orderhistory.html">Order History</a></li>
+                        <li><a href="ordertracking.html">Order Tracking</a></li>
+                        <li><a href="orderconfirmation.html">Order Success</a></li>
+                        <li>
+                            <a href="#"
+                                >Sub-Menu 2
+                                <i class="pl-6 lni lni-chevron-right" style="font-size: 10px"></i
+                            ></a>
+                            <ul>
+                                <li><a href="account.html">Profile</a></li>
+                                <li><a href="productlist.html">Product List</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"
+                                >Sub-Menu 3
+                                <i class="pl-6 lni lni-chevron-right" style="font-size: 10px"></i
+                            ></a>
+                            <ul>
+                                <li><a href="#">Sub Sub-Menu 1</a></li>
+                                <li><a href="#">Sub Sub-Menu 2</a></li>
+                                <li><a href="#">Sub Sub-Menu 3</a></li>
+                                <li><a href="#">Sub Sub-Menu 4</a></li>
+                                <li><a href="#">Sub Sub-Menu 5</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">Blog</a></li>
+                <li>
+                    <a href="#"
+                        >Categories <i class="lni lni-chevron-down" style="font-size: 12px"></i
+                    ></a>
+                    <ul class="sub-menu">
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="checkout.html">Checkout</a></li>
+                        <li><a href="wishlist.html">Wishlist</a></li>
+                        <li class="w-full">
+                            <a href="#"
+                                >Sub-Menu 2
+                                <i class="pl-6 lni lni-chevron-right" style="font-size: 10px"></i
+                            ></a>
+                            <ul>
+                                <li><a href="#">Sub Sub-Menu 4</a></li>
+                                <li><a href="#">Sub Sub-Menu 5</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"
+                                >Sub-Menu 3
+                                <i class="pl-6 lni lni-chevron-right" style="font-size: 10px"></i
+                            ></a>
+                            <ul>
+                                <li><a href="#">Sub Sub-Menu 1</a></li>
+                                <li><a href="#">Sub Sub-Menu 2</a></li>
+                                <li><a href="#">Sub Sub-Menu 3</a></li>
+                                <li><a href="#">Sub Sub-Menu 4</a></li>
+                                <li><a href="#">Sub Sub-Menu 5</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="contactus.html"> Contact</a></li>
+                <li><a href="#"> Sitemap</a></li>
+                <li><a href="aboutus.html">About</a></li>
+            </ul>
+        </nav>
+        <!-- ======================== Main Header:END ======================== -->
+
+        <!-- =================== Main Wrapper:Begin========================== -->
+        <main class="main_wrapper">
+            <!-- ================ Wishlist Section:Begin ================ -->
+            <section
+                class="items-center w-full px-12 my-12 border-b border-gray-200 section--contactus"
+            >
+                <div
+                    class="container flex flex-col w-full p-4 mx-auto mt-6 bg-white rounded  contactus_content"
+                >
+                    <!-- Header:Begin -->
+                    <div
+                        class="py-3 mt-0 bg-cover opacity-100  holder sm:py-5 md:py-10 fade-up-fast lazyloaded"
+                        style="
+                            background-image: url('https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=707&w=1920');
+                        "
+                    >
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-xl-9">
+                                    <div
+                                        class="mx-auto text-sm leading-7  page-title-bg max-w-7xl md:py-3"
+                                    >
+                                        <h1
+                                            class="mb-12 text-4xl font-semibold leading-4 text-gray-800 "
+                                        >
+                                            CONTACT US
+                                        </h1>
+                                        <p class="font-medium text-gray-700">
+                                            No one rejects, dislikes, or avoids pleasure itself,
+                                            because it is pleasure, but because those who do not
+                                            know how to pursue pleasure rationally
+                                        </p>
+                                        <p class="font-medium text-gray-700 mt-7">
+                                            Have a great question, comment or concern? Simply fill
+                                            out the form below and click Submit. We will respond to
+                                            all inquiries within 48 business hours.Check out our
+                                            <a href="faq.html">Frequently Asked Questions</a>.
+                                        </p>
+                                        <blockquote
+                                            class="relative hidden px-6 py-5 mt-3 text-sm italic leading-6 text-gray-600 bg-white  contactus_blockquote md:block md:mt-6"
+                                        >
+                                            <div>
+                                                You can never take too much care over the choice of
+                                                your shoes. Too many women think that they are
+                                                unimportant, but the real proof of an elegant woman
+                                                is what is on her feet.
+                                            </div>
+                                            <div
+                                                class="mt-4 text-base not-italic font-semibold leading-6 text-right text-gray-800  blockquote-author"
+                                            >
+                                                <a href="#">– Christian Dior</a>
+                                            </div>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Header:END -->
+
+                    <!-- Address:Begin -->
+                    <div class="relative py-20 pb-16 section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-4">
+                                    <div
+                                        class="px-5 py-10 text-center rounded-md shadow-md  contact_wrap contact_style3 mb-7"
+                                    >
+                                        <div
+                                            class="relative z-10 inline-block w-20 h-20 mr-1 overflow-hidden text-center border rounded-full  contact_icon border-green-550"
+                                        >
+                                            <i class="text-3xl lni lni-map text-green-550"></i>
+                                        </div>
+                                        <div class="contact_text">
+                                            <span
+                                                class="block mb-1 text-lg font-semibold text-gray-800 "
+                                                >Address</span
+                                            >
+                                            <p class="font-medium text-gray-600 text-bases">
+                                                123 Street, Old Trafford, London, UK
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4">
+                                    <div
+                                        class="px-5 py-10 text-center rounded-md shadow-md  contact_wrap contact_style3 mb-7"
+                                    >
+                                        <div
+                                            class="relative z-10 inline-block w-20 h-20 mr-1 overflow-hidden text-center border rounded-full  contact_icon border-green-550"
+                                        >
+                                            <i class="text-3xl lni lni-envelope text-green-550"></i>
+                                        </div>
+                                        <div class="flex flex-col contact_text">
+                                            <span
+                                                class="block mb-1 text-lg font-semibold text-gray-800 "
+                                                >Email Address</span
+                                            >
+                                            <a
+                                                class="font-medium text-gray-600 text-bases"
+                                                href="mailto:info@sitename.com"
+                                                >info@yourmail.com
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4">
+                                    <div
+                                        class="px-5 py-10 text-center rounded-md shadow-md  contact_wrap contact_style3 mb-7"
+                                    >
+                                        <div
+                                            class="relative z-10 inline-block w-20 h-20 mr-1 overflow-hidden text-center border rounded-full  contact_icon border-green-550"
+                                        >
+                                            <i class="text-3xl lni lni-phone text-green-550"></i>
+                                        </div>
+                                        <div class="contact_text">
+                                            <span
+                                                class="block mb-1 text-lg font-semibold text-gray-800 "
+                                                >Phone</span
+                                            >
+                                            <p
+                                                class="font-medium tracking-wider text-gray-600  text-bases"
+                                            >
+                                                + 457 789 789 65
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Address:End -->
+                    <!-- Form And Map:Begin -->
+                    <div class="pt-0 contactus_form section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-6">
+                                        <h2 class="text-4xl font-semibold text-gray-800">
+                                            Get In touch
+                                        </h2>
+                                    </div>
+                                    <p class="font-medium tracking-wide text-gray-500 mb-7">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Phasellus blandit massa enim. Nullam id varius nunc id
+                                        varius nunc.
+                                    </p>
+                                    <div class="field_form">
+                                        <form method="post" name="enq">
+                                            <div class="row">
+                                                <div class="mb-4 form-group col-md-6">
+                                                    <input
+                                                        required=""
+                                                        placeholder="Enter Name *"
+                                                        id="first-name"
+                                                        class="form-control"
+                                                        name="name"
+                                                        type="text"
+                                                    />
+                                                </div>
+                                                <div class="mb-4 form-group col-md-6">
+                                                    <input
+                                                        required=""
+                                                        placeholder="Enter Email *"
+                                                        id="email"
+                                                        class="form-control"
+                                                        name="email"
+                                                        type="email"
+                                                    />
+                                                </div>
+                                                <div class="mb-4 form-group col-md-6">
+                                                    <input
+                                                        required=""
+                                                        placeholder="Enter Phone No. *"
+                                                        id="phone"
+                                                        class="form-control"
+                                                        name="phone"
+                                                    />
+                                                </div>
+                                                <div class="mb-4 form-group col-md-6">
+                                                    <input
+                                                        placeholder="Enter Subject"
+                                                        id="subject"
+                                                        class="form-control"
+                                                        name="subject"
+                                                    />
+                                                </div>
+                                                <div class="mb-4 form-group col-md-12">
+                                                    <textarea
+                                                        required=""
+                                                        placeholder="Message *"
+                                                        id="description"
+                                                        class="form-control"
+                                                        name="message"
+                                                        rows="4"
+                                                    ></textarea>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <button type="submit" title="Submit Your
+                                                    Message!" class="w-full py-3 px-1 cursor-pointer
+                                                    rounded inline-block font-medium text-center
+                                                    align-middle select-none transition duration-500
+                                                    ease-in-out bg-green-550 hover:bg-yellow-550
+                                                    text-white mb-2 id=" submitButton" name="submit"
+                                                    value="Submit"> Send Message
+                                                    <img
+                                                        class="inline-block"
+                                                        src="https://img.icons8.com/doodle/20/000000/paper-plane--v1.png"
+                                                    />
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div
+                                                        id="alert-msg"
+                                                        class="text-center alert-msg"
+                                                    ></div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <!-- Map -->
+                                <div class="pt-2 mt-4 col-lg-6 pt-lg-0 mt-lg-0">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14604.927911881725!2d90.3654215!3d23.774752300000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1611044354374!5m2!1sen!2sbd"
+                                        width="600"
+                                        height="450"
+                                        frameborder="0"
+                                        style="border: 0"
+                                        allowfullscreen=""
+                                        aria-hidden="false"
+                                        tabindex="0"
+                                    ></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Form And Map:END -->
+                </div>
+            </section>
+            <!-- ================ ProductView Section:END ================ -->
+        </main>
+
+        <!-- =================== Main Wrapper:END========================== -->
+        <!-- =================== Footer:Begin========================== -->
+        <footer>
+            <div class="items-center w-full p-6 bg-white footer_section">
+                <div class="container flex mx-auto">
+                    <div class="flex w-full footer_container">
+                        <div class="w-1/4 pl-4">
+                            <picture>
+                                <img src="./src/img/logo.svg" class="mb-2" alt="Logo" />
+                            </picture>
+                            <div class="pl-2 text-sm">
+                                <h2 class="text-gray-800">
+                                    <i class="w-1/12 py-1 text-xs lni lni-phone"></i>+61 525 240 310
+                                </h2>
+                                <h2 class="text-gray-800">
+                                    <i class="w-1/12 py-1 text-xs lni lni-mobile"></i>01858 586930,
+                                    01563-526387
+                                </h2>
+                                <h2 class="text-green-550">
+                                    <i class="w-1/12 py-1 text-xs lni lni-envelope"></i
+                                    >FreshGrocery@Gmail.com
+                                </h2>
+                                <h2 class="text-yellow-600">
+                                    <i class="w-1/12 py-1 text-xs lni lni-world"></i
+                                    >www.FreshGrocery.Com
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="text-sm text-gray-700 w-1/7">
+                            <h2
+                                class="pb-4 text-base font-medium text-gray-900  hover:text-yellow-600"
+                            >
+                                <a href="#">TOP CITIES</a>
+                            </h2>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Dhaka</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Chittagong</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Rajsahi</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Barishal</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Sylhet</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Khulna</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Feni</a>
+                            </h4>
+                        </div>
+                        <div class="w-1/5 text-sm text-gray-700">
+                            <h2
+                                class="pb-4 text-base font-medium text-gray-900  hover:text-yellow-600"
+                            >
+                                <a href="#">CATEGORIES</a>
+                            </h2>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Vegetables</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Grocery & Staples</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Breakfast & Dairy</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Soft Drinks</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Snacks</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Fresh Juice</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Biscuit & Cookies</a>
+                            </h4>
+                        </div>
+                        <div class="w-1/5 text-sm text-gray-700">
+                            <h2
+                                class="pb-4 text-base font-medium text-gray-900  hover:text-yellow-6000"
+                            >
+                                USEFUL LINKS
+                            </h2>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Privacy Policy</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Terms Conditions</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">About Us</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Affiliate Program</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Store Locations</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Copyright</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out  footer-links hover:text-green-550"
+                            >
+                                <a href="#">Contact Us</a>
+                            </h4>
+                        </div>
+                        <div class="w-1/5">
+                            <div>
+                                <h2 class="text-base font-medium text-gray-900">DOWNLOAD APP</h2>
+                                <div class="flex py-4">
+                                    <a href="#" class="w-1/2">
+                                        <img
+                                            class="w-8/10"
+                                            src="./src/img/google.4ce869c.png"
+                                            alt="Google Play Store"
+                                        />
+                                    </a>
+                                    <a href="#" class="w-1/2 -ml-3">
+                                        <img
+                                            class="w-8/10"
+                                            src="./src/img/ios.62d930a.png"
+                                            alt="Apple Store"
+                                        />
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="pt-4">
+                                <h2 class="text-base font-medium text-gray-900">GET IN TOUCH</h2>
+                                <div class="flex justify-center Footer-Social-media">
+                                    <a href="#"
+                                        ><i class="lni lni-facebook-oval hover:text-blue-600"></i
+                                    ></a>
+                                    <a href="#"
+                                        ><i class="lni lni-twitter-original hover:text-blue-400"></i
+                                    ></a>
+                                    <a href="#"
+                                        ><i class="lni lni-whatsapp hover:text-green-600"></i
+                                    ></a>
+                                    <a href="#"
+                                        ><i class="lni lni-instagram hover:text-red-500"></i
+                                    ></a>
+                                    <a href="#"
+                                        ><i class="lni lni-youtube hover:text-red-500"></i
+                                    ></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="items-center w-full p-8 py-6 text-white bg-gray-800 bottom_footer_section">
+                <div class="container flex mx-auto">
+                    <div class="flex w-full bottom_footer_container">
+                        <div class="w-1/2 text-sm">
+                            &copy Copyright 2021
+                            <strong class="tracking-widest">FreshGrocery</strong>. All Rights
+                            Reserved <br />
+                            <span class="text-xs"
+                                >Made With <i class="lni lni-heart-filled"></i> by JAHID</span
+                            >
+                        </div>
+                        <div class="w-1/2">
+                            <img
+                                src="./src/img/SSL-Commerz-Pay-With-logo-All-Size-03-1.png"
+                                alt="payments"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- =================== Footer:END========================== -->
+    </body>
+</html>

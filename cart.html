@@ -1,54 +1,74 @@
 <!DOCTYPE html>
 <html lang="en" class="box-border">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fresh Grocery</title>
+        <!-- Favicon -->
+        <link rel="icon" href="src/img/favicon.ico" />
+        <!--LineIcons -->
+        <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet" />
+        <!-- Owl Carousel Slider -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        />
+        <!-- CSS -->
+        <link rel="stylesheet" href="./src/tailwind.css" />
+        <link rel="stylesheet" href="./src/css/style.css" />
+        <!-- ======================== ******* ======================== -->
+        <!-- ======================== Scripts ======================== -->
+        <!-- ======================== ******* ======================== -->
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Owl Carousel -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <!-- Main Custom JS-->
+        <script type="text/javascript" src="./src/js/main.js"></script>
+    </head> 
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fresh Grocery</title>
-    <!-- Favicon -->
-    <link rel="icon" href="src/img/favicon.ico" />
-    <!--LineIcons -->
-    <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet" />
-    <!-- Owl Carousel Slider -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
-    <!-- CSS -->
-    <link rel="stylesheet" href="src/tailwind.css" />
-    <link rel="stylesheet" href="style.css" />
-    <!-- ======================== ******* ======================== -->
-    <!-- ======================== Scripts ======================== -->
-    <!-- ======================== ******* ======================== -->
-    <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Owl Carousel -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <!-- Main Custom JS-->
-    <script type="text/javascript" src="main.js"></script>
-</head>
-
-<body class="antialiased min-h-screen box-border overflow-auto bg-blue-100">
+<body class="box-border min-h-screen overflow-auto antialiased bg-blue-100">
     <!-- ======================== Small Cart:Begin ======================== -->
     <div id="small_cart">
         <div>
-            <div id="small_cart_container" class="container w-full h-full fixed hidden"
-                style="background-color: rgba(0, 0, 0, 0.5); z-index: 1000">
-                <div class="w-full md:w-2/3 lg:w-1/3 h-full fixed top-0 right-0" style="background: rgb(255, 255, 255)">
+            <div
+                id="small_cart_container"
+                class="container fixed hidden w-full h-full"
+                style="background-color: rgba(0, 0, 0, 0.5); z-index: 1000"
+            >
+                <div
+                    class="fixed top-0 right-0 w-full h-full md:w-2/3 lg:w-1/3"
+                    style="background: rgb(255, 255, 255)"
+                >
                     <!-- Head:Begin -->
-                    <div id="small_cart_head" class="small_cart-heading_container" style="min-height: 5%; height: 5%">
-                        <div id="small_cart_head" class="flex justify-between items-center h-full">
+                    <div
+                        id="small_cart_head"
+                        class="small_cart-heading_container"
+                        style="min-height: 5%; height: 5%"
+                    >
+                        <div
+                            id="small_cart_head"
+                            class="flex items-center justify-between h-full"
+                        >
                             <div class="w-8/12">
-                                <h5 style="color: #fff; font-size: 12px"
-                                    class="small_cart_shopping_heading tracking-wider font-semibold px-3">
+                                <h5
+                                    style="color: #fff; font-size: 12px"
+                                    class="px-3 font-semibold tracking-wider small_cart_shopping_heading"
+                                >
                                     <i class="lni lni-anchor"></i>
                                     SHOPPING CART
                                 </h5>
                             </div>
-                            <div class="w-4/12 flex justify-end mr-2">
-                                <p style="font-size: 12px"
-                                    class="small_cart-close cursor-pointer uppercase font-medium hover:text-red-600">
+                            <div class="flex justify-end w-4/12 mr-2">
+                                <p
+                                    style="font-size: 12px"
+                                    class="font-medium uppercase cursor-pointer small_cart-close hover:text-red-600"
+                                >
                                     Close &nbsp;
                                     <i class="lni lni-close"></i>
                                 </p>
@@ -59,37 +79,55 @@
 
                     <!-- HealthBar:Begin -->
                     <div class="small_cart-healthbar">
-                        <span class="small_cart-health_text font-bold text-white text-xs">You may checkout now.</span>
-                        <div class="small_cart-healthbar__value"
-                            style="background-color: rgb(39, 174, 96); width: 4800%"></div>
+                        <span class="text-xs font-bold text-white small_cart-health_text"
+                            >You may checkout now.</span
+                        >
+                        <div
+                            class="small_cart-healthbar__value"
+                            style="background-color: rgb(39, 174, 96); width: 4800%"
+                        ></div>
                     </div>
                     <!-- HealthBar:END -->
 
                     <!-- Main Body:Begin -->
-                    <div class="small_cart-body-container" style="overflow-y: scroll; height: 81%">
+                    <div
+                        class="small_cart-body-container"
+                        style="overflow-y: scroll; height: 81%"
+                    >
                         <!-- 1 -->
-                        <div class="small_cart-checkout-box flex flex-col items-between">
-                            <div class="small_cart-section flex relative">
+                        <div class="flex flex-col small_cart-checkout-box items-between">
+                            <div class="relative flex small_cart-section">
                                 <div class="small_cart-product-remove">
                                     <i
-                                        class="lni lni-close cursor-pointer absolute text-xs right-5 top-3 hover:text-red-700"></i>
+                                        class="absolute text-xs cursor-pointer lni lni-close right-5 top-3 hover:text-red-700"
+                                    ></i>
                                 </div>
-                                <div class="w-4/12 flex items-center">
-                                    <a href="#"><img style="width: 80px" src="./src/img/vegetables1.png" /></a>
+                                <div class="flex items-center w-4/12">
+                                    <a href="#"
+                                        ><img
+                                            style="width: 80px"
+                                            src="./src/img/vegetables1.png"
+                                    /></a>
                                 </div>
                                 <div class="w-8/12 leading-normal" style="margin-left: 5px">
-                                    <div class="flex justify-between items-start pb-1">
+                                    <div class="flex items-start justify-between pb-1">
                                         <a href="#">
-                                            <p title="" class="product-title text-sm text-gray-800 font-medium">
+                                            <p
+                                                title=""
+                                                class="text-sm font-medium text-gray-800 product-title"
+                                            >
                                                 Mixed Fruit Salad
                                             </p>
                                         </a>
                                     </div>
                                     <!-- Product Size Select Box -->
-                                    <div class="small_cart-produc-size-container flex">
-                                        <div class="selectbox relative">
-                                            <select name="" id=""
-                                                class="border border-gray-100 text-xs flex bg-gray-100 text-gray-800 outline-0 cursor-pointer appearance-none">
+                                    <div class="flex small_cart-produc-size-container">
+                                        <div class="relative selectbox">
+                                            <select
+                                                name=""
+                                                id=""
+                                                class="flex text-xs text-gray-800 bg-gray-100 border border-gray-100 appearance-none cursor-pointer outline-0"
+                                            >
                                                 <option value="">1000 Gm</option>
                                                 <option value="">1 Kg</option>
                                                 <option value="">5 Litter</option>
@@ -99,18 +137,28 @@
 
                                     <div class="flex">
                                         <!-- Inrement Button
-                                             -->
-                                        <div class="product_increment_btn flex pt-2">
+                                         -->
+                                        <div class="flex pt-2 product_increment_btn">
                                             <span
-                                                class="input-number-decrement border-none select-none inline-block cursor-pointer font-bold bg-gray-300 hover:bg-gray-800 text-gray-800 hover:text-white flex justify-center items-center">–</span>
+                                                class="flex items-center justify-center inline-block font-bold text-gray-800 bg-gray-300 border-none cursor-pointer select-none input-number-decrement hover:bg-gray-800 hover:text-white"
+                                                >–</span
+                                            >
                                             <input
-                                                class="input-number text-gray-700 align-top text-center select-none border-none"
-                                                type="text" value="1" min="0" max="10" />
+                                                class="text-center text-gray-700 align-top border-none select-none input-number"
+                                                type="text"
+                                                value="1"
+                                                min="0"
+                                                max="10"
+                                            />
                                             <span
-                                                class="input-number-increment select-none border-none inline-block cursor-pointer font-bold bg-gray-300 hover:bg-gray-800 text-gray-800 hover:text-white flex justify-center items-center">+</span>
+                                                class="flex items-center justify-center inline-block font-bold text-gray-800 bg-gray-300 border-none cursor-pointer select-none input-number-increment hover:bg-gray-800 hover:text-white"
+                                                >+</span
+                                            >
                                         </div>
                                         <!-- Price -->
-                                        <div class="small_cart-product-total w-7/12 flex items-center justify-end">
+                                        <div
+                                            class="flex items-center justify-end w-7/12 small_cart-product-total"
+                                        >
                                             <p class="text-base font-semibold text-yellow-550">
                                                 ৳ 720
                                             </p>
@@ -120,28 +168,39 @@
                             </div>
                         </div>
                         <!-- 2 -->
-                        <div class="small_cart-checkout-box flex flex-col items-between">
-                            <div class="small_cart-section flex relative">
+                        <div class="flex flex-col small_cart-checkout-box items-between">
+                            <div class="relative flex small_cart-section">
                                 <div class="small_cart-product-remove">
                                     <i
-                                        class="lni lni-close cursor-pointer absolute text-xs right-5 top-3 hover:text-red-700"></i>
+                                        class="absolute text-xs cursor-pointer lni lni-close right-5 top-3 hover:text-red-700"
+                                    ></i>
                                 </div>
-                                <div class="w-4/12 flex items-center">
-                                    <a href="#"><img style="width: 80px" src="./src/img/vegetables2.png" /></a>
+                                <div class="flex items-center w-4/12">
+                                    <a href="#"
+                                        ><img
+                                            style="width: 80px"
+                                            src="./src/img/vegetables2.png"
+                                    /></a>
                                 </div>
                                 <div class="w-8/12 leading-normal" style="margin-left: 5px">
-                                    <div class="flex justify-between items-start pb-1">
+                                    <div class="flex items-start justify-between pb-1">
                                         <a href="#">
-                                            <p title="" class="product-title text-sm text-gray-800 font-medium">
+                                            <p
+                                                title=""
+                                                class="text-sm font-medium text-gray-800 product-title"
+                                            >
                                                 Mixed Fruit Salad
                                             </p>
                                         </a>
                                     </div>
                                     <!-- Product Size Select Box -->
-                                    <div class="small_cart-produc-size-container flex">
-                                        <div class="selectbox relative">
-                                            <select name="" id=""
-                                                class="border border-gray-100 text-xs flex bg-gray-100 text-gray-800 outline-0 cursor-pointer appearance-none">
+                                    <div class="flex small_cart-produc-size-container">
+                                        <div class="relative selectbox">
+                                            <select
+                                                name=""
+                                                id=""
+                                                class="flex text-xs text-gray-800 bg-gray-100 border border-gray-100 appearance-none cursor-pointer outline-0"
+                                            >
                                                 <option value="">1000 Gm</option>
                                                 <option value="">1 Kg</option>
                                                 <option value="">5 Litter</option>
@@ -151,18 +210,28 @@
 
                                     <div class="flex">
                                         <!-- Inrement Button
-                                             -->
-                                        <div class="product_increment_btn flex pt-2">
+                                         -->
+                                        <div class="flex pt-2 product_increment_btn">
                                             <span
-                                                class="input-number-decrement border-none select-none inline-block cursor-pointer font-bold bg-gray-300 hover:bg-gray-800 text-gray-800 hover:text-white flex justify-center items-center">–</span>
+                                                class="flex items-center justify-center inline-block font-bold text-gray-800 bg-gray-300 border-none cursor-pointer select-none input-number-decrement hover:bg-gray-800 hover:text-white"
+                                                >–</span
+                                            >
                                             <input
-                                                class="input-number text-gray-700 align-top text-center select-none border-none"
-                                                type="text" value="1" min="0" max="10" />
+                                                class="text-center text-gray-700 align-top border-none select-none input-number"
+                                                type="text"
+                                                value="1"
+                                                min="0"
+                                                max="10"
+                                            />
                                             <span
-                                                class="input-number-increment select-none border-none inline-block cursor-pointer font-bold bg-gray-300 hover:bg-gray-800 text-gray-800 hover:text-white flex justify-center items-center">+</span>
+                                                class="flex items-center justify-center inline-block font-bold text-gray-800 bg-gray-300 border-none cursor-pointer select-none input-number-increment hover:bg-gray-800 hover:text-white"
+                                                >+</span
+                                            >
                                         </div>
                                         <!-- Price -->
-                                        <div class="small_cart-product-total w-7/12 flex items-center justify-end">
+                                        <div
+                                            class="flex items-center justify-end w-7/12 small_cart-product-total"
+                                        >
                                             <p class="text-base font-semibold text-yellow-550">
                                                 ৳ 720
                                             </p>
@@ -172,28 +241,39 @@
                             </div>
                         </div>
                         <!-- 3 -->
-                        <div class="small_cart-checkout-box flex flex-col items-between">
-                            <div class="small_cart-section flex relative">
+                        <div class="flex flex-col small_cart-checkout-box items-between">
+                            <div class="relative flex small_cart-section">
                                 <div class="small_cart-product-remove">
                                     <i
-                                        class="lni lni-close cursor-pointer absolute text-xs right-5 top-3 hover:text-red-700"></i>
+                                        class="absolute text-xs cursor-pointer lni lni-close right-5 top-3 hover:text-red-700"
+                                    ></i>
                                 </div>
-                                <div class="w-4/12 flex items-center">
-                                    <a href="#"><img style="width: 80px" src="./src/img/vegetables3.png" /></a>
+                                <div class="flex items-center w-4/12">
+                                    <a href="#"
+                                        ><img
+                                            style="width: 80px"
+                                            src="./src/img/vegetables3.png"
+                                    /></a>
                                 </div>
                                 <div class="w-8/12 leading-normal" style="margin-left: 5px">
-                                    <div class="flex justify-between items-start pb-1">
+                                    <div class="flex items-start justify-between pb-1">
                                         <a href="#">
-                                            <p title="" class="product-title text-sm text-gray-800 font-medium">
+                                            <p
+                                                title=""
+                                                class="text-sm font-medium text-gray-800 product-title"
+                                            >
                                                 Mixed Fruit Salad
                                             </p>
                                         </a>
                                     </div>
                                     <!-- Product Size Select Box -->
-                                    <div class="small_cart-produc-size-container flex">
-                                        <div class="selectbox relative">
-                                            <select name="" id=""
-                                                class="border border-gray-100 text-xs flex bg-gray-100 text-gray-800 outline-0 cursor-pointer appearance-none">
+                                    <div class="flex small_cart-produc-size-container">
+                                        <div class="relative selectbox">
+                                            <select
+                                                name=""
+                                                id=""
+                                                class="flex text-xs text-gray-800 bg-gray-100 border border-gray-100 appearance-none cursor-pointer outline-0"
+                                            >
                                                 <option value="">1000 Gm</option>
                                                 <option value="">1 Kg</option>
                                                 <option value="">5 Litter</option>
@@ -203,18 +283,28 @@
 
                                     <div class="flex">
                                         <!-- Inrement Button
-                                             -->
-                                        <div class="product_increment_btn flex pt-2">
+                                         -->
+                                        <div class="flex pt-2 product_increment_btn">
                                             <span
-                                                class="input-number-decrement border-none select-none inline-block cursor-pointer font-bold bg-gray-300 hover:bg-gray-800 text-gray-800 hover:text-white flex justify-center items-center">–</span>
+                                                class="flex items-center justify-center inline-block font-bold text-gray-800 bg-gray-300 border-none cursor-pointer select-none input-number-decrement hover:bg-gray-800 hover:text-white"
+                                                >–</span
+                                            >
                                             <input
-                                                class="input-number text-gray-700 align-top text-center select-none border-none"
-                                                type="text" value="1" min="0" max="10" />
+                                                class="text-center text-gray-700 align-top border-none select-none input-number"
+                                                type="text"
+                                                value="1"
+                                                min="0"
+                                                max="10"
+                                            />
                                             <span
-                                                class="input-number-increment select-none border-none inline-block cursor-pointer font-bold bg-gray-300 hover:bg-gray-800 text-gray-800 hover:text-white flex justify-center items-center">+</span>
+                                                class="flex items-center justify-center inline-block font-bold text-gray-800 bg-gray-300 border-none cursor-pointer select-none input-number-increment hover:bg-gray-800 hover:text-white"
+                                                >+</span
+                                            >
                                         </div>
                                         <!-- Price -->
-                                        <div class="small_cart-product-total w-7/12 flex items-center justify-end">
+                                        <div
+                                            class="flex items-center justify-end w-7/12 small_cart-product-total"
+                                        >
                                             <p class="text-base font-semibold text-yellow-550">
                                                 ৳ 720
                                             </p>
@@ -224,28 +314,39 @@
                             </div>
                         </div>
                         <!-- 4 -->
-                        <div class="small_cart-checkout-box flex flex-col items-between">
-                            <div class="small_cart-section flex relative">
+                        <div class="flex flex-col small_cart-checkout-box items-between">
+                            <div class="relative flex small_cart-section">
                                 <div class="small_cart-product-remove">
                                     <i
-                                        class="lni lni-close cursor-pointer absolute text-xs right-5 top-3 hover:text-red-700"></i>
+                                        class="absolute text-xs cursor-pointer lni lni-close right-5 top-3 hover:text-red-700"
+                                    ></i>
                                 </div>
-                                <div class="w-4/12 flex items-center">
-                                    <a href="#"><img style="width: 80px" src="./src/img/vegetables4.png" /></a>
+                                <div class="flex items-center w-4/12">
+                                    <a href="#"
+                                        ><img
+                                            style="width: 80px"
+                                            src="./src/img/vegetables4.png"
+                                    /></a>
                                 </div>
                                 <div class="w-8/12 leading-normal" style="margin-left: 5px">
-                                    <div class="flex justify-between items-start pb-1">
+                                    <div class="flex items-start justify-between pb-1">
                                         <a href="#">
-                                            <p title="" class="product-title text-sm text-gray-800 font-medium">
+                                            <p
+                                                title=""
+                                                class="text-sm font-medium text-gray-800 product-title"
+                                            >
                                                 Mixed Fruit Salad
                                             </p>
                                         </a>
                                     </div>
                                     <!-- Product Size Select Box -->
-                                    <div class="small_cart-produc-size-container flex">
-                                        <div class="selectbox relative">
-                                            <select name="" id=""
-                                                class="border border-gray-100 text-xs flex bg-gray-100 text-gray-800 outline-0 cursor-pointer appearance-none">
+                                    <div class="flex small_cart-produc-size-container">
+                                        <div class="relative selectbox">
+                                            <select
+                                                name=""
+                                                id=""
+                                                class="flex text-xs text-gray-800 bg-gray-100 border border-gray-100 appearance-none cursor-pointer outline-0"
+                                            >
                                                 <option value="">1000 Gm</option>
                                                 <option value="">1 Kg</option>
                                                 <option value="">5 Litter</option>
@@ -255,18 +356,28 @@
 
                                     <div class="flex">
                                         <!-- Inrement Button
-                                             -->
-                                        <div class="product_increment_btn flex pt-2">
+                                         -->
+                                        <div class="flex pt-2 product_increment_btn">
                                             <span
-                                                class="input-number-decrement border-none select-none inline-block cursor-pointer font-bold bg-gray-300 hover:bg-gray-800 text-gray-800 hover:text-white flex justify-center items-center">–</span>
+                                                class="flex items-center justify-center inline-block font-bold text-gray-800 bg-gray-300 border-none cursor-pointer select-none input-number-decrement hover:bg-gray-800 hover:text-white"
+                                                >–</span
+                                            >
                                             <input
-                                                class="input-number text-gray-700 align-top text-center select-none border-none"
-                                                type="text" value="1" min="0" max="10" />
+                                                class="text-center text-gray-700 align-top border-none select-none input-number"
+                                                type="text"
+                                                value="1"
+                                                min="0"
+                                                max="10"
+                                            />
                                             <span
-                                                class="input-number-increment select-none border-none inline-block cursor-pointer font-bold bg-gray-300 hover:bg-gray-800 text-gray-800 hover:text-white flex justify-center items-center">+</span>
+                                                class="flex items-center justify-center inline-block font-bold text-gray-800 bg-gray-300 border-none cursor-pointer select-none input-number-increment hover:bg-gray-800 hover:text-white"
+                                                >+</span
+                                            >
                                         </div>
                                         <!-- Price -->
-                                        <div class="small_cart-product-total w-7/12 flex items-center justify-end">
+                                        <div
+                                            class="flex items-center justify-end w-7/12 small_cart-product-total"
+                                        >
                                             <p class="text-base font-semibold text-yellow-550">
                                                 ৳ 720
                                             </p>
@@ -279,28 +390,44 @@
                     <!-- Main Body:END -->
 
                     <!-- Bottom:Begin -->
-                    <div class="small_cart-checkout-container" style="min-height: 10%; height: 11%">
-                        <div class="flex h-full justify-between items-center">
+                    <div
+                        class="small_cart-checkout-container"
+                        style="min-height: 10%; height: 10%"
+                    >
+                        <div class="flex items-center justify-between h-full">
                             <div
-                                class="small_cart-total border border-gray-300 w-6/12 h-full flex flex-col justify-center items-center">
-                                <p class="text-base text-left capitalize text-gray-800 font-medium">
+                                class="flex flex-col items-center justify-start w-6/12 h-full border border-gray-300 small_cart-total"
+                            >
+                                <p
+                                    class="text-base font-medium text-left text-gray-800 capitalize "
+                                >
                                     Cart Total
                                     <br />
                                 </p>
 
                                 <div class="text-center">
-                                    <span class="text-base font-semibold text-green-550">৳
+                                    <span class="text-base font-semibold text-green-550"
+                                        >৳
                                     </span>
-                                    <span class="text-base font-semibold text-green-550">720</span>
+                                    <span class="text-base font-semibold text-green-550"
+                                        >720</span
+                                    >
                                 </div>
                             </div>
-                            <div class="small_cart-checkout bg-green-550 hover:bg-gray-800 transition duration-300 ease-in-out text-white uppercase w-6/12 h-full flex justify-center items-center"
-                                style="border-top: 1px solid rgba(129, 129, 129, 0.2)">
-                                <a href="cart.html"><button style="outline: none"
-                                        class="small_cart-checkout-btn focus:outline-none font-medium ml-auto mr-auto w-6/12 h-full flex justify-center items-center">
+                            <div
+                                class="flex items-center justify-center w-6/12 h-full text-white uppercase transition duration-300 ease-in-out small_cart-checkout bg-green-550 hover:bg-gray-800"
+                                style="border-top: 1px solid rgba(129, 129, 129, 0.2)"
+                            >
+                                <a href="cart.html"
+                                    ><button
+                                        style="outline: none"
+                                        class="flex items-center justify-center w-6/12 h-full ml-auto mr-auto font-medium small_cart-checkout-btn focus:outline-none"
+                                    >
                                         PROCEED
                                         <i
-                                            class="lni lni-chevron-right-circle pl-2 focus:outline-none"></i></button></a>
+                                            class="pl-2 lni lni-chevron-right-circle focus:outline-none"
+                                        ></i></button
+                                ></a>
                             </div>
                         </div>
                     </div>
@@ -308,16 +435,27 @@
             </div>
 
             <!-- Small Cart Small Bag  -->
-            <div id="small_cart_section_div"
-                class="container small_cart-shopping-bag-sidebar fixed top-5/10 opacity-70 right-0 hover:opacity-100">
+            <div
+                id="small_cart_section_div"
+                class="container fixed right-0 small_cart-shopping-bag-sidebar top-5/10 opacity-70 hover:opacity-100"
+            >
                 <div
-                    class="small-cart-container bg-green-550 rounded cursor-pointer flex flex-col justify-between items-center">
-                    <span class="small_cart-small_bag flex justify-center cursor-pointer text-lg"><i
-                            class="lni lni-shopify text-white"></i></span>
-                    <p id="small_total_cart" class="text-xs tracking-wider font-semibold text-white">
+                    class="flex flex-col items-center justify-between rounded cursor-pointer small-cart-container bg-green-550"
+                >
+                    <span
+                        class="flex justify-center text-lg cursor-pointer small_cart-small_bag"
+                        ><i class="text-white lni lni-shopify"></i
+                    ></span>
+                    <p
+                        id="small_total_cart"
+                        class="text-xs font-semibold tracking-wider text-white"
+                    >
                         1 ITEMS
                     </p>
-                    <p class="w-full text-white text-center font-semibold text-sm" style="background: rgb(45, 55, 72)">
+                    <p
+                        class="w-full text-sm font-semibold text-center text-white"
+                        style="background: rgb(45, 55, 72)"
+                    >
                         <span>৳&nbsp;</span> <span id="small_cart_amount"> 720 </span>
                         <input id="small_cart_amount_2" type="hidden" />
                     </p>
@@ -328,35 +466,35 @@
     <!-- ======================== Small Cart:End ======================== -->
 
     <!-- ======================== TopBar:Begin ======================== -->
-    <div class="topbar_container overflow-hidden">
-        <div class="topbar_content bg-white w-full py-2 md:py-3 flex flex-col md:flex-row">
+    <div class="overflow-hidden topbar_container">
+        <div class="flex flex-col w-full py-2 bg-white topbar_content md:py-3 md:flex-row">
 
             <div style="border-bottom: 1px solid #dfe2e0"
-                class="topbar_divbox w-full flex flex-row justify-end md:justify-end px-4 md:px-12 text-white text-sm font-medium">
+                class="flex flex-row justify-end w-full px-4 text-sm font-medium text-white topbar_divbox md:justify-end md:px-12">
                 <div style="border-right: 1px solid #cddace" class="pr-4 md:pr-6">
                     <a href="#"
-                        class="flex pb-1 transition duration-500 ease-in-out text-gray-800 hover:text-green-550">
-                        <i class="lni lni-map-marker m-auto pr-2 my-auto"></i>
+                        class="flex pb-1 text-gray-800 transition duration-500 ease-in-out hover:text-green-550">
+                        <i class="pr-2 m-auto my-auto lni lni-map-marker"></i>
                         <h2>New York</h2>
                     </a>
                 </div>
                 <div style="border-right: 1px solid #cddace" class="pl-2 pr-4 md:pr-6">
                     <a href="checkout.html"
-                        class="hidden sm:flex pb-1 transition duration-500 ease-in-out text-gray-800 hover:text-green-550">
-                        <i class="lni lni-cart m-auto pr-1"></i>
+                        class="hidden pb-1 text-gray-800 transition duration-500 ease-in-out sm:flex hover:text-green-550">
+                        <i class="pr-1 m-auto lni lni-cart"></i>
                         <h2>Checkout</h2>
                     </a>
                     <a href="wishlist.html"
-                        class="flex sm:hidden pb-1 transition duration-500 ease-in-out text-gray-800 hover:text-green-550">
-                        <i class="lni lni-heart m-auto pr-1"></i>
+                        class="flex pb-1 text-gray-800 transition duration-500 ease-in-out sm:hidden hover:text-green-550">
+                        <i class="pr-1 m-auto lni lni-heart"></i>
                         <h2>Wishlist</h2>
                     </a>
                 </div>
                 <div class="pl-2">
                     <div class="auth-modal-btn">
                         <li class="md:inline-block"><a
-                                class="auth-signup transition duration-500 ease-in-out text-gray-800 hover:text-green-550"
-                                href="#"> <i class="lni lni-lock m-auto pr-1"></i> SignIn</a></li>
+                                class="text-gray-800 transition duration-500 ease-in-out auth-signup hover:text-green-550"
+                                href="#"> <i class="pr-1 m-auto lni lni-lock"></i> SignIn</a></li>
                     </div>
                 </div>
             </div>
@@ -365,29 +503,29 @@
     <!-- ======================== TopBar:End ======================== -->
 
     <!-- ======================== auth Modal:Begin ======================== -->
-    <div class="auth-user-modal fixed top-0 left-0 w-full h-full overflow-y-auto cursor-pointer invisible opacity-0"
+    <div class="fixed top-0 left-0 invisible w-full h-full overflow-y-auto opacity-0 cursor-pointer auth-user-modal"
         style="z-index: 2000;">
         <div
-            class="auth-user-modal-container relative w-9/10 max-w-md bg-white cursor-auto rounded transition transform duration-700">
+            class="relative max-w-md transition duration-700 transform bg-white rounded cursor-auto auth-user-modal-container w-9/10">
             <!-- this is the container wrapper -->
             <ul class="auth_nav-switcher">
-                <li class="w-1/2 float-left text-center"><a href="#0" class="block w-full h-12 leading-10">Sign in</a>
+                <li class="float-left w-1/2 text-center"><a href="#0" class="block w-full h-12 leading-10">Sign in</a>
                 </li>
-                <li class="w-1/2 float-left text-center"><a href="#0" class="block w-full h-12 leading-10">New
+                <li class="float-left w-1/2 text-center"><a href="#0" class="block w-full h-12 leading-10">New
                         account</a></li>
             </ul>
 
             <div id="auth-login">
                 <!-- log in form -->
-                <form class="auth-form p-8">
-                    <p class="fieldset relative my-8 mx-0">
+                <form class="p-8 auth-form">
+                    <p class="relative mx-0 my-8 fieldset">
                         <label class="image-replace auth-email" for="signin-email">E-mail</label>
                         <input class="full-width has-padding has-border" id="signin-email" type="email"
                             placeholder="E-mail">
                         <span class="auth-error-message">Error message here!</span>
                     </p>
 
-                    <p class="fieldset relative my-8 mx-0">
+                    <p class="relative mx-0 my-8 fieldset">
                         <label class="image-replace auth-password" for="signin-password">Password</label>
                         <input class="full-width has-padding has-border" id="signin-password" type="text"
                             placeholder="Password">
@@ -395,39 +533,39 @@
                         <span class="auth-error-message">Error message here!</span>
                     </p>
 
-                    <p class="fieldset relative my-8 mx-0">
+                    <p class="relative mx-0 my-8 fieldset">
                         <input type="checkbox" id="remember-me" checked>
                         <label for="remember-me">Remember me</label>
                     </p>
 
-                    <p class="fieldset relative my-8 mx-0">
+                    <p class="relative mx-0 my-8 fieldset">
                         <input class="full-width" type="submit" value="Login">
                     </p>
                 </form>
 
-                <p class="auth-form-bottom-message text-sm text-center absolute left-0 w-full -bottom-8"><a
+                <p class="absolute left-0 w-full text-sm text-center auth-form-bottom-message -bottom-8"><a
                         class="text-white underline" href="#0">Forgot your password?</a></p>
                 <!-- <a href="#0" class="auth-close-form">Close</a> -->
             </div> <!-- auth-login -->
 
             <div id="auth-signup">
                 <!-- sign up form -->
-                <form class="auth-form p-8">
-                    <p class="fieldset relative my-8 mx-0">
+                <form class="p-8 auth-form">
+                    <p class="relative mx-0 my-8 fieldset">
                         <label class="image-replace auth-username" for="signup-username">Username</label>
                         <input class="full-width has-padding has-border" id="signup-username" type="text"
                             placeholder="Username">
                         <span class="auth-error-message">Error message here!</span>
                     </p>
 
-                    <p class="fieldset relative my-8 mx-0">
+                    <p class="relative mx-0 my-8 fieldset">
                         <label class="image-replace auth-email" for="signup-email">E-mail</label>
                         <input class="full-width has-padding has-border" id="signup-email" type="email"
                             placeholder="E-mail">
                         <span class="auth-error-message">Error message here!</span>
                     </p>
 
-                    <p class="fieldset relative my-8 mx-0">
+                    <p class="relative mx-0 my-8 fieldset">
                         <label class="image-replace auth-password" for="signup-password">Password</label>
                         <input class="full-width has-padding has-border" id="signup-password" type="text"
                             placeholder="Password">
@@ -435,12 +573,12 @@
                         <span class="auth-error-message">Error message here!</span>
                     </p>
 
-                    <p class="fieldset relative my-8 mx-0">
+                    <p class="relative mx-0 my-8 fieldset">
                         <input type="checkbox" id="accept-terms">
                         <label for="accept-terms">I agree to the <a href="#0">Terms</a></label>
                     </p>
 
-                    <p class="fieldset relative my-8 mx-0">
+                    <p class="relative mx-0 my-8 fieldset">
                         <input class="full-width has-padding" type="submit" value="Create account">
                     </p>
                 </form>
@@ -453,20 +591,20 @@
                 <p class="auth-form-message">Lost your password? Please enter your email address. You will receive a
                     link to create a new password.</p>
 
-                <form class="auth-form p-8">
-                    <p class="fieldset relative my-8 mx-0">
+                <form class="p-8 auth-form">
+                    <p class="relative mx-0 my-8 fieldset">
                         <label class="image-replace auth-email" for="reset-email">E-mail</label>
                         <input class="full-width has-padding has-border" id="reset-email" type="email"
                             placeholder="E-mail">
                         <span class="auth-error-message">Error message here!</span>
                     </p>
 
-                    <p class="fieldset relative my-8 mx-0">
+                    <p class="relative mx-0 my-8 fieldset">
                         <input class="full-width has-padding" type="submit" value="Reset password">
                     </p>
                 </form>
 
-                <p class="auth-form-bottom-message text-sm text-center absolute left-0 w-full -bottom-8"><a
+                <p class="absolute left-0 w-full text-sm text-center auth-form-bottom-message -bottom-8"><a
                         class="text-white underline" href="#0">Back to log-in</a></p>
             </div> <!-- auth-reset-password -->
             <a href="#0" class="auth-close-form">Close</a>
@@ -477,10 +615,10 @@
     <!-- ======================== Main Header:Begin ======================== -->
 
     <header class="header_container">
-        <div class="header_content bg-white w-full h-20 pb-4 px-4 md:px-12 flex items-center">
-            <div class="w-full flex">
+        <div class="flex items-center w-full h-20 px-4 pb-4 bg-white header_content md:px-12">
+            <div class="flex w-full">
                 <!-- Logo -->
-                <div class="logo_img_div w-4/10 md:w-2/12 flex items-center justify-start h-full">
+                <div class="flex items-center justify-start h-full logo_img_div w-4/10 md:w-2/12">
                     <div class="w-full">
                         <a href="index.html" class="logo_image">
                             <img src="src/img/logo.png" alt="Logo" class="object-cover w-36" />
@@ -488,30 +626,30 @@
                     </div>
                 </div>
                 <!-- Search -->
-                <div class="w-7/12 md:flex items-center justify-center hidden md:block">
+                <div class="items-center justify-center hidden w-7/12 md:flex md:block">
                     <!-- Categories -->
-                    <div class="border border-r-0 w-2/12 bg-gray-200 hidden md:block">
+                    <div class="hidden w-2/12 bg-gray-200 border border-r-0 md:block">
                         <div class="relative w-full border-none">
-                            <div class="pointer-events-none absolute inset-y-0 flex items-center px-2">
-                                <i style="font-size: 14px" class="lni lni-envato text-gray-500"></i>
+                            <div class="absolute inset-y-0 flex items-center px-2 pointer-events-none">
+                                <i style="font-size: 14px" class="text-gray-500 lni lni-envato"></i>
                             </div>
                             <select
-                                class="bg-gray-50 appearance-none font-light text-sm text-gray-700 border-none inline-block py-3 pl-7 rounded leading-tight w-full">
+                                class="inline-block w-full py-3 text-sm font-light leading-tight text-gray-700 border-none rounded appearance-none bg-gray-50 pl-7">
                                 <option class="pt-6" hidden>Categories</option>
                                 <option>Chips</option>
                                 <option>Potato</option>
                                 <option>Orange</option>
                             </select>
-                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2">
-                                <i style="font-size: 10px" class="lni lni-chevron-down text-gray-500"></i>
+                            <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                <i style="font-size: 10px" class="text-gray-500 lni lni-chevron-down"></i>
                             </div>
                         </div>
                     </div>
                     <!-- Search Box -->
-                    <div class="border md:border-l-0 w-9/12 overflow-hidden flex">
-                        <input type="text" class="px-3 md:px-8 py-2 w-full" placeholder="Search Product..." />
-                        <button class="text-xs text-white bg-green-550 flex items-center justify-center px-3 md:px-6">
-                            <svg class="h-4 w-4 text-grey-dark" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                    <div class="flex w-9/12 overflow-hidden border md:border-l-0">
+                        <input type="text" class="w-full px-3 py-2 md:px-8" placeholder="Search Product..." />
+                        <button class="flex items-center justify-center px-3 text-xs text-white bg-green-550 md:px-6">
+                            <svg class="w-4 h-4 text-grey-dark" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24">
                                 <path
                                     d="M16.32 14.9l5.39 5.4a1 1 0 0 1-1.42 1.4l-5.38-5.38a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z" />
@@ -522,51 +660,51 @@
 
                 <!-- Cart -->
                 <div
-                    class="w-6/10 md:w-3/12 text-sm text-gray-800 font-medium flex justify-end items-center transition-all">
+                    class="flex items-center justify-end text-sm font-medium text-gray-800 transition-all w-6/10 md:w-3/12">
 
 
                     <!-- Wishlist Btn -->
-                    <div class="wishlist_order_btn hidden sm:flex w-1/2 md:w-1/2 justify-end">
+                    <div class="justify-end hidden w-1/2 wishlist_order_btn sm:flex md:w-1/2">
 
                         <a href="wishlist.html" class="flex items-center">
                             <div
-                                class="flex relative items-center justify-center mr-2 rounded-full border border-gray-200 h-10 w-10 hover:shadow-sm">
-                                <i class="lni lni-heart z-50 text-green-550"></i>
-                                <span class="order-count-badge absolute left-0 top-0 text-sm">2</span>
+                                class="relative flex items-center justify-center w-10 h-10 mr-2 border border-gray-200 rounded-full hover:shadow-sm">
+                                <i class="z-50 lni lni-heart text-green-550"></i>
+                                <span class="absolute top-0 left-0 text-sm order-count-badge">2</span>
                             </div>
                             <div class="flex flex-col">
-                                <h3 class="text-gray-800 hover:text-green-550 font-bold text-sm">Wishlist</h3>
-                                <h4 class="text-gray-600 font-semibold text-sm">$0.00</h4>
+                                <h3 class="text-sm font-bold text-gray-800 hover:text-green-550">Wishlist</h3>
+                                <h4 class="text-sm font-semibold text-gray-600">$0.00</h4>
                             </div>
                         </a>
                     </div>
                     <!--  -->
-                    <div class="cart_order_btn w-full sm:w-1/2 flex justify-end">
+                    <div class="flex justify-end w-full cart_order_btn sm:w-1/2">
                         <!-- Search Box -->
-                        <div class="header-search_box flex justify-end header-search_box md:hidden">
-                            <div class="search-container relative inline-block align-bottom pt-1 w-12 h-12">
+                        <div class="flex justify-end header-search_box md:hidden">
+                            <div class="relative inline-block w-12 h-12 pt-1 align-bottom search-container">
                                 <form action="/search" method="get">
                                     <input
-                                        class="search absolute bg-white outline-none border-none  w-0 p-0 h-full z-10 left-12 expandright"
+                                        class="absolute z-10 w-0 h-full p-0 bg-white border-none outline-none search left-12 expandright"
                                         id="searchright" type="search" name="q" placeholder="Search Here......">
                                     <label
-                                        class="header_search_btn inline-block text-sm px-8 text-center text-gray-800 cursor-pointer no-underline select-none hover:transition hover:duration-400 hover:bg-white hover:text-black searchbutton absolute w-full m-0 rounded-full border border-gray-200 justify-end"
+                                        class="absolute justify-end inline-block w-full px-8 m-0 text-sm text-center text-gray-800 no-underline border border-gray-200 rounded-full cursor-pointer select-none header_search_btn hover:transition hover:duration-400 hover:bg-white hover:text-black searchbutton"
                                         for="searchright"><span
-                                            class="mglass transform -rotate-45 text-green-550 inline-block pointer-events-none">&#9906;</span></label>
+                                            class="inline-block transform -rotate-45 pointer-events-none mglass text-green-550">&#9906;</span></label>
                                 </form>
                             </div>
                         </div>
                         <!-- Cart Btn -->
                         <a href="cart.html" class="flex items-center">
                             <div
-                                class="flex relative items-center justify-center mr-2 rounded-full border border-gray-200 h-10 w-10 hover:shadow-sm">
-                                <i class="lni lni-cart z-50 text-green-550"></i>
-                                <span class="order-count-badge absolute left-0 top-0 text-sm">2</span>
+                                class="relative flex items-center justify-center w-10 h-10 mr-2 border border-gray-200 rounded-full hover:shadow-sm">
+                                <i class="z-50 lni lni-cart text-green-550"></i>
+                                <span class="absolute top-0 left-0 text-sm order-count-badge">2</span>
                             </div>
                             <div class="flex flex-col">
-                                <h3 class="text-gray-800 hover:text-green-550 font-bold text-xs sm:text-sm">My Cart
+                                <h3 class="text-xs font-bold text-gray-800 hover:text-green-550 sm:text-sm">My Cart
                                 </h3>
-                                <h4 class="text-gray-600 font-semibold text-sm">$0.00</h4>
+                                <h4 class="text-sm font-semibold text-gray-600">$0.00</h4>
                             </div>
                         </a>
                     </div>
@@ -576,10 +714,10 @@
     </header>
 
     <!-- ============ Nav  Menubar =========== -->
-    <nav class="px-0 md:px-12 relative">
-        <a class="responsive-menu text-sm hamburger" id="nav-icon"><i class="lni lni-menu"></i> Shop By
+    <nav class="relative px-0 md:px-12">
+        <a class="text-sm responsive-menu hamburger" id="nav-icon"><i class="lni lni-menu"></i> Shop By
             Categories </a>
-        <a href="#" id="resp-menu" class="responsive-category absolute block md:hidden"><i class="lni lni-menu"></i></a>
+        <a href="#" id="resp-menu" class="absolute block responsive-category md:hidden"><i class="lni lni-menu"></i></a>
         <!-- Sidenav:Begin -->
         <nav class="side-nav">
             <ul class="side-nav-list">
@@ -596,19 +734,19 @@
         </nav>
         <!-- Sidenav:END -->
         <ul class="menu">
-            <li class="shop_categories_li"><a href="#" class="homer mr-20"
-                    style="background-color:#14a753; color:#fff; font-size: 16px;"> <i class="lni lni-menu pr-1"></i>
+            <li class="shop_categories_li"><a href="#" class="mr-20 homer"
+                    style="background-color:#14a753; color:#fff; font-size: 16px;"> <i class="pr-1 lni lni-menu"></i>
                     Shop By Categories</a>
                 <ul class="sub-menu categories_ul">
                     <li class="transition duration-500 ease-in-out">
                         <a href="productlist.html" style="display: flex; padding: 10px 10px"><span
-                                class="w-/12 pr-1 my-auto"><img
+                                class="pr-1 my-auto w-/12"><img
                                     src="https://img.icons8.com/emoji/20/000000/peach-emoji.png" /></span>
                             Fruits & Vegetables</a>
                     </li>
                     <li class="transition duration-500 ease-in-out">
                         <a href="productlist.html" style="display: flex; padding: 10px 10px"><span
-                                class="w-/12 pr-1 my-auto"><img
+                                class="pr-1 my-auto w-/12"><img
                                     src="https://img.icons8.com/emoji/20/000000/shopping-bags.png" /></span>Grocery
                             & Staples</a>
                         <ul class="sub-menu">
@@ -630,49 +768,49 @@
                     </li>
                     <li class="transition duration-500 ease-in-out">
                         <a href="productlist.html" style="display: flex; padding: 10px 10px"><span
-                                class="w-/12 pr-1 my-auto"><img
+                                class="pr-1 my-auto w-/12"><img
                                     src="https://img.icons8.com/emoji/20/000000/lotion-bottle.png" /></span>Personal
                             Care</a>
                     </li>
                     <li class="transition duration-500 ease-in-out">
                         <a href="productlist.html" style="display: flex; padding: 10px 10px"><span
-                                class="w-/12 pr-1 my-auto"><img
+                                class="pr-1 my-auto w-/12"><img
                                     src="https://img.icons8.com/emoji/20/000000/couch-and-lamp.png" /></span>Furnishing
                             Needs</a>
                     </li>
                     <li class="transition duration-500 ease-in-out">
                         <a href="productlist.html" style="display: flex; padding: 10px 10px"><span
-                                class="w-/12 pr-1 my-auto"><img
+                                class="pr-1 my-auto w-/12"><img
                                     src="https://img.icons8.com/emoji/20/000000/chocolate-bar-emoji.png" /></span>Chocolate
                             & Fastfood</a>
                     </li>
                     <li class="transition duration-500 ease-in-out">
                         <a href="productlist.html" style="display: flex; padding: 10px 10px"><span
-                                class="w-/12 pr-1 my-auto"><img
+                                class="pr-1 my-auto w-/12"><img
                                     src="https://img.icons8.com/emoji/20/000000/glass-of-milk.png" /></span>Breakfast
                             & Dairy</a>
                     </li>
                     <li class="transition duration-500 ease-in-out">
                         <a href="productlist.html" style="display: flex; padding: 10px 10px"><span
-                                class="w-/12 pr-1 my-auto"><img
+                                class="pr-1 my-auto w-/12"><img
                                     src="https://img.icons8.com/emoji/20/000000/peach-emoji.png" /></span>
                             Fruits & Vegetables</a>
                     </li>
                     <li class="transition duration-500 ease-in-out">
                         <a href="productlist.html" style="display: flex; padding: 10px 10px"><span
-                                class="w-/12 pr-1 my-auto"><img
+                                class="pr-1 my-auto w-/12"><img
                                     src="https://img.icons8.com/emoji/20/000000/hammer-and-wrench.png" /></span>Household
                             Needs</a>
                     </li>
                     <li class="transition duration-500 ease-in-out">
                         <a href="productlist.html" style="display: flex; padding: 10px 10px"><span
-                                class="w-/12 pr-1 my-auto"><img
+                                class="pr-1 my-auto w-/12"><img
                                     src="https://img.icons8.com/emoji/20/000000/lotion-bottle.png" /></span>Personal
                             Care</a>
                     </li>
                     <li class="transition duration-500 ease-in-out">
                         <a href="productlist.html" style="display: flex; padding: 10px 10px"><span
-                                class="w-/12 pr-1 my-auto"><img
+                                class="pr-1 my-auto w-/12"><img
                                     src="https://img.icons8.com/emoji/20/000000/ice-cream-emoji.png" /></span>Biscuit
                             & Snacks</a>
 
@@ -697,13 +835,13 @@
                     <li><a href="orderhistory.html">Order History</a></li>
                     <li><a href="ordertracking.html">Order Tracking</a></li>
                     <li><a href="orderconfirmation.html">Order Success</a></li>
-                    <li><a href="#">Sub-Menu 2 <i class="lni lni-chevron-right pl-6" style="font-size: 10px;"></i></a>
+                    <li><a href="#">Sub-Menu 2 <i class="pl-6 lni lni-chevron-right" style="font-size: 10px;"></i></a>
                         <ul>
                             <li><a href="account.html">Profile</a></li>
                             <li><a href="productlist.html">Product List</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Sub-Menu 3 <i class="lni lni-chevron-right pl-6" style="font-size: 10px;"></i></a>
+                    <li><a href="#">Sub-Menu 3 <i class="pl-6 lni lni-chevron-right" style="font-size: 10px;"></i></a>
                         <ul>
                             <li><a href="#">Sub Sub-Menu 1</a></li>
                             <li><a href="#">Sub Sub-Menu 2</a></li>
@@ -720,7 +858,7 @@
                     <li><a href="cart.html">Cart</a></li>
                     <li><a href="checkout.html">Checkout</a></li>
                     <li><a href="wishlist.html">Wishlist</a></li>
-                    <li class="w-full"><a href="#">Sub-Menu 2 <i class="lni lni-chevron-right pl-6"
+                    <li class="w-full"><a href="#">Sub-Menu 2 <i class="pl-6 lni lni-chevron-right"
                                 style=" font-size: 10px;"></i></a>
                         <ul>
 
@@ -728,7 +866,7 @@
                             <li><a href="#">Sub Sub-Menu 5</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Sub-Menu 3 <i class="lni lni-chevron-right pl-6" style="font-size: 10px;"></i></a>
+                    <li><a href="#">Sub-Menu 3 <i class="pl-6 lni lni-chevron-right" style="font-size: 10px;"></i></a>
                         <ul>
                             <li><a href="#">Sub Sub-Menu 1</a></li>
                             <li><a href="#">Sub Sub-Menu 2</a></li>
@@ -749,17 +887,17 @@
     <!-- =================== Main Wrapper:Begin========================== -->
     <main class="main_wrapper">
         <!-- Breadcrumb:Begin -->
-        <div class="breadcrumbs_wrap dark text-white py-8 w-full">
+        <div class="w-full py-8 text-white breadcrumbs_wrap dark">
             <div class="container">
-                <div class="flex flex-wrap mx-4 items-center">
+                <div class="flex flex-wrap items-center mx-4">
                     <div class="w-full">
                         <div class="text-center">
-                            <h2 class="breadcrumbs_title text-4xl font-medium mb-0 text-green-550">
+                            <h2 class="mb-0 text-4xl font-medium breadcrumbs_title text-green-550">
                                 Add To Cart
                             </h2>
                             <div aria-label="breadcrumb">
-                                <ol class="p-0 bg-transparent list-none my-0 mx-auto flex justify-center border-0">
-                                    <li class="breadcrumb-item text-gray-800">
+                                <ol class="flex justify-center p-0 mx-auto my-0 list-none bg-transparent border-0">
+                                    <li class="text-gray-800 breadcrumb-item">
                                         <a href="#" style="color: rgba(31, 41, 55) !important;"><i
                                                 class="lni lni-home"></i></a>
                                     </li>
@@ -767,7 +905,7 @@
                                         <a href="#" style="color: rgba(31, 41, 55) !important;">My
                                             Account</a>
                                     </li>
-                                    <li class="breadcrumb-item text-gray-600">
+                                    <li class="text-gray-600 breadcrumb-item">
                                         Order History
                                     </li>
                                 </ol>
@@ -779,8 +917,8 @@
         </div>
         <!-- Breadcrumb:END -->
         <!-- ================ ProductView Section:Begin ================ -->
-        <section class="cart_total_container mb-12 w-full px-2 md:px-12 border-b items-center border-gray-200">
-            <div class="container cart_content mt-2 p-4 mx-auto w-full rounded flex bg-white">
+        <section class="items-center w-full px-2 mb-12 border-b border-gray-200 cart_total_container md:px-12">
+            <div class="container flex w-full p-4 mx-auto mt-2 bg-white rounded cart_content">
                 <div class="container">
                     <div class="row">
 
@@ -1001,7 +1139,7 @@
                             </div>
 
                             <!-- Coupon Box -->
-                            <div class="cart_coupon row items-end justify-between px-8 mb-10 md:mb-0">
+                            <div class="items-end justify-between px-8 mb-10 cart_coupon row md:mb-0">
                                 <div class="col-12 col-md-7" style="padding-left: 0px;">
 
                                     <!-- Coupon -->
@@ -1018,7 +1156,7 @@
                                             <div class="col-auto py-2 xs:py-0">
                                                 <!-- Button -->
                                                 <button
-                                                    class="btn py-4 px-6 cursor-pointer rounded inline-block font-medium text-center align-middle select-none transition duration-500 ease-in-out bg-gray-800 hover:bg-black text-white border border-gray-800"
+                                                    class="inline-block px-6 py-4 font-medium text-center text-white align-middle transition duration-500 ease-in-out bg-gray-800 border border-gray-800 rounded cursor-pointer select-none btn hover:bg-black"
                                                     type="submit">Apply</button>
                                             </div>
                                         </div>
@@ -1029,7 +1167,7 @@
                                 <div class="col-12 col-md-auto contents">
                                     <!-- Button -->
                                     <button
-                                        class="btn py-4 px-6 cursor-pointer rounded inline-block font-medium text-center align-middle select-none transition duration-500 ease-in-out bg-transparent hover:bg-gray-800 text-gray-800 hover:text-white border border-2 border-gray-800"">Update Cart</button>
+                                        class="inline-block px-6 py-4 font-medium text-center text-gray-800 align-middle transition duration-500 ease-in-out bg-transparent border border-2 border-gray-800 rounded cursor-pointer select-none btn hover:bg-gray-800 hover:text-white"">Update Cart</button>
                                 </div>
                             </div>
                             <!-- Coupon Box -->
@@ -1038,36 +1176,36 @@
 
                         <!-- CART Details Box:Begin -->
                         <div class=" col-lg-4 col-md-12 col-sm-12 col-12">
-                                        <div class="cart_detail_box rounded w-full bg-gray-100 mb-4">
-                                            <div class="card-body flex-auto p-5 border-none border-b-0">
+                                        <div class="w-full mb-4 bg-gray-100 rounded cart_detail_box">
+                                            <div class="flex-auto p-5 border-b-0 border-none card-body">
                                                 <ul
-                                                    class="list-group flex flex-col pl-0 mb-0 list-group-sm list-group-flush-y list-group-flush-x">
-                                                    <li class="list-group-item flex">
-                                                        <h5 class="mb-0 text-gray-800 text-xl font-semibold">Order
+                                                    class="flex flex-col pl-0 mb-0 list-group list-group-sm list-group-flush-y list-group-flush-x">
+                                                    <li class="flex list-group-item">
+                                                        <h5 class="mb-0 text-xl font-semibold text-gray-800">Order
                                                             Summary</h5>
                                                     </li>
-                                                    <li style="display: flex;" class="list-group-item text-gray-700">
+                                                    <li style="display: flex;" class="text-gray-700 list-group-item">
                                                         <span>Subtotal</span> <span
                                                             class="ml-auto text-sm">$89.00</span>
                                                     </li>
-                                                    <li style="display: flex;" class="list-group-item text-gray-700">
+                                                    <li style="display: flex;" class="text-gray-700 list-group-item">
                                                         <span>Tax</span> <span class="ml-auto text-sm">$00.00</span>
                                                     </li>
                                                     <li style="display: flex;"
-                                                        class="list-group-item text-lg text-gray-700 font-semibold">
+                                                        class="text-lg font-semibold text-gray-700 list-group-item">
                                                         <span>Total</span> <span class="ml-auto text-sm">$89.00</span>
                                                     </li>
                                                     <li style="border-bottom: none;"
-                                                        class="list-group-item text-sm text-center text-gray-500">
+                                                        class="text-sm text-center text-gray-500 list-group-item">
                                                         Shipping cost calculated at Checkout *
                                                     </li>
                                                 </ul>
                                             </div>
                                         </div>
-                                        <a class="w-full py-4 px-6 cursor-pointer rounded inline-block font-medium text-center align-middle select-none transition duration-500 ease-in-out bg-gray-800 hover:bg-black text-white border border-gray-800 mb-2"
+                                        <a class="inline-block w-full px-6 py-4 mb-2 font-medium text-center text-white align-middle transition duration-500 ease-in-out bg-gray-800 border border-gray-800 rounded cursor-pointer select-none hover:bg-black"
                                             href="checkout.html">Proceed to Checkout</a>
-                                        <a class="px-0 flex text-sm text-gray-700 hover:text-green-550" href="#"><span
-                                                class="my-auto pr-3"><img
+                                        <a class="flex px-0 text-sm text-gray-700 hover:text-green-550" href="#"><span
+                                                class="pr-3 my-auto"><img
                                                     src="https://img.icons8.com/officexs/14/000000/undo.png" /></span>
                                             Continue
                                             Shopping</a>
@@ -1084,130 +1222,196 @@
     <!-- =================== Main Wrapper:END========================== -->
     <!-- =================== Footer:Begin========================== -->
     <footer>
-        <div class="footer_section w-full items-center p-6 bg-white">
-            <div class="container mx-auto flex">
-                <div class="footer_container w-full flex flex-col md:flex-row">
-                    <div class="w-full md:w-1/4 py-2 md:py-0 pl-0 md:pl-4">
+        <div class="items-center w-full p-6 bg-white footer_section">
+            <div class="container flex mx-auto">
+                <div class="flex w-full footer_container">
+                    <div class="w-1/4 pl-4">
                         <picture>
                             <img src="./src/img/logo.svg" class="mb-2" alt="Logo" />
                         </picture>
-                        <div class="text-sm pl-2">
+                        <div class="pl-2 text-sm">
                             <h2 class="text-gray-800">
-                                <i class="w-1/12 text-xs py-1 lni lni-phone"></i>+61 525 240 310
+                                <i class="w-1/12 py-1 text-xs lni lni-phone"></i>+61 525 240 310
                             </h2>
                             <h2 class="text-gray-800">
-                                <i class="w-1/12 text-xs py-1 lni lni-mobile"></i>01858 586930,
+                                <i class="w-1/12 py-1 text-xs lni lni-mobile"></i>01858 586930,
                                 01563-526387
                             </h2>
                             <h2 class="text-green-550">
-                                <i class="w-1/12 text-xs py-1 lni lni-envelope"></i>FreshGrocery@Gmail.com
+                                <i class="w-1/12 py-1 text-xs lni lni-envelope"></i
+                                >FreshGrocery@Gmail.com
                             </h2>
                             <h2 class="text-yellow-600">
-                                <i class="w-1/12 text-xs py-1 lni lni-world"></i>www.FreshGrocery.Com
+                                <i class="w-1/12 py-1 text-xs lni lni-world"></i
+                                >www.FreshGrocery.Com
                             </h2>
                         </div>
                     </div>
-                    <div class="w-full md:w-1/7 py-2 md:py-0 text-gray-700 text-sm">
-                        <h2 class="pb-4 text-gray-900 text-base font-medium hover:text-yellow-600">
+                    <div class="text-sm text-gray-700 w-1/7">
+                        <h2
+                            class="pb-4 text-base font-medium text-gray-900 hover:text-yellow-600"
+                        >
                             <a href="#">TOP CITIES</a>
                         </h2>
-                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                        <h4
+                            class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550"
+                        >
                             <a href="#">Dhaka</a>
                         </h4>
-                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                        <h4
+                            class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550"
+                        >
                             <a href="#">Chittagong</a>
                         </h4>
-                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                        <h4
+                            class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550"
+                        >
                             <a href="#">Rajsahi</a>
                         </h4>
-                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                        <h4
+                            class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550"
+                        >
                             <a href="#">Barishal</a>
                         </h4>
-                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                        <h4
+                            class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550"
+                        >
                             <a href="#">Sylhet</a>
                         </h4>
-                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                        <h4
+                            class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550"
+                        >
                             <a href="#">Khulna</a>
                         </h4>
-                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                        <h4
+                            class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550"
+                        >
                             <a href="#">Feni</a>
                         </h4>
                     </div>
-                    <div class="w-full md:w-1/5 py-2 md:py-0 text-gray-700 text-sm">
-                        <h2 class="pb-4 text-gray-900 text-base font-medium hover:text-yellow-600">
+                    <div class="w-1/5 text-sm text-gray-700">
+                        <h2
+                            class="pb-4 text-base font-medium text-gray-900 hover:text-yellow-600"
+                        >
                             <a href="#">CATEGORIES</a>
                         </h2>
-                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                        <h4
+                            class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550"
+                        >
                             <a href="#">Vegetables</a>
                         </h4>
-                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                        <h4
+                            class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550"
+                        >
                             <a href="#">Grocery & Staples</a>
                         </h4>
-                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                        <h4
+                            class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550"
+                        >
                             <a href="#">Breakfast & Dairy</a>
                         </h4>
-                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                        <h4
+                            class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550"
+                        >
                             <a href="#">Soft Drinks</a>
                         </h4>
-                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                        <h4
+                            class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550"
+                        >
                             <a href="#">Snacks</a>
                         </h4>
-                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                        <h4
+                            class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550"
+                        >
                             <a href="#">Fresh Juice</a>
                         </h4>
-                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                        <h4
+                            class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550"
+                        >
                             <a href="#">Biscuit & Cookies</a>
                         </h4>
                     </div>
-                    <div class="w-full md:w-1/5 py-2 md:py-0 text-gray-700 text-sm">
-                        <h2 class="pb-4 text-gray-900 text-base font-medium hover:text-yellow-6000">
+                    <div class="w-1/5 text-sm text-gray-700">
+                        <h2
+                            class="pb-4 text-base font-medium text-gray-900 hover:text-yellow-6000"
+                        >
                             USEFUL LINKS
                         </h2>
-                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                        <h4
+                            class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550"
+                        >
                             <a href="#">Privacy Policy</a>
                         </h4>
-                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                        <h4
+                            class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550"
+                        >
                             <a href="#">Terms Conditions</a>
                         </h4>
-                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                        <h4
+                            class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550"
+                        >
                             <a href="#">About Us</a>
                         </h4>
-                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                        <h4
+                            class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550"
+                        >
                             <a href="#">Affiliate Program</a>
                         </h4>
-                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                        <h4
+                            class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550"
+                        >
                             <a href="#">Store Locations</a>
                         </h4>
-                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                        <h4
+                            class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550"
+                        >
                             <a href="#">Copyright</a>
                         </h4>
-                        <h4 class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550">
+                        <h4
+                            class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550"
+                        >
                             <a href="#">Contact Us</a>
                         </h4>
                     </div>
-                    <div class="w-full md:w-1/5">
+                    <div class="w-1/5">
                         <div>
-                            <h2 class="text-gray-900 text-base font-semibold md:font-medium">DOWNLOAD APP</h2>
+                            <h2 class="text-base font-medium text-gray-900">DOWNLOAD APP</h2>
                             <div class="flex py-4">
                                 <a href="#" class="w-1/2">
-                                    <img class="w-8/10" src="https://jogaan.com/_nuxt/img/4ce869c.png"
-                                        alt="Google Play Store" />
+                                    <img
+                                        class="w-8/10"
+                                        src="./src/img/google.4ce869c.png"
+                                        alt="Google Play Store"
+                                    />
                                 </a>
                                 <a href="#" class="w-1/2 -ml-3">
-                                    <img class="w-8/10" src="https://jogaan.com/_nuxt/img/62d930a.png"
-                                        alt="Apple Store" />
+                                    <img
+                                        class="w-8/10"
+                                        src="./src/img/ios.62d930a.png"
+                                        alt="Apple Store"
+                                    />
                                 </a>
                             </div>
                         </div>
 
                         <div class="pt-4">
-                            <h2 class="text-gray-900 text-base font-semibold md:font-medium pb-3">GET IN TOUCH</h2>
-                            <div class="Footer-Social-media flex justify-center">
-                                <a href="#"><i class="lni lni-facebook-oval hover:text-blue-600"></i></a>
-                                <a href="#"><i class="lni lni-twitter-original hover:text-blue-400"></i></a>
-                                <a href="#"><i class="lni lni-whatsapp hover:text-green-600"></i></a>
-                                <a href="#"><i class="lni lni-instagram hover:text-red-500"></i></a>
-                                <a href="#"><i class="lni lni-youtube hover:text-red-500"></i></a>
+                            <h2 class="text-base font-medium text-gray-900">GET IN TOUCH</h2>
+                            <div class="flex justify-center Footer-Social-media">
+                                <a href="#"
+                                    ><i class="lni lni-facebook-oval hover:text-blue-600"></i
+                                ></a>
+                                <a href="#"
+                                    ><i class="lni lni-twitter-original hover:text-blue-400"></i
+                                ></a>
+                                <a href="#"
+                                    ><i class="lni lni-whatsapp hover:text-green-600"></i
+                                ></a>
+                                <a href="#"
+                                    ><i class="lni lni-instagram hover:text-red-500"></i
+                                ></a>
+                                <a href="#"
+                                    ><i class="lni lni-youtube hover:text-red-500"></i
+                                ></a>
                             </div>
                         </div>
                     </div>
@@ -1216,19 +1420,22 @@
         </div>
 
         <!-- Bottom Footer -->
-        <div class="bottom_footer_section w-full items-center p-4 md:p-8 py-6 bg-gray-800 text-white">
-            <div class="container mx-auto flex">
-                <div class="bottom_footer_container w-full flex flex-col md:flex-row">
-                    <div class="text-sm w-full md:w-1/2 pb-4 md:pb-0">
+        <div class="items-center w-full p-8 py-6 text-white bg-gray-800 bottom_footer_section">
+            <div class="container flex mx-auto">
+                <div class="flex w-full bottom_footer_container">
+                    <div class="w-1/2 text-sm">
                         &copy Copyright 2021
                         <strong class="tracking-widest">FreshGrocery</strong>. All Rights
                         Reserved <br />
-                        <span class="text-xs">Made With <i class="lni lni-heart-filled"></i> by <a
-                                href="softarch.com">SoftArch</a> </span>
+                        <span class="text-xs"
+                            >Made With <i class="lni lni-heart-filled"></i> by JAHID</span
+                        >
                     </div>
-                    <div class="w-full md:w-1/2">
-                        <img src="https://www.khaasfood.com/wp-content/uploads/2020/06/SSL-Commerz-Pay-With-logo-All-Size-03-1.png"
-                            alt="payments" />
+                    <div class="w-1/2">
+                        <img
+                            src="./src/img/SSL-Commerz-Pay-With-logo-All-Size-03-1.png"
+                            alt="payments"
+                        />
                     </div>
                 </div>
             </div>

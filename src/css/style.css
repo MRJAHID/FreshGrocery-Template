@@ -44,6 +44,7 @@
     23. Header Search Box CSS
     24. Side Nav Design 
     25. Auth Modal Design CSS
+    26. Invoice Design CSS
 
 
 -----------------------------------------------------------------------------------*/
@@ -66,7 +67,7 @@ textarea:focus {
     outline-color: #a3d6d5 !important;
 }
 
-@media(min-width:768px) {
+@media (min-width: 768px) {
     .md\:revert {
         display: revert;
     }
@@ -692,6 +693,12 @@ textarea:focus {
 |                                              |
 ================================================
 */
+.product_grid_list_show_content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
+    gap: 1rem;
+}
 .product_grid_list_show_container .product-grid {
     text-align: center;
     overflow: hidden;
@@ -1051,14 +1058,13 @@ textarea:focus {
     background-clip: initial;
 }
 
-.form-row>.col,
-.form-row>[class*='col-'] {
+.form-row > .col,
+.form-row > [class*='col-'] {
     padding-right: 15px;
     padding-left: 15px;
 }
 
-@media(max-width:450px) {
-
+@media (max-width: 450px) {
     .cart_coupon_inpt_box {
         padding-right: 0px;
         padding-left: 0px;
@@ -1211,12 +1217,12 @@ textarea:focus {
 
 .auth_content .left-auth_panel {
     pointer-events: all;
-    padding: 4rem 57% 2rem 12%
+    padding: 4rem 57% 2rem 12%;
 }
 
 .auth_content .right-auth_panel {
     pointer-events: none;
-    padding: 0rem 12% 2rem 12%
+    padding: 0rem 12% 2rem 12%;
 }
 
 .auth_content .btn.transparent {
@@ -1446,23 +1452,22 @@ textarea:focus {
     margin: 15px;
 }
 
-@media(max-width:500px) {
-
+@media (max-width: 500px) {
     .checkout_content label,
     .checkout_content table {
         margin: 15px 5px;
     }
 }
 
-.checkout_content label>span {
+.checkout_content label > span {
     float: left;
     width: 25%;
     font-weight: 500;
     padding-right: 20px;
 }
 
-@media(max-width:500px) {
-    .checkout_content label>span {
+@media (max-width: 500px) {
+    .checkout_content label > span {
         font-size: 15px;
     }
 }
@@ -1494,7 +1499,7 @@ textarea:focus {
     border: 1px solid #dadada;
 }
 
-@media(max-width:500px) {
+@media (max-width: 500px) {
     .checkout_content .checkout_Yorder {
         padding: 14px;
     }
@@ -1511,12 +1516,12 @@ textarea:focus {
     font-size: 20px;
 }
 
-.checkout_content tr>td:nth-child(1) {
+.checkout_content tr > td:nth-child(1) {
     text-align: left;
     color: #2d2d2a;
 }
 
-.checkout_content tr>td:nth-child(2) {
+.checkout_content tr > td:nth-child(2) {
     text-align: right;
     color: #14a753;
 }
@@ -1534,7 +1539,7 @@ textarea:focus {
     padding-left: 25px;
 }
 
-.checkout_content .checkout_Yorder>div {
+.checkout_content .checkout_Yorder > div {
     padding: 15px 0;
     font-weight: 500;
 }
@@ -1607,7 +1612,7 @@ ul.collapse.color_filter li span {
 }
 
 /* 14.2 Filter Section Collapse CSS  */
-.tag-group p.title.open+ul.collapse {
+.tag-group p.title.open + ul.collapse {
     display: none;
 }
 
@@ -1681,7 +1686,7 @@ ul.collapse.color_filter li.active {
 .member:hover.member-anim .member-overlay p,
 .member:hover.member-anim .member-overlay .social-icons {
     animation-name: fadeInUpShort;
-    animation-duration: .65s;
+    animation-duration: 0.65s;
     animation-fill-mode: both;
 }
 
@@ -1693,9 +1698,9 @@ ul.collapse.color_filter li.active {
     color: rgba(31, 41, 55);
 }
 
-.faq_accordion input:checked+label:after {
+.faq_accordion input:checked + label:after {
     content: '-';
-    line-height: .8em;
+    line-height: 0.8em;
 }
 
 .faq_accordion .accordion__content {
@@ -1703,7 +1708,7 @@ ul.collapse.color_filter li.active {
     transition: all 0.4s cubic-bezier(0.865, 0.14, 0.095, 0.87);
 }
 
-.faq_accordion input[name='panel']:checked~.accordion__content {
+.faq_accordion input[name='panel']:checked ~ .accordion__content {
     max-height: 50em;
 }
 
@@ -1742,7 +1747,7 @@ ul.collapse.color_filter li.active {
     color: #7f8fa9 !important;
 }
 
-.breadcrumb-item+.breadcrumb-item::before {
+.breadcrumb-item + .breadcrumb-item::before {
     display: inline-block;
     padding-right: 0.5rem;
     padding-left: 0.5rem;
@@ -1861,12 +1866,12 @@ table.table tr th {
     text-align: left;
 }
 
-.table>tbody>tr>td,
-.table>tbody>tr>th,
-.table>tfoot>tr>td,
-.table>tfoot>tr>th,
-.table>thead>tr>td,
-.table>thead>tr>th {
+.table > tbody > tr > td,
+.table > tbody > tr > th,
+.table > tfoot > tr > td,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > thead > tr > th {
     border-top: 1px solid #e8eaf1;
 }
 
@@ -1947,7 +1952,6 @@ table.table tr th {
 ================================================
 */
 
-
 nav {
     display: block;
     background-color: rgba(31, 41, 55);
@@ -1983,11 +1987,10 @@ nav {
 }
 
 .menu li a:hover,
-.menu li:hover>a {
+.menu li:hover > a {
     color: #14a753;
     background: transparent;
 }
-
 
 .menu ul {
     visibility: hidden;
@@ -2011,7 +2014,7 @@ nav {
     bottom: 100%;
     left: 20%;
     border: solid transparent;
-    content: " ";
+    content: ' ';
     height: 0;
     width: 0;
     position: absolute;
@@ -2040,12 +2043,13 @@ nav {
 }
 
 .menu ul li a:hover,
-.menu ul li:hover>a {
+.menu ul li:hover > a {
     background: #14a753;
     color: #fff;
 }
 
-.menu li:hover>ul {
+.menu li:hover > ul {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     visibility: visible;
     opacity: 1;
     transform: translate(0, 0);
@@ -2064,7 +2068,7 @@ nav {
     left: -6px;
     top: 10%;
     border: solid transparent;
-    content: " ";
+    content: ' ';
     height: 0;
     width: 0;
     position: absolute;
@@ -2075,7 +2079,7 @@ nav {
     margin-top: -6px;
 }
 
-.menu li>ul ul:hover {
+.menu li > ul ul:hover {
     visibility: visible;
     opacity: 1;
     transform: translate(0, 0);
@@ -2110,7 +2114,6 @@ nav {
 a.homer {
     background: #14a753;
 }
-
 
 @media (min-width: 768px) and (max-width: 979px) {
     .mainWrap {
@@ -2164,7 +2167,7 @@ a.homer {
     }
 
     .menu li a:hover,
-    .menu li:hover>a {
+    .menu li:hover > a {
         background: #14a753;
         color: #fff;
     }
@@ -2178,7 +2181,7 @@ a.homer {
         transform: initial;
     }
 
-    .menu li:hover>ul {
+    .menu li:hover > ul {
         visibility: visible;
         opacity: 1;
         position: relative;
@@ -2190,12 +2193,12 @@ a.homer {
         transform: initial;
     }
 
-    .menu li>ul ul:hover {
+    .menu li > ul ul:hover {
         transform: initial;
     }
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
     .shop_categories_li {
         display: block;
     }
@@ -2314,7 +2317,6 @@ blockquote::after,
     padding: 12px 15px;
 }
 
-
 /*
 ================================================
 |                                              |
@@ -2327,7 +2329,6 @@ blockquote::after,
     height: 42px;
     width: 42px;
     line-height: 42px;
-
 }
 
 .header-search_box .searchbutton {
@@ -2335,13 +2336,13 @@ blockquote::after,
     padding: 0;
 }
 
-@media(max-width:490px) {
+@media (max-width: 490px) {
     .header-search_box .searchbutton {
         font-size: 22px;
     }
 }
 
-.header-search_box .search:focus+.searchbutton {
+.header-search_box .search:focus + .searchbutton {
     transition-duration: 0.4s;
     background-color: white;
     color: black;
@@ -2359,55 +2360,54 @@ blockquote::after,
     border-radius: 5px;
 }
 
-@media(max-width:490px) {
+@media (max-width: 490px) {
     .header-search_box .search:focus {
         width: 300px;
     }
 }
 
-@media(max-width:460px) {
+@media (max-width: 460px) {
     .header-search_box .search:focus {
         width: 250px;
     }
 }
 
-@media(max-width:420px) {
+@media (max-width: 420px) {
     .header-search_box .search:focus {
         width: 400px;
     }
 }
 
-@media(max-width:410px) {
+@media (max-width: 410px) {
     .header-search_box .search:focus {
         width: 380px;
     }
 }
 
-@media(max-width:390px) {
+@media (max-width: 390px) {
     .header-search_box .search:focus {
         width: 350px;
     }
 }
 
-@media(max-width:370px) {
+@media (max-width: 370px) {
     .header-search_box .search:focus {
         width: 345px;
     }
 }
 
-@media(max-width:350px) {
+@media (max-width: 350px) {
     .header-search_box .search:focus {
         width: 325px;
     }
 }
-
 
 .header-search_box .expandright {
     left: auto;
     right: 49px;
 }
 
-@media(max-width:420px) {
+@media (max-width: 420px) {
     .header-search_box .expandright {
         left: auto;
         right: -100px;
@@ -2445,7 +2445,7 @@ blockquote::after,
     padding: 0;
     background-color: rgba(31, 41, 55);
     padding: 15px;
-    transition: all .7s ease-in-out;
+    transition: all 0.7s ease-in-out;
 }
 
 .side-nav-item {
@@ -2481,12 +2481,12 @@ blockquote::after,
 .nav a,
 .nav label {
     display: block;
-    padding: .85rem;
+    padding: 0.85rem;
     color: #fff;
     background-color: transparent;
     box-shadow: inset 0 -1px #1d1d1d;
-    -webkit-transition: all .25s ease-in;
-    transition: all .25s ease-in;
+    -webkit-transition: all 0.25s ease-in;
+    transition: all 0.25s ease-in;
 }
 
 .nav a:focus,
@@ -2566,22 +2566,22 @@ blockquote::after,
     height: 100%;
     max-height: 0;
     overflow: hidden;
-    -webkit-transition: max-height .5s ease-in-out;
-    transition: max-height .5s ease-in-out;
+    -webkit-transition: max-height 0.5s ease-in-out;
+    transition: max-height 0.5s ease-in-out;
 }
 
-.nav__list input[type=checkbox]:checked+label+ul {
+.nav__list input[type='checkbox']:checked + label + ul {
     /* reset the height when checkbox is checked */
     max-height: 1000px;
 }
 
-Rotating chevron icon on toggle. label>span {
+Rotating chevron icon on toggle. label > span {
     float: right;
-    -webkit-transition: -webkit-transform .65s ease;
-    transition: transform .65s ease;
+    -webkit-transition: -webkit-transform 0.65s ease;
+    transition: transform 0.65s ease;
 }
 
-.nav__list input[type=checkbox]:checked+label>span {
+.nav__list input[type='checkbox']:checked + label > span {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
@@ -2617,7 +2617,7 @@ Rotating chevron icon on toggle. label>span {
 
 .auth-user-modal-container .auth_nav-switcher::after {
     clear: both;
-    content: "";
+    content: '';
     display: table;
 }
 
@@ -2635,7 +2635,7 @@ Rotating chevron icon on toggle. label>span {
 }
 
 .auth-user-modal-container .auth_nav-switcher a.selected {
-    background: #FFF;
+    background: #fff;
     color: #505260;
 }
 
@@ -2683,18 +2683,21 @@ Rotating chevron icon on toggle. label>span {
 }
 
 .auth-form label.auth-username {
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M20.822 18.096c-3.439-.794-6.64-1.49-5.09-4.418 4.72-8.912 1.251-13.678-3.732-13.678-5.082 0-8.464 4.949-3.732 13.678 1.597 2.945-1.725 3.641-5.09 4.418-3.073.71-3.188 2.236-3.178 4.904l.004 1h23.99l.004-.969c.012-2.688-.092-4.222-3.176-4.935z"/></svg>') center no-repeat;
-    opacity: .6;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M20.822 18.096c-3.439-.794-6.64-1.49-5.09-4.418 4.72-8.912 1.251-13.678-3.732-13.678-5.082 0-8.464 4.949-3.732 13.678 1.597 2.945-1.725 3.641-5.09 4.418-3.073.71-3.188 2.236-3.178 4.904l.004 1h23.99l.004-.969c.012-2.688-.092-4.222-3.176-4.935z"/></svg>')
+        center no-repeat;
+    opacity: 0.6;
 }
 
 .auth-form label.auth-email {
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.971l-11.986 9.713zm-5.425-1.822l-6.575-5.329v12.501l6.575-7.172zm10.85 0l6.575 7.172v-12.501l-6.575 5.329zm-1.557 1.261l-3.868 3.135-3.868-3.135-8.11 8.848h23.956l-8.11-8.848z"/></svg>') center no-repeat;
-    opacity: .6;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.971l-11.986 9.713zm-5.425-1.822l-6.575-5.329v12.501l6.575-7.172zm10.85 0l6.575 7.172v-12.501l-6.575 5.329zm-1.557 1.261l-3.868 3.135-3.868-3.135-8.11 8.848h23.956l-8.11-8.848z"/></svg>')
+        center no-repeat;
+    opacity: 0.6;
 }
 
 .auth-form label.auth-password {
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M17 9.761v-4.761c0-2.761-2.238-5-5-5-2.763 0-5 2.239-5 5v4.761c-1.827 1.466-3 3.714-3 6.239 0 4.418 3.582 8 8 8s8-3.582 8-8c0-2.525-1.173-4.773-3-6.239zm-8-4.761c0-1.654 1.346-3 3-3s3 1.346 3 3v3.587c-.927-.376-1.938-.587-3-.587s-2.073.211-3 .587v-3.587zm3 17c-3.309 0-6-2.691-6-6s2.691-6 6-6 6 2.691 6 6-2.691 6-6 6zm2-6c0 1.104-.896 2-2 2s-2-.896-2-2 .896-2 2-2 2 .896 2 2z"/></svg>') center no-repeat;
-    opacity: .6;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M17 9.761v-4.761c0-2.761-2.238-5-5-5-2.763 0-5 2.239-5 5v4.761c-1.827 1.466-3 3.714-3 6.239 0 4.418 3.582 8 8 8s8-3.582 8-8c0-2.525-1.173-4.773-3-6.239zm-8-4.761c0-1.654 1.346-3 3-3s3 1.346 3 3v3.587c-.927-.376-1.938-.587-3-.587s-2.073.211-3 .587v-3.587zm3 17c-3.309 0-6-2.691-6-6s2.691-6 6-6 6 2.691 6 6-2.691 6-6 6zm2-6c0 1.104-.896 2-2 2s-2-.896-2-2 .896-2 2-2 2 .896 2 2z"/></svg>')
+        center no-repeat;
+    opacity: 0.6;
 }
 
 .auth-form input {
@@ -2726,22 +2729,22 @@ Rotating chevron icon on toggle. label>span {
     border: 1px solid #d76666;
 }
 
-.auth-form input[type=password] {
+.auth-form input[type='password'] {
     padding-right: 65px;
 }
 
-.auth-form input[type=submit] {
+.auth-form input[type='submit'] {
     padding: 16px 0;
     cursor: pointer;
     background: #14a753;
-    color: #FFF;
+    color: #fff;
     font-weight: bold;
     border: none;
     appearance: none;
 }
 
-.no-touch .auth-form input[type=submit]:hover,
-.no-touch .auth-form input[type=submit]:focus {
+.no-touch .auth-form input[type='submit']:hover,
+.no-touch .auth-form input[type='submit']:focus {
     background: #3599ae;
     outline: none;
 }
@@ -2769,7 +2772,7 @@ Rotating chevron icon on toggle. label>span {
     background: rgba(215, 102, 102, 0.9);
     padding: 0.8em;
     z-index: 2;
-    color: #FFF;
+    color: #fff;
     font-size: 13px;
     font-size: 0.8125rem;
     border-radius: 0.25em;
@@ -2782,7 +2785,7 @@ Rotating chevron icon on toggle. label>span {
 
 .auth-form .auth-error-message::after {
     /* triangle */
-    content: "";
+    content: '';
     position: absolute;
     left: 22px;
     bottom: 100%;
@@ -2820,7 +2823,7 @@ Rotating chevron icon on toggle. label>span {
         padding: 16px 20px 16px 50px;
     }
 
-    .auth-form input[type=submit] {
+    .auth-form input[type='submit'] {
         padding: 16px 0;
     }
 }
@@ -2837,7 +2840,6 @@ Rotating chevron icon on toggle. label>span {
         padding: 2em 2em 0;
     }
 }
-
 
 .auth-close-form {
     display: block;
@@ -2860,4 +2862,90 @@ Rotating chevron icon on toggle. label>span {
 #auth-signup.is-selected,
 #auth-reset-password.is-selected {
     display: block;
+}
+
+/*
+================================================
+|                                              |
+|           26. Invoice Design CSS             |
+|                                              |
+================================================
+*/
+
+.invoice div,
+.invoice p,
+.invoice a,
+.invoice li,
+.invoice td {
+    -webkit-text-size-adjust: none;
+}
+.invoice .ReadMsgBody {
+    width: 100%;
+    background-color: #ffffff;
+}
+.invoice .ExternalClass {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.invoice p {
+    padding: 0 !important;
+    margin-top: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+}
+.invoice .visibleMobile {
+    display: none;
+}
+.invoice .hiddenMobile {
+    display: block;
+}
+
+@media only screen and (max-width: 600px) {
+    .invoice table[class='fullTable'] {
+        width: 96% !important;
+        clear: both;
+    }
+    .invoice table[class='fullPadding'] {
+        width: 85% !important;
+        clear: both;
+    }
+    .invoice table[class='col'] {
+        width: 45% !important;
+    }
+    .invoice .erase {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .invoice table[class='fullTable'] {
+        width: 100% !important;
+        clear: both;
+    }
+    .invoice table[class='fullPadding'] {
+        width: 85% !important;
+        clear: both;
+    }
+    .invoice table[class='col'] {
+        width: 100% !important;
+        clear: both;
+    }
+    .invoice table[class='col'] td {
+        text-align: left !important;
+    }
+    .invoice .erase {
+        display: none;
+        font-size: 0;
+        max-height: 0;
+        line-height: 0;
+        padding: 0;
+    }
+    .invoice .visibleMobile {
+        display: block !important;
+    }
+    .invoice .hiddenMobile {
+        display: none !important;
+    }
 }
