@@ -1051,13 +1051,13 @@
         <!-- =================== Main Wrapper:Begin========================== -->
         <main class="main_wrapper">
             <!-- Breadcrumb:Begin -->
-            <div class="w-full py-8 text-white bg-transparent breadcrumbs_wrap dark">
+            <div class="w-full py-4 text-white bg-transparent md:py-8 breadcrumbs_wrap dark">
                 <div class="container">
                     <div class="flex flex-wrap items-center mx-4">
                         <div class="w-full">
                             <div class="text-center">
                                 <h2
-                                    class="mb-0 text-4xl font-medium breadcrumbs_title text-green-550"
+                                    class="mb-0 text-2xl font-medium md:text-4xl breadcrumbs_title text-green-550"
                                 >
                                     Account Settings
                                 </h2>
@@ -1084,9 +1084,9 @@
             <!-- Breadcrumb:END -->
             <!-- ================ ProductView Section:Begin ================ -->
             <section
-                class="items-center w-full px-4 my-12 border-b border-gray-200 cart_total_container"
+                class="items-center w-full px-1 my-4 border-b border-gray-200 md:px-4 md:my-12 cart_total_container"
             >
-                <div class="container flex w-full p-4 mx-auto mt-6 rounded cart_content">
+                <div class="container flex w-full p-1 mx-auto mt-2 rounded md:mt-6 md:p-4 cart_content">
                     <div class="w-full">
                         <div class="container w-full">
                             <div class="flex flex-wrap w-full">
@@ -1215,12 +1215,11 @@
                                                     <div class="mb-2 col-12 col-md-6">
                                                         <!-- Email -->
                                                         <div class="form-group">
-                                                            <label>First Name *</label>
+                                                            <label class="inline-block mb-1 md:mb-0">First Name *</label>
                                                             <input
-                                                                class="form-control"
+                                                                class="w-full form-control md:w-auto"
                                                                 type="text"
-                                                                placeholder="First Name *"
-                                                                value="Yash"
+                                                                placeholder="First Name"
                                                                 required=""
                                                                 style="
                                                                     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC');
@@ -1237,12 +1236,11 @@
                                                     <div class="mb-2 col-12 col-md-6">
                                                         <!-- Last Name -->
                                                         <div class="form-group">
-                                                            <label>Last Name *</label>
+                                                            <label class="inline-block mb-1 md:mb-0">Last Name *</label>
                                                             <input
-                                                                class="form-control"
+                                                                class="w-full form-control md:w-auto"
                                                                 type="text"
-                                                                placeholder="Last Name *"
-                                                                value="Verma"
+                                                                placeholder="Last Name"
                                                                 required=""
                                                             />
                                                         </div>
@@ -1251,12 +1249,11 @@
                                                     <div class="mb-2 col-12 col-md-6">
                                                         <!-- Email -->
                                                         <div class="form-group">
-                                                            <label> Email Address *</label>
+                                                            <label class="inline-block mb-1 md:mb-0"> Email Address *</label>
                                                             <input
-                                                                class="form-control"
+                                                                class="w-full form-control md:w-auto"
                                                                 type="email"
-                                                                placeholder="Email Address *"
-                                                                value="yash77@gmail.com"
+                                                                placeholder="Email Address"
                                                                 required=""
                                                             />
                                                         </div>
@@ -1265,11 +1262,11 @@
                                                     <div class="mb-2 col-12 col-md-6">
                                                         <!-- Password -->
                                                         <div class="form-group">
-                                                            <label>Current Password *</label>
+                                                            <label class="inline-block mb-1 md:mb-0">Current Password *</label>
                                                             <input
-                                                                class="form-control"
+                                                                class="w-full form-control md:w-auto"
                                                                 type="password"
-                                                                placeholder="Current Password *"
+                                                                placeholder="Current Password"
                                                                 required=""
                                                                 style="
                                                                     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC');
@@ -1285,11 +1282,11 @@
                                                     <div class="mb-2 col-12 col-md-6">
                                                         <!-- Password -->
                                                         <div class="form-group">
-                                                            <label>New Password *</label>
+                                                            <label class="inline-block mb-1 md:mb-0">New Password *</label>
                                                             <input
-                                                                class="form-control"
+                                                                class="w-full form-control md:w-auto"
                                                                 type="password"
-                                                                placeholder="New Password *"
+                                                                placeholder="New Password"
                                                                 required=""
                                                                 style="
                                                                     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACIUlEQVQ4EX2TOYhTURSG87IMihDsjGghBhFBmHFDHLWwSqcikk4RRKJgk0KL7C8bMpWpZtIqNkEUl1ZCgs0wOo0SxiLMDApWlgOPrH7/5b2QkYwX7jvn/uc//zl3edZ4PPbNGvF4fC4ajR5VrNvt/mo0Gr1ZPOtfgWw2e9Lv9+chX7cs64CS4Oxg3o9GI7tUKv0Q5o1dAiTfCgQCLwnOkfQOu+oSLyJ2A783HA7vIPLGxX0TgVwud4HKn0nc7Pf7N6vV6oZHkkX8FPG3uMfgXC0Wi2vCg/poUKGGcagQI3k7k8mcp5slcGswGDwpl8tfwGJg3xB6Dvey8vz6oH4C3iXcFYjbwiDeo1KafafkC3NjK7iL5ESFGQEUF7Sg+ifZdDp9GnMF/KGmfBdT2HCwZ7TwtrBPC7rQaav6Iv48rqZwg+F+p8hOMBj0IbxfMdMBrW5pAVGV/ztINByENkU0t5BIJEKRSOQ3Aj+Z57iFs1R5NK3EQS6HQqF1zmQdzpFWq3W42WwOTAf1er1PF2USFlC+qxMvFAr3HcexWX+QX6lUvsKpkTyPSEXJkw6MQ4S38Ljdbi8rmM/nY+CvgNcQqdH6U/xrYK9t244jZv6ByUOSiDdIfgBZ12U6dHEHu9TpdIr8F0OP692CtzaW/a6y3y0Wx5kbFHvGuXzkgf0xhKnPzA4UTyaTB8Ph8AvcHi3fnsrZ7Wore02YViqVOrRXXPhfqP8j6MYlawoAAAAASUVORK5CYII=');
@@ -1305,8 +1302,8 @@
                                                     <div class="mb-2 col-12 col-md-6">
                                                         <!-- Birthday -->
                                                         <div class="form-group">
-                                                            <label>Date of Birth</label>
-                                                            <div class="row">
+                                                            <label class="inline-block mb-1 md:mb-0">Date of Birth</label>
+                                                            <div class="justify-center row md:justify-start">
                                                                 <div class="col-auto">
                                                                     <!-- Date -->
                                                                     <label class="sr-only"
@@ -1361,7 +1358,7 @@
                                                     <div class="mb-2 col-12 col-md-6">
                                                         <!-- Gender -->
                                                         <div class="mb-8 form-group">
-                                                            <label>Gender</label>
+                                                            <label class="inline-block mb-1 md:mb-0">Gender</label>
                                                             <div
                                                                 class="flex mt-2 btn-group-toggle bd-highlight"
                                                             >
@@ -1419,10 +1416,10 @@
         <!-- =================== Main Wrapper:END========================== -->
         <!-- =================== Footer:Begin========================== -->
         <footer>
-            <div class="items-center w-full p-6 bg-white footer_section">
+            <div class="items-center w-full p-2 bg-white md:p-6 footer_section">
                 <div class="container flex mx-auto">
-                    <div class="flex w-full footer_container">
-                        <div class="w-1/4 pl-4">
+                    <div class="flex flex-wrap w-full footer_container">
+                        <div class="w-full mb-2 md:mb-0 md:w-1/4 md:pl-4">
                             <picture>
                                 <img src="./src/img/logo.svg" class="mb-2" alt="Logo" />
                             </picture>
@@ -1444,7 +1441,7 @@
                                 </h2>
                             </div>
                         </div>
-                        <div class="text-sm text-gray-700 w-1/7">
+                        <div class="w-1/2 mb-2 text-sm text-gray-700 md:mb-0 md:w-1/7">
                             <h2
                                 class="pb-4 text-base font-medium text-gray-900 hover:text-yellow-600"
                             >
@@ -1486,7 +1483,7 @@
                                 <a href="#">Feni</a>
                             </h4>
                         </div>
-                        <div class="w-1/5 text-sm text-gray-700">
+                        <div class="w-1/2 mb-2 text-sm text-gray-700 md:mb-0 md:w-1/5">
                             <h2
                                 class="pb-4 text-base font-medium text-gray-900 hover:text-yellow-600"
                             >
@@ -1528,7 +1525,7 @@
                                 <a href="#">Biscuit & Cookies</a>
                             </h4>
                         </div>
-                        <div class="w-1/5 text-sm text-gray-700">
+                        <div class="w-1/2 mb-2 text-sm text-gray-700 md:mb-0 md:w-1/5">
                             <h2
                                 class="pb-4 text-base font-medium text-gray-900 hover:text-yellow-6000"
                             >
@@ -1570,7 +1567,49 @@
                                 <a href="#">Contact Us</a>
                             </h4>
                         </div>
-                        <div class="w-1/5">
+                        <div class="w-1/2 mb-2 text-sm text-gray-700 md:mb-0 md:hidden">
+                            <h2
+                                class="pb-4 text-base font-medium text-gray-900 hover:text-yellow-6000"
+                            >
+                                USEFUL LINKS
+                            </h2>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550"
+                            >
+                                <a href="#">Privacy Policy</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550"
+                            >
+                                <a href="#">Terms Conditions</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550"
+                            >
+                                <a href="#">About Us</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550"
+                            >
+                                <a href="#">Affiliate Program</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550"
+                            >
+                                <a href="#">Store Locations</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550"
+                            >
+                                <a href="#">Copyright</a>
+                            </h4>
+                            <h4
+                                class="pb-1 transition duration-500 ease-in-out footer-links hover:text-green-550"
+                            >
+                                <a href="#">Contact Us</a>
+                            </h4>
+                        </div>
+                        <div class="w-full md:w-1/5">
                             <div>
                                 <h2 class="text-base font-medium text-gray-900">DOWNLOAD APP</h2>
                                 <div class="flex py-4">
@@ -1617,18 +1656,18 @@
             </div>
 
             <!-- Bottom Footer -->
-            <div class="items-center w-full p-8 py-6 text-white bg-gray-800 bottom_footer_section">
+            <div class="items-center w-full px-2 py-2 text-white bg-gray-800 md:px-8 md:py-6 bottom_footer_section">
                 <div class="container flex mx-auto">
-                    <div class="flex w-full bottom_footer_container">
-                        <div class="w-1/2 text-sm">
+                    <div class="flex flex-wrap w-full bottom_footer_container">
+                        <div class="w-full mb-3 text-sm md:mb-0 md:w-1/2">
                             &copy Copyright 2021
-                            <strong class="tracking-widest">FreshGrocery</strong>. All Rights
+                            <strong class="md:tracking-widest">FreshGrocery</strong>. All Rights
                             Reserved <br />
                             <span class="text-xs"
-                                >Made With <i class="lni lni-heart-filled"></i> by JAHID</span
+                                >Made With <i class="lni lni-heart-filled"></i> by SoftArch</span
                             >
                         </div>
-                        <div class="w-1/2">
+                        <div class="w-full md:w-1/2">
                             <img
                                 src="./src/img/SSL-Commerz-Pay-With-logo-All-Size-03-1.png"
                                 alt="payments"

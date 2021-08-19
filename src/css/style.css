@@ -116,6 +116,37 @@ textarea:focus {
     padding-left: 15px;
 }
 
+@media (max-width: 600px) {
+    .col-2,
+.col-4,
+.col-12,
+.col-10,
+.col-lg-12,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-8,
+.col-lg-9,
+.col-md-8,
+.col-md-9,
+.col-xl-4,
+.col-xl-9,
+.col-md-12,
+.col-md-7,
+.col-sm-4,
+.col-sm-6,
+.col-sm-8,
+.col-sm-12,
+.col-md-6,
+.col-md-3,
+.col-md-4 {
+    padding-right: 4px;
+    padding-left: 4px;
+}
+
+}
+
 .col {
     -ms-flex-preferred-size: 0;
     flex-basis: 0;
@@ -364,6 +395,12 @@ textarea:focus {
 */
 .featured_offers_content li:last-child {
     padding-right: 0px !important;
+}
+
+@media (max-width: 768px) {
+    .featured_offers_content li:last-child {
+        padding-right: 8px !important;
+    }
 }
 
 .featured_shopnow_btn:hover {
@@ -702,6 +739,24 @@ textarea:focus {
     grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
     gap: 1rem;
 }
+@media (min-width:1600px) {
+    .product_grid_list_show_content {
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 0.3rem;
+    }  
+}
+@media (max-width:768px) {
+    .product_grid_list_show_content {
+        grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+        gap: 0.3rem;
+    }  
+}
+@media (max-width:500px) {
+    .product_grid_list_show_content {
+        grid-template-columns: repeat(auto-fill, minmax(169px, 1fr));
+        gap: 0.1rem;
+    }  
+}
 .product_grid_list_show_container .product-grid {
     text-align: center;
     overflow: hidden;
@@ -828,6 +883,7 @@ textarea:focus {
     font-weight: 300;
     text-decoration: line-through;
     display: inline-block;
+    font-size: 14px;
 }
 
 @media only screen and (max-width: 990px) {
@@ -893,13 +949,14 @@ textarea:focus {
 .product-view-content .product-view-product-detail ul li {
     margin: 0;
     list-style: none;
-    background: url(./src/img/checked.png) left center no-repeat;
+    background: url('https://image.flaticon.com/icons/png/512/190/190411.png') left center no-repeat;
     background-size: 18px;
     padding-left: 1.7rem;
     margin: 0.4rem 0;
     font-weight: 600;
     opacity: 0.9;
 }
+
 
 .product-view-content .product-view-product-detail ul li span {
     font-weight: 500;
@@ -1067,12 +1124,6 @@ textarea:focus {
     padding-left: 15px;
 }
 
-@media (max-width: 450px) {
-    .cart_coupon_inpt_box {
-        padding-right: 0px;
-        padding-left: 0px;
-    }
-}
 
 /* ======== 11.1 CART Order Summary Css ======== */
 
@@ -1436,7 +1487,12 @@ textarea:focus {
         max-width: 1140px;
     }
 }
-
+@media (max-width: 768px) {
+    .checkout_content {
+        padding-right: 2px;
+        padding-left: 2px;
+    }
+}
 .checkout_content form {
     flex: 4;
 }
@@ -1468,12 +1524,24 @@ textarea:focus {
     font-weight: 500;
     padding-right: 20px;
 }
-
-@media (max-width: 500px) {
+@media (max-width: 768px) {
     .checkout_content label > span {
-        font-size: 15px;
+        font-size: 16px;
+    padding-right: 10px;
+
+        
     }
 }
+
+@media (max-width: 550px) {
+    .checkout_content label > span {
+        font-size: 14px;
+    padding-right: 0px;
+    width: 30%;
+
+    }
+}
+
 
 .checkout_content input[type='text'],
 .checkout_content input[type='tel'],
@@ -2928,7 +2996,7 @@ Rotating chevron icon on toggle. label > span {
         clear: both;
     }
     .invoice table[class='fullPadding'] {
-        width: 85% !important;
+        width: 95% !important;
         clear: both;
     }
     .invoice table[class='col'] {
